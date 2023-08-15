@@ -2,7 +2,7 @@
 
 
 
-![image-20230814113137081](${img}\image-20230814113137081.png)
+![image-20230814113137081](https://github.com/LikeRunningWater/LikeRunningWater.github.io/tree/main/%24%7Bimg%7D\image-20230814113137081.png)
 
 
 
