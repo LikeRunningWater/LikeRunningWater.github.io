@@ -6,15 +6,37 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-08-11T15:11:01.047Z</updated>
+  <updated>2023-12-17T08:51:33.408Z</updated>
   <id>http://example.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>IceBlin</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bullshit</title>
+    <link href="http://example.com/2023/12/17/bullshit/"/>
+    <id>http://example.com/2023/12/17/bullshit/</id>
+    <published>2023-12-17T08:01:15.000Z</published>
+    <updated>2023-12-17T08:51:33.408Z</updated>
+    
+    <content type="html"><![CDATA[<p>​    大家好，我是 java 小菜鸡 iceblin ，之前就一直有搭建个人博客的想法（我相信大部分学编程的都希望有个自己的博客小天地的😃），现在终于实现了，欢呼喝彩嘿嘿</p><p>这是一个傻傻不正经的博主哈哈</p><p>:star:  iceblin 个人博客————启动！！！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​    大家好，我是 java 小菜鸡 iceblin ，之前就一直有搭建个人博客的想法（我相信大部分学编程的都希望有个自己的博客小天地的😃），现在终于实现了，欢呼喝彩嘿嘿&lt;/p&gt;
+&lt;p&gt;这是一个傻傻不正经的博主哈哈&lt;/p&gt;
+&lt;p&gt;:star:  iceblin 个人博</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
