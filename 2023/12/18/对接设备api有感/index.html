@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>bullshit |  Hexo</title>
+      <title>对接第三方api |  Hexo</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -54,7 +54,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-bullshit"
+  id="post-对接设备api有感"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -65,7 +65,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  bullshit
+  对接第三方api
 </h1>
  
 
@@ -73,15 +73,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/12/17/bullshit/" class="article-date">
-  <time datetime="2023-12-17T08:01:15.000Z" itemprop="datePublished">2023-12-17</time>
+      <a href="/2023/12/18/%E5%AF%B9%E6%8E%A5%E8%AE%BE%E5%A4%87api%E6%9C%89%E6%84%9F/" class="article-date">
+  <time datetime="2023-12-18T13:11:06.000Z" itemprop="datePublished">2023-12-18</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">84</span>
+            <span class="post-count">342</span>
         </span>
     </span>
 
@@ -97,15 +97,29 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>​    大家好，我是 java 小菜鸡 iceblin ，之前就一直有搭建个人博客的想法（我相信大部分学编程的都希望有个自己的博客小天地的😃），现在终于实现了，欢呼喝彩嘿嘿</p>
-<p>这是一个傻傻不正经的博主哈哈</p>
-<p>:star:  iceblin 个人博客————启动！！！</p>
+  <h2 id="对接第三方api-接口记录"><a href="#对接第三方api-接口记录" class="headerlink" title="对接第三方api 接口记录"></a>对接第三方api 接口记录</h2><p>这两天在对接门禁设备到安防系统，遇到一些问题和get到一些新技巧</p>
+<p>:bookmark_tabs:</p>
+<ol>
+<li><p>第三方api和安防系统的需求有不完整的敌法</p>
+<p>在调用远程开关门的时候，门禁的打开或者关闭的状态没法看到，虽然写好了代码但是测试开门或者常开等其他状态时，门禁的显示屏都没变化，无法得知是否成功执行，只能等门禁真正安装才能查看？这显然不合理，那开发在测试时不知道是否有问题。</p>
+<p><font color=red>所以在对接代码前先测试一下api接口是否符合预期</font></p>
+</li>
+<li><p>对安防系统的代码不够熟悉，有些数据不知道是在哪里获得的和流通的走向</p>
+<p><font color=blue>这个没办法只能一点一点打断点或者请教，自己看代码的话容易花费太多时间,系统的各个模块相互依赖比较多需要将负责的部分去理解数据流向</font>&gt;</p>
+</li>
+</ol>
+<p>📖 get新技巧：</p>
+<ul>
+<li>postman的环境变量设置,可以使用<code>&#123;&#123;&#125;&#125;</code>这个类似插值表达式来取环境变量的值，postman可以在test里将比如登录认证返回的token更新设置到环境变量里</li>
+</ul>
  
       <!-- reward -->
       
@@ -176,7 +190,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/12/17/bullshit/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/12/18/%E5%AF%B9%E6%8E%A5%E8%AE%BE%E5%A4%87api%E6%9C%89%E6%84%9F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -187,19 +201,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/12/18/%E5%AF%B9%E6%8E%A5%E8%AE%BE%E5%A4%87api%E6%9C%89%E6%84%9F/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            对接第三方api
-          
-        </div>
-      </a>
     
-    
-      <a href="/2023/08/11/live2d/" class="article-nav-link">
+      <a href="/2023/12/17/bullshit/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title"></div>
+        <div class="article-nav-title">bullshit</div>
       </a>
     
   </nav>
