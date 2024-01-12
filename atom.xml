@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-01-10T09:21:28.854Z</updated>
+  <updated>2023-08-11T15:11:01.047Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://example.com/2024/01/11/live2d/"/>
+    <id>http://example.com/2024/01/11/live2d/</id>
+    <published>2024-01-10T17:28:06.657Z</published>
+    <updated>2023-08-11T15:11:01.047Z</updated>
+    
+    <content type="html"><![CDATA[<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>简单引入看板娘js-小埋选手-_ (:з」∠)_ XD</title></head><script src="https://jsd.onmicrosoft.cn/gh/wuuconix/live2d-cdn@v0.1.8/autoload.js"></script><body>    </body></html>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>工作总结</title>
     <link href="http://example.com/2024/01/10/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/"/>
     <id>http://example.com/2024/01/10/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</id>
     <published>2024-01-10T07:54:00.000Z</published>
-    <updated>2024-01-10T09:21:28.854Z</updated>
+    <updated>2024-01-12T07:25:40.671Z</updated>
     
-    <content type="html"><![CDATA[<p>我总结一下自己工作一个月以来学到的一些方法论和思想</p><p>工作上面感想:</p><p>:thinking:  <font color=orange> 好的工作方式能提高执行效率</font></p><ol><li>工作的方式最好是效率为先，能当面沟通最好，其次电话沟通，打字沟通效率慢</li><li>问问题最好是有个大纲或者截图，说清楚自己在干吗，遇到了什么不懂</li><li>只要进来公司就不要害怕别人瞧不起你，不懂就问很正常，交流需要认真</li><li>上班的内心一定要保持松弛感，一直紧绷着整个人都不会进步也不会好，会积累压力</li><li>大胆提出自己的想法不丢人，不懂就不懂，不能不懂装懂会浪费时间和内耗自己</li><li>每次都要预估一下自己完成的时间，将一件事情在心中大概计划的 分时间段完成</li><li>完成后需要测试截图将结果和组内沟通，初步确认</li></ol><p>技术层面感想:</p><p>:man_technologist:  <font color=orange> 好的编程思想能提高代码质量</font></p><ol><li><p>写代码一定要先把实现逻辑想清楚，不然不敲代码，否则是在浪费时间，也不是一种负责的行为,  只有清楚了逻辑你才能和别人讲你的实现思路。</p></li><li><p>测试非常重要，一定要单元测试，在接口层尽可能的不要去写业务逻辑，要在工具类里去拆解封装好工具函数，并且测试你的工具函数，最后再在接口函数里去调用各种你的工具函数，这样接口才不会臃肿，更好的管理代码。</p><p>:star:</p></li><li><p>日志一定要打，每一步的代码都要为自己负责，每一个函数保证自己的正确性，所以每次都需要优先考虑执行错误的情况，并且做出if else判断，每次都要输出日志，最好是每个函数调用都判断，方便出问题能根据日志快速定位到具体的代码函数</p></li><li><p>遵循设计原则–开闭原则、里氏替换原则等等  写代码一定要考虑后期的维护和规范，写好封装的调用函数，尽量让自己的代码足够动态，对扩展开放，后人不必修改自己的代码也能增加功能。</p></li><li><p>测试，写完一个方法就要实现这个方法的测试自证自己的代码，如果能在写代码前先写好单元测试根据测试来实现那可能更好(maybe)</p></li></ol><p>工具方面的感想</p><p>:straight_ruler:  <font color=orange> 好的工具能提高工作效率 </font></p><p>测试工具:</p><p>java后端测试的工具推荐</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">postman --接口文档和测试</span><br><span class="line">Apifox  --接口文档和测试</span><br><span class="line">swagger --接口文档和测试</span><br><span class="line">fiddle  --抓包和发送请求</span><br><span class="line">jmeter  --压测</span><br></pre></td></tr></table></figure><p>网络测试工具:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sockettools  --模拟tcp/udp 端</span><br><span class="line">httpserver   --模拟http服务器</span><br><span class="line">fiddle</span><br><span class="line">也可以自己手动写监听的jar包 </span><br></pre></td></tr></table></figure><p>感想:</p><p>工作如果真的无法适应，并且你尝试做出了努力，那么就离开它。</p><p>合适的工作才是长久的，离职也不</p><p>是一个坏的选择，花一些时间考虑清楚自己的规划和意愿，自由思考的感觉真棒。</p><p>:free:</p>]]></content>
+    <content type="html"><![CDATA[<p>我总结一下自己工作一个月以来学到的一些方法论和思想</p><p>工作上面感想:</p><p>:thinking:  <font color=orange> 好的工作方式能提高执行效率</font></p><ol><li>工作的方式最好是效率为先，能当面沟通最好，其次电话沟通，打字沟通效率慢</li><li>问问题最好是有个大纲或者截图，说清楚自己在干吗，遇到了什么不懂</li><li>只要进来公司就不要害怕别人瞧不起你，不懂就问很正常，交流需要认真</li><li>上班的内心一定要保持松弛感，一直紧绷着整个人都不会进步也不会好，会积累压力</li><li>大胆提出自己的想法不丢人，不懂就不懂，不能不懂装懂会浪费时间和内耗自己</li><li>每次都要预估一下自己完成的时间，将一件事情在心中大概计划的 分时间段完成</li><li>完成后需要测试截图将结果和组内沟通，初步确认</li></ol><p>技术层面感想:</p><p>:man_technologist:  <font color=orange> 好的编程思想能提高代码质量</font></p><ol><li><p>写代码一定要先把实现逻辑想清楚，不然不敲代码，否则是在浪费时间，也不是一种负责的行为,  只有清楚了逻辑你才能和别人讲你的实现思路。</p></li><li><p>测试非常重要，一定要单元测试，在接口层尽可能的不要去写业务逻辑，要在工具类里去拆解封装好工具函数，并且测试你的工具函数，最后再在接口函数里去调用各种你的工具函数，这样接口才不会臃肿，更好的管理代码。</p><p>:star:</p></li><li><p>日志一定要打，每一步的代码都要为自己负责，每一个函数保证自己的正确性，所以每次都需要优先考虑执行错误的情况，并且做出if else判断，每次都要输出日志，最好是每个函数调用都判断，方便出问题能根据日志快速定位到具体的代码函数</p></li><li><p>遵循设计原则–开闭原则、里氏替换原则等等  写代码一定要考虑后期的维护和规范，写好封装的调用函数，尽量让自己的代码足够动态，对扩展开放，后人不必修改自己的代码也能增加功能。</p></li><li><p>测试，写完一个方法就要实现这个方法的测试自证自己的代码，如果能在写代码前先写好单元测试根据测试来实现那可能更好(maybe)</p></li></ol><p>工具方面的感想</p><p>:straight_ruler:  <font color=orange> 好的工具能提高工作效率 </font></p><p>测试工具:</p><p>java后端测试的工具推荐</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">postman --接口文档和测试</span><br><span class="line">Apifox  --接口文档和测试</span><br><span class="line">swagger --接口文档和测试</span><br><span class="line">fiddle  --抓包和发送请求</span><br><span class="line">jmeter  --压测</span><br></pre></td></tr></table></figure><p>网络测试工具:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sockettools  --模拟tcp/udp 端</span><br><span class="line">httpserver   --模拟http服务器</span><br><span class="line">fiddle</span><br><span class="line">也可以自己手动写监听的jar包 </span><br></pre></td></tr></table></figure><p>感想:</p><p>工作如果真的无法适应，并且你尝试做出了努力，那么就离开它。</p><p>合适的工作才是长久的，离职也不</p><p>是一个坏的选择，花一些时间考虑清楚自己的规划和意愿，自由思考的感觉真棒。</p>]]></content>
     
     
       
@@ -105,30 +129,6 @@
     <summary type="html">&lt;p&gt;​    大家好，我是 java 小菜鸡 iceblin ，之前就一直有搭建个人博客的想法（我相信大部分学编程的都希望有个自己的博客小天地的😃），现在终于实现了，欢呼喝彩嘿嘿&lt;/p&gt;
 &lt;p&gt;这是一个傻傻不正经的博主哈哈&lt;/p&gt;
 &lt;p&gt;:star:  iceblin 个人博</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/08/11/live2d/"/>
-    <id>http://example.com/2023/08/11/live2d/</id>
-    <published>2023-08-11T14:58:36.582Z</published>
-    <updated>2023-08-11T15:11:01.047Z</updated>
-    
-    <content type="html"><![CDATA[<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>简单引入看板娘js-小埋选手-_ (:з」∠)_ XD</title></head><script src="https://jsd.onmicrosoft.cn/gh/wuuconix/live2d-cdn@v0.1.8/autoload.js"></script><body>    </body></html>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;</summary>
       
     
     
