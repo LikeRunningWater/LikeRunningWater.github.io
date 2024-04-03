@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-03-08T14:17:49.129Z</updated>
+  <updated>2024-04-03T12:08:52.406Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2024/04/03/u%E7%9B%98%E6%B5%8B%E8%AF%95/"/>
+    <id>http://example.com/2024/04/03/u%E7%9B%98%E6%B5%8B%E8%AF%95/</id>
+    <published>2024-04-03T11:30:12.226Z</published>
+    <updated>2024-04-03T12:08:52.406Z</updated>
+    
+    <content type="html"><![CDATA[<p>省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能:cry:</p><p>1.测试软件: <strong>Parkdale</strong></p><p>结果:HIKSEMI - 3.00 58.6 GB HIKSEMI (G:): 37.9 MByte/sec read, 33.9 MByte/sec write USB<br>软件评价:</p><ul><li>This is pretty slow for a USB3 device. USB3 device on USB3 controller in USB2 speed!</li><li>对于USB3设备来说，这是相当慢的。USB3设备上的USB3控制器在USB2速度!</li></ul><p><img src="$%7Bimg%7D%5Cimage-20240403193421546.png" alt="image-20240403193421546"></p><p>2.测试软件:<strong>HD Tune</strong></p><p><img src="D:%5CBlog%5Csource_posts$%7Bimg%7D%5Cimage-20240403193057026.png" alt="image-20240403193057026"></p><p>3.测试软件:<strong>CrystalDiskMark</strong> 8.05</p><p><img src="$%7Bimg%7D%5Cimage-20240403194038125.png" alt="image-20240403194038125"></p><p>解释:</p><p>主要看第1项顺序读写和第3项4K<a href="https://www.zhihu.com/search?q=%E9%9A%8F%E6%9C%BA%E8%AF%BB%E5%86%99&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">随机读写</a></p><p><strong>SEQ1M|Q8T1</strong>表示顺序读写，位深1024K，1线程8队列的测试速度</p><p><strong>SEQ1M|Q1T1</strong>表示顺序读写，位深1024K，1线程1队列测试速度</p><p><strong>RND4K|Q32T1</strong>表示随机读写，位深1024*4K，1线程32队列的测试速度</p><p><strong>RND4K|Q1T1</strong>表示随机读写，位深1024*4K，一线程一队列的测试速度</p><ul><li><p>Seq指的是连续测试，可以理解为影音文件的读写速度，商家标称速度一般指的是这个速度4K随机读写性能代表了硬盘的数据吞吐能力(单位为iops)，比如：<a href="https://www.zhihu.com/search?q=%E7%BD%91%E9%A1%B5%E7%BC%93%E5%AD%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">网页缓存</a>的写入、系统文件更新，包括程序、游戏的加载、响应等等都与随机4K读写性能息息相关。对硬盘来说，4K读写的快慢决定了系统的操作体验，对<a href="https://www.zhihu.com/search?q=U%E7%9B%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">U盘</a>来说，代表了零碎文件（比如复制有大量小文件的文件夹）的读写速度。</p></li><li><p>比如你按下开机按钮，进入Windows以后，启动Windows这个过程既涉及连续文件读，也涉及4K随机读。这个过程有512B文件到128KB各种大小文件的读写过程。Windows正常运行时，产生的<a href="https://www.zhihu.com/search?q=%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">临时文件</a>。也是混合两种文件。</p></li></ul><p>P.s :  随机=random['rændəm]   顺序=sequence[ˈsiːkwəns]</p><p>4.测试软件: <strong>ATTO Disk Benchmark</strong></p><p><img src="$%7Bimg%7D%5Cimage-20240403200357838.png" alt="image-20240403200357838"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能:cry:&lt;/p&gt;
+&lt;p&gt;1.测试软件: &lt;strong&gt;Parkdale&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;结果:HIKSEMI - 3.00 58.6 GB HIKSEMI (G:): 37.</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2024/03/22/Docker%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2024/03/22/Docker%E7%AC%94%E8%AE%B0/</id>
+    <published>2024-03-22T13:41:21.547Z</published>
+    <updated>2024-03-22T13:46:33.494Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="DockerNote">DockerNote</h2><p>虚拟容器作用:模拟运行环境</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;DockerNote&quot;&gt;DockerNote&lt;/h2&gt;
+&lt;p&gt;虚拟容器作用:模拟运行环境&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -40,30 +84,6 @@
 &lt;li&gt;
 &lt;p&gt;面试问题常问问题&lt;/p&gt;
 &lt;/li</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2024/01/11/live2d/"/>
-    <id>http://example.com/2024/01/11/live2d/</id>
-    <published>2024-01-10T17:28:06.657Z</published>
-    <updated>2023-08-11T15:11:01.047Z</updated>
-    
-    <content type="html"><![CDATA[<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>简单引入看板娘js-小埋选手-_ (:з」∠)_ XD</title></head><script src="https://jsd.onmicrosoft.cn/gh/wuuconix/live2d-cdn@v0.1.8/autoload.js"></script><body>    </body></html>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;</summary>
       
     
     
