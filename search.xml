@@ -48,11 +48,11 @@
 <li>This is pretty slow for a USB3 device. USB3 device on USB3 controller in USB2 speed!</li>
 <li>对于USB3设备来说，这是相当慢的。USB3设备上的USB3控制器在USB2速度!</li>
 </ul>
-<p><img src="$%7Bimg%7D%5Cimage-20240403193421546.png" alt="image-20240403193421546"></p>
+<p><img src="../$%7Bimg%7D%5Cimage-20240403193421546.png" alt="image-20240403193421546"></p>
 <p>2.测试软件:<strong>HD Tune</strong></p>
-<p><img src="D:%5CBlog%5Csource_posts$%7Bimg%7D%5Cimage-20240403193057026.png" alt="image-20240403193057026"></p>
+<p><img src="../$%7Bimg%7D%5Cimage-20240403193057026.png" alt="image-20240403193057026"></p>
 <p>3.测试软件:<strong>CrystalDiskMark</strong> 8.05</p>
-<p><img src="$%7Bimg%7D%5Cimage-20240403194038125.png" alt="image-20240403194038125"></p>
+<p><img src="../$%7Bimg%7D%5Cimage-20240403194038125.png" alt="image-20240403194038125"></p>
 <p>解释:</p>
 <p>主要看第1项顺序读写和第3项4K<a href="https://www.zhihu.com/search?q=%E9%9A%8F%E6%9C%BA%E8%AF%BB%E5%86%99&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">随机读写</a></p>
 <p><strong>SEQ1M|Q8T1</strong>表示顺序读写，位深1024K，1线程8队列的测试速度</p>
@@ -69,7 +69,30 @@
 </ul>
 <p>P.s :  随机=random['rændəm]   顺序=sequence[ˈsiːkwəns]</p>
 <p>4.测试软件: <strong>ATTO Disk Benchmark</strong></p>
-<p><img src="$%7Bimg%7D%5Cimage-20240403200357838.png" alt="image-20240403200357838"></p>
+<p><img src="../$%7Bimg%7D%5Cimage-20240403200357838.png" alt="image-20240403200357838"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>对接第三方api</title>
+    <url>/2023/12/18/%E5%AF%B9%E6%8E%A5%E8%AE%BE%E5%A4%87api%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<h2 id="对接第三方api-接口记录">对接第三方api 接口记录</h2>
+<p>这两天在对接门禁设备到安防系统，遇到一些问题和get到一些新技巧</p>
+<p>:bookmark_tabs:</p>
+<ol>
+<li>
+<p>第三方api和安防系统的需求有不完整的敌法</p>
+<p>在调用远程开关门的时候，门禁的打开或者关闭的状态没法看到，虽然写好了代码但是测试开门或者常开等其他状态时，门禁的显示屏都没变化，无法得知是否成功执行，只能等门禁真正安装才能查看？这显然不合理，那开发在测试时不知道是否有问题。</p>
+<p><font color=red>所以在对接代码前先测试一下api接口是否符合预期</font></p>
+</li>
+<li>
+<p>对安防系统的代码不够熟悉，有些数据不知道是在哪里获得的和流通的走向</p>
+<p><font color=blue>这个没办法只能一点一点打断点或者请教，自己看代码的话容易花费太多时间,系统的各个模块相互依赖比较多需要将负责的部分去理解数据流向</font>&gt;</p>
+</li>
+</ol>
+<p>📖 get新技巧：</p>
+<ul>
+<li>postman的环境变量设置,可以使用<code>&#123;&#123;&#125;&#125;</code>这个类似插值表达式来取环境变量的值，postman可以在test里将比如登录认证返回的token更新设置到环境变量里</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
@@ -118,29 +141,6 @@
 <p>工作如果真的无法适应，并且你尝试做出了努力，那么就离开它。</p>
 <p>合适的工作才是长久的，离职也不</p>
 <p>是一个坏的选择，花一些时间考虑清楚自己的规划和意愿，自由思考的感觉真棒。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>对接第三方api</title>
-    <url>/2023/12/18/%E5%AF%B9%E6%8E%A5%E8%AE%BE%E5%A4%87api%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<h2 id="对接第三方api-接口记录">对接第三方api 接口记录</h2>
-<p>这两天在对接门禁设备到安防系统，遇到一些问题和get到一些新技巧</p>
-<p>:bookmark_tabs:</p>
-<ol>
-<li>
-<p>第三方api和安防系统的需求有不完整的敌法</p>
-<p>在调用远程开关门的时候，门禁的打开或者关闭的状态没法看到，虽然写好了代码但是测试开门或者常开等其他状态时，门禁的显示屏都没变化，无法得知是否成功执行，只能等门禁真正安装才能查看？这显然不合理，那开发在测试时不知道是否有问题。</p>
-<p><font color=red>所以在对接代码前先测试一下api接口是否符合预期</font></p>
-</li>
-<li>
-<p>对安防系统的代码不够熟悉，有些数据不知道是在哪里获得的和流通的走向</p>
-<p><font color=blue>这个没办法只能一点一点打断点或者请教，自己看代码的话容易花费太多时间,系统的各个模块相互依赖比较多需要将负责的部分去理解数据流向</font>&gt;</p>
-</li>
-</ol>
-<p>📖 get新技巧：</p>
-<ul>
-<li>postman的环境变量设置,可以使用<code>&#123;&#123;&#125;&#125;</code>这个类似插值表达式来取环境变量的值，postman可以在test里将比如登录认证返回的token更新设置到环境变量里</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
