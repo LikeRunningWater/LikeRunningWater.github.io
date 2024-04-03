@@ -155,6 +155,111 @@
     
     
     <article
+  id="post-u盘测试"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2024/04/03/u%E7%9B%98%E6%B5%8B%E8%AF%95/" class="article-date">
+  <time datetime="2024-04-03T11:30:12.226Z" itemprop="datePublished">2024-04-03</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能:cry:</p>
+<p>1.测试软件: <strong>Parkdale</strong></p>
+<p>结果:HIKSEMI - 3.00 58.6 GB HIKSEMI (G:): 37.9 MByte/sec read, 33.9 MByte/sec write USB<br>
+软件评价:</p>
+<ul>
+<li>This is pretty slow for a USB3 device. USB3 device on USB3 controller in USB2 speed!</li>
+<li>对于USB3设备来说，这是相当慢的。USB3设备上的USB3控制器在USB2速度!</li>
+</ul>
+<p><img src="D:%5CBlog%5Csource_posts$%7Bimg%7D%5Cimage-20240403193421546.png" alt="image-20240403193421546"></p>
+<p>2.测试软件:<strong>HD Tune</strong></p>
+<p><img src="D:%5CBlog%5Csource_posts$%7Bimg%7D%5Cimage-20240403193057026.png" alt="image-20240403193057026"></p>
+<p>3.测试软件:<strong>CrystalDiskMark</strong> 8.05</p>
+<p><img src="D:%5CBlog%5Csource_posts$%7Bimg%7D%5Cimage-20240403194038125.png" alt="image-20240403194038125"></p>
+<p>解释:</p>
+<p>主要看第1项顺序读写和第3项4K<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E9%9A%8F%E6%9C%BA%E8%AF%BB%E5%86%99&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">随机读写</a></p>
+<p><strong>SEQ1M|Q8T1</strong>表示顺序读写，位深1024K，1线程8队列的测试速度</p>
+<p><strong>SEQ1M|Q1T1</strong>表示顺序读写，位深1024K，1线程1队列测试速度</p>
+<p><strong>RND4K|Q32T1</strong>表示随机读写，位深1024*4K，1线程32队列的测试速度</p>
+<p><strong>RND4K|Q1T1</strong>表示随机读写，位深1024*4K，一线程一队列的测试速度</p>
+<ul>
+<li>
+<p>Seq指的是连续测试，可以理解为影音文件的读写速度，商家标称速度一般指的是这个速度4K随机读写性能代表了硬盘的数据吞吐能力(单位为iops)，比如：<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E7%BD%91%E9%A1%B5%E7%BC%93%E5%AD%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">网页缓存</a>的写入、系统文件更新，包括程序、游戏的加载、响应等等都与随机4K读写性能息息相关。对硬盘来说，4K读写的快慢决定了系统的操作体验，对<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=U%E7%9B%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">U盘</a>来说，代表了零碎文件（比如复制有大量小文件的文件夹）的读写速度。</p>
+</li>
+<li>
+<p>比如你按下开机按钮，进入Windows以后，启动Windows这个过程既涉及连续文件读，也涉及4K随机读。这个过程有512B文件到128KB各种大小文件的读写过程。Windows正常运行时，产生的<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">临时文件</a>。也是混合两种文件。</p>
+</li>
+</ul>
+<p>P.s :  随机=random['rændəm]   顺序=sequence[ˈsiːkwəns]</p>
+<p>4.测试软件: <strong>ATTO Disk Benchmark</strong></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-Docker笔记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2024/03/22/Docker%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2024-03-22T13:41:21.547Z" itemprop="datePublished">2024-03-22</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="DockerNote">DockerNote</h2>
+<p>虚拟容器作用:模拟运行环境</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-面试复习准备"
   class="article article-type-post"
   itemscope
