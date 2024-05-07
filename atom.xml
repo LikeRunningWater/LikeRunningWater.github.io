@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-05T09:02:03.947Z</updated>
+  <updated>2024-05-07T05:18:20.418Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git的emoji图标注释</title>
+    <link href="http://example.com/2024/05/07/git%E7%9A%84emoji%E5%9B%BE%E6%A0%87%E6%B3%A8%E9%87%8A/"/>
+    <id>http://example.com/2024/05/07/git%E7%9A%84emoji%E5%9B%BE%E6%A0%87%E6%B3%A8%E9%87%8A/</id>
+    <published>2024-05-07T04:51:49.000Z</published>
+    <updated>2024-05-07T05:18:20.418Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="gitmoji">gitmoji</h2><p>有时我们会想在git上使用emoji来轻松一下我们的内容，所以就涉及了这个网站</p><p><a href="https://gitmoji.dev/">gitmoji | An emoji guide for your commit messages</a></p><p>这里是各种emoji的使用方式</p><p>例如:</p><p>:art:</p><p>:zap:</p><p>:fire:</p><p>:bug:  (bug)</p><p>:memo:</p><p>:rocket:</p><p>:sparkles:</p><p>:white_check_mark:</p><p>:poop:</p><p>:bulb:</p><p>:speech_balloon:</p><p>:mute:</p><p>:clown_face:</p><p>:mag:</p><p>等一些emoji，其实很写法简单,就是 : +英文名称+:            比如:bug:  只需输入: bug ：（要使用英文标点）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;gitmoji&quot;&gt;gitmoji&lt;/h2&gt;
+&lt;p&gt;有时我们会想在git上使用emoji来轻松一下我们的内容，所以就涉及了这个网站&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://gitmoji.dev/&quot;&gt;gitmoji | An emoji guide for </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
