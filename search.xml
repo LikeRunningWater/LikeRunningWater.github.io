@@ -59,7 +59,97 @@
 <p>🔇</p>
 <p>🤡</p>
 <p>🔍</p>
-<p>等一些emoji，其实很写法简单,就是 : +英文名称+:            比如🐛  只需输入: bug ：（要使用英文标点）</p>
+<p>😃</p>
+<p>💢</p>
+<p>😠</p>
+<p>:happy:</p>
+<p>等一些emoji，其实很写法简单,就是   : 英文名称:            比如🐛  只需输入: bug ：（要使用英文标点）</p>
+<h3 id="but"><a class="header-anchor" href="#but"></a>but</h3>
+<p>😱 但是有个问题…</p>
+<p>Hexo默认的markdown渲染引擎<a href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>已经不再支持将Github emoji渲染到静态的html中</p>
+<p>所以直接使用在文章发布后你会发现没有emoji,所以得稍稍配置一下…(我直接百度🐶 )</p>
+<h2 id="使用插件"><a class="header-anchor" href="#使用插件"></a>使用插件</h2>
+<p>这里推荐的是 <code>hexo-renderer-markdown-it</code> 渲染器，支持扩展，采用的是 <code>markdown-it</code> 的内核来解析 markdown 的文本。</p>
+<h3 id="第一步"><a class="header-anchor" href="#第一步"></a>第一步</h3>
+<p>在你的blog目录下</p>
+<p>先卸载掉原来的<a href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>，然后下载新的插件<a href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it</a>和<a href="https://github.com/markdown-it/markdown-it-emoji">markdown-it-emoji</a></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked -S</span><br><span class="line">npm i hexo-renderer-markdown-it -S</span><br><span class="line"></span><br><span class="line">npm i markdown-it-emoji markdown-it-task-lists -S</span><br></pre></td></tr></table></figure>
+<h3 id="第二步"><a class="header-anchor" href="#第二步"></a>第二步</h3>
+<p>❗ 在你的根目录的<font color=green> _config.yaml</font>下添加下面这段配置(注意是根目录blog下的 _config.yaml)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#让hexo支持emoji增加的插件配置  </span><br><span class="line">markdown:</span><br><span class="line">  render:</span><br><span class="line">    html: true # 在 markdown 文本中支持 html tag 标签</span><br><span class="line">    xhtmlOut: false # 需要 xtml 文档，使用 &lt;br /&gt; 替代 &lt;br&gt;</span><br><span class="line">    breaks: true # 用 &lt;br&gt; 开始新的一行</span><br><span class="line">    linkify: true # 自动将 可能是链接的内容转换成链接</span><br><span class="line">    typographer: true # 印刷标识转换</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">    - markdown-it-emoji </span><br><span class="line">    - markdown-it-task-lists</span><br><span class="line">  anchors:</span><br><span class="line">    level: 2</span><br><span class="line">    collisionSuffix: &#x27;&#x27;</span><br><span class="line">    permalink: false,</span><br><span class="line">    permalinkClass: &#x27;header-anchor&#x27;</span><br><span class="line">    permalinkSymbol: &#x27;&#x27;</span><br><span class="line">    case: 0</span><br><span class="line">    separator: &#x27;&#x27;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<p>然后提交就ok了</p>
+<p>以上步骤应该就能支持emoji了</p>
+<p>参考文章 :</p>
+<p><a href="https://luckysusu.top/post/hexo_emoji.html">hexo中使用emoji表情 | 苏苏の休憩小屋 (luckysusu.top)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/102325252">Hexo 中使用 emoji 和 tasks - 知乎 (zhihu.com)</a></p>
+<h4 id="部分emoji使用编码参考-🧐"><a class="header-anchor" href="#部分emoji使用编码参考-🧐"></a>部分emoji使用编码参考   🧐</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">人物</th>
+<th>自然</th>
+<th>事物</th>
+<th>地点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>😐</strong> <code>:neutral_face:</code></td>
+<td>☀️ <code>:sunny:</code></td>
+<td><strong>💝</strong> <code>:gift_heart:</code></td>
+<td>🏠<code>:house:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😄 <code>:smile:</code></td>
+<td>❄️ <code>:snowflake:</code></td>
+<td>🎁 <code>:gift:</code></td>
+<td>🏫<code>:school:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😍 <code>:heart_eyes:</code></td>
+<td><strong>☔️</strong> <code>:umbrella:</code></td>
+<td>🎏 <code>:flags:</code></td>
+<td>🏥<code>:hospital:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😘 <code>:kissing_heart:</code></td>
+<td><strong>☁️</strong> <code>:cloud:</code></td>
+<td>🔔 <code>:bell:</code></td>
+<td>🗾<code>:japan:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😓 <code>:sweat:</code></td>
+<td>⚡️ <code>:zap:</code></td>
+<td>🎄 <code>:christmas_tree:</code></td>
+<td>🏭<code>:factory:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😤 <code>:triumph:</code></td>
+<td>🐷 <code>:pig:</code></td>
+<td>☎️ <code>:phone:</code></td>
+<td>✈️<code>:airplane:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😨 <code>:fearful:</code></td>
+<td>🐗 <code>:boar:</code></td>
+<td>🔉 <code>:sound:</code></td>
+<td>🚲<code>:bike:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😎 <code>:sunglasses</code></td>
+<td>🐑 <code>:sheep:</code></td>
+<td>📢 <code>:loudspeaker:</code></td>
+<td>🚕<code>:taxi:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😭 <code>:sob:</code></td>
+<td>🐁 <code>:mouse2:</code></td>
+<td>📰 <code>:newspaper:</code></td>
+<td>🚌<code>:bus:</code></td>
+</tr>
+</tbody>
+</table>
+<p>详细请看参考文章或者文档 ,<a href="https://gitmoji.dev/">附上git支持emoji地址gitmoji</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -95,29 +185,6 @@
 <p>P.s :  随机=random['rændəm]   顺序=sequence[ˈsiːkwəns]</p>
 <p>4.测试软件: <strong>ATTO Disk Benchmark</strong></p>
 <p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403200357838.png" alt="image-20240403200357838"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>对接第三方api</title>
-    <url>/2023/12/18/%E5%AF%B9%E6%8E%A5%E8%AE%BE%E5%A4%87api%E6%9C%89%E6%84%9F/</url>
-    <content><![CDATA[<h2 id="对接第三方api-接口记录"><a class="header-anchor" href="#对接第三方api-接口记录"></a>对接第三方api 接口记录</h2>
-<p>这两天在对接门禁设备到安防系统，遇到一些问题和get到一些新技巧</p>
-<p>📑</p>
-<ol>
-<li>
-<p>第三方api和安防系统的需求有不完整的敌法</p>
-<p>在调用远程开关门的时候，门禁的打开或者关闭的状态没法看到，虽然写好了代码但是测试开门或者常开等其他状态时，门禁的显示屏都没变化，无法得知是否成功执行，只能等门禁真正安装才能查看？这显然不合理，那开发在测试时不知道是否有问题。</p>
-<p><font color=red>所以在对接代码前先测试一下api接口是否符合预期</font></p>
-</li>
-<li>
-<p>对安防系统的代码不够熟悉，有些数据不知道是在哪里获得的和流通的走向</p>
-<p><font color=blue>这个没办法只能一点一点打断点或者请教，自己看代码的话容易花费太多时间,系统的各个模块相互依赖比较多需要将负责的部分去理解数据流向</font>&gt;</p>
-</li>
-</ol>
-<p>📖 get新技巧：</p>
-<ul>
-<li>postman的环境变量设置,可以使用<code>&#123;&#123;&#125;&#125;</code>这个类似插值表达式来取环境变量的值，postman可以在test里将比如登录认证返回的token更新设置到环境变量里</li>
-</ul>
 ]]></content>
   </entry>
   <entry>
@@ -247,6 +314,29 @@
 </li>
 </ol>
 <p>🔚</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>对接第三方api</title>
+    <url>/2023/12/18/%E5%AF%B9%E6%8E%A5%E8%AE%BE%E5%A4%87api%E6%9C%89%E6%84%9F/</url>
+    <content><![CDATA[<h2 id="对接第三方api-接口记录"><a class="header-anchor" href="#对接第三方api-接口记录"></a>对接第三方api 接口记录</h2>
+<p>这两天在对接门禁设备到安防系统，遇到一些问题和get到一些新技巧</p>
+<p>📑</p>
+<ol>
+<li>
+<p>第三方api和安防系统的需求有不完整的敌法</p>
+<p>在调用远程开关门的时候，门禁的打开或者关闭的状态没法看到，虽然写好了代码但是测试开门或者常开等其他状态时，门禁的显示屏都没变化，无法得知是否成功执行，只能等门禁真正安装才能查看？这显然不合理，那开发在测试时不知道是否有问题。</p>
+<p><font color=red>所以在对接代码前先测试一下api接口是否符合预期</font></p>
+</li>
+<li>
+<p>对安防系统的代码不够熟悉，有些数据不知道是在哪里获得的和流通的走向</p>
+<p><font color=blue>这个没办法只能一点一点打断点或者请教，自己看代码的话容易花费太多时间,系统的各个模块相互依赖比较多需要将负责的部分去理解数据流向</font>&gt;</p>
+</li>
+</ol>
+<p>📖 get新技巧：</p>
+<ul>
+<li>postman的环境变量设置,可以使用<code>&#123;&#123;&#125;&#125;</code>这个类似插值表达式来取环境变量的值，postman可以在test里将比如登录认证返回的token更新设置到环境变量里</li>
+</ul>
 ]]></content>
   </entry>
 </search>
