@@ -182,26 +182,116 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="gitmoji">gitmoji</h2>
+  <h2 id="gitmoji"><a class="header-anchor" href="#gitmoji"></a>gitmoji</h2>
 <p>有时我们会想在git上使用emoji来轻松一下我们的内容，所以就涉及了这个网站</p>
 <p><a target="_blank" rel="noopener" href="https://gitmoji.dev/">gitmoji | An emoji guide for your commit messages</a></p>
 <p>这里是各种emoji的使用方式</p>
 <p>例如:</p>
-<p>:art:</p>
-<p>:zap:</p>
-<p>:fire:</p>
-<p>:bug:  (bug)</p>
-<p>:memo:</p>
-<p>:rocket:</p>
-<p>:sparkles:</p>
-<p>:white_check_mark:</p>
-<p>:poop:</p>
-<p>:bulb:</p>
-<p>:speech_balloon:</p>
-<p>:mute:</p>
-<p>:clown_face:</p>
-<p>:mag:</p>
-<p>等一些emoji，其实很写法简单,就是 : +英文名称+:            比如:bug:  只需输入: bug ：（要使用英文标点）</p>
+<p>🎨</p>
+<p>⚡</p>
+<p>🔥</p>
+<p>🐛  (bug)</p>
+<p>📝</p>
+<p>🚀</p>
+<p>✨</p>
+<p>✅</p>
+<p>💩</p>
+<p>💡</p>
+<p>💬</p>
+<p>🔇</p>
+<p>🤡</p>
+<p>🔍</p>
+<p>😃</p>
+<p>💢</p>
+<p>😠</p>
+<p>:happy:</p>
+<p>等一些emoji，其实很写法简单,就是   : 英文名称:            比如🐛  只需输入: bug ：（要使用英文标点）</p>
+<h3 id="but"><a class="header-anchor" href="#but"></a>but</h3>
+<p>😱 但是有个问题…</p>
+<p>Hexo默认的markdown渲染引擎<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>已经不再支持将Github emoji渲染到静态的html中</p>
+<p>所以直接使用在文章发布后你会发现没有emoji,所以得稍稍配置一下…(我直接百度🐶 )</p>
+<h2 id="使用插件"><a class="header-anchor" href="#使用插件"></a>使用插件</h2>
+<p>这里推荐的是 <code>hexo-renderer-markdown-it</code> 渲染器，支持扩展，采用的是 <code>markdown-it</code> 的内核来解析 markdown 的文本。</p>
+<h3 id="第一步"><a class="header-anchor" href="#第一步"></a>第一步</h3>
+<p>在你的blog目录下</p>
+<p>先卸载掉原来的<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>，然后下载新的插件<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it</a>和<a target="_blank" rel="noopener" href="https://github.com/markdown-it/markdown-it-emoji">markdown-it-emoji</a></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked -S</span><br><span class="line">npm i hexo-renderer-markdown-it -S</span><br><span class="line"></span><br><span class="line">npm i markdown-it-emoji markdown-it-task-lists -S</span><br></pre></td></tr></table></figure>
+<h3 id="第二步"><a class="header-anchor" href="#第二步"></a>第二步</h3>
+<p>❗ 在你的根目录的<font color=green> _config.yaml</font>下添加下面这段配置(注意是根目录blog下的 _config.yaml)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#让hexo支持emoji增加的插件配置  </span><br><span class="line">markdown:</span><br><span class="line">  render:</span><br><span class="line">    html: true # 在 markdown 文本中支持 html tag 标签</span><br><span class="line">    xhtmlOut: false # 需要 xtml 文档，使用 &lt;br /&gt; 替代 &lt;br&gt;</span><br><span class="line">    breaks: true # 用 &lt;br&gt; 开始新的一行</span><br><span class="line">    linkify: true # 自动将 可能是链接的内容转换成链接</span><br><span class="line">    typographer: true # 印刷标识转换</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">    - markdown-it-emoji </span><br><span class="line">    - markdown-it-task-lists</span><br><span class="line">  anchors:</span><br><span class="line">    level: 2</span><br><span class="line">    collisionSuffix: &#x27;&#x27;</span><br><span class="line">    permalink: false,</span><br><span class="line">    permalinkClass: &#x27;header-anchor&#x27;</span><br><span class="line">    permalinkSymbol: &#x27;&#x27;</span><br><span class="line">    case: 0</span><br><span class="line">    separator: &#x27;&#x27;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<p>然后提交就ok了</p>
+<p>以上步骤应该就能支持emoji了</p>
+<p>参考文章 :</p>
+<p><a target="_blank" rel="noopener" href="https://luckysusu.top/post/hexo_emoji.html">hexo中使用emoji表情 | 苏苏の休憩小屋 (luckysusu.top)</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102325252">Hexo 中使用 emoji 和 tasks - 知乎 (zhihu.com)</a></p>
+<h4 id="部分emoji使用编码参考-🧐"><a class="header-anchor" href="#部分emoji使用编码参考-🧐"></a>部分emoji使用编码参考   🧐</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">人物</th>
+<th>自然</th>
+<th>事物</th>
+<th>地点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>😐</strong> <code>:neutral_face:</code></td>
+<td>☀️ <code>:sunny:</code></td>
+<td><strong>💝</strong> <code>:gift_heart:</code></td>
+<td>🏠<code>:house:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😄 <code>:smile:</code></td>
+<td>❄️ <code>:snowflake:</code></td>
+<td>🎁 <code>:gift:</code></td>
+<td>🏫<code>:school:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😍 <code>:heart_eyes:</code></td>
+<td><strong>☔️</strong> <code>:umbrella:</code></td>
+<td>🎏 <code>:flags:</code></td>
+<td>🏥<code>:hospital:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😘 <code>:kissing_heart:</code></td>
+<td><strong>☁️</strong> <code>:cloud:</code></td>
+<td>🔔 <code>:bell:</code></td>
+<td>🗾<code>:japan:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😓 <code>:sweat:</code></td>
+<td>⚡️ <code>:zap:</code></td>
+<td>🎄 <code>:christmas_tree:</code></td>
+<td>🏭<code>:factory:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😤 <code>:triumph:</code></td>
+<td>🐷 <code>:pig:</code></td>
+<td>☎️ <code>:phone:</code></td>
+<td>✈️<code>:airplane:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😨 <code>:fearful:</code></td>
+<td>🐗 <code>:boar:</code></td>
+<td>🔉 <code>:sound:</code></td>
+<td>🚲<code>:bike:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😎 <code>:sunglasses</code></td>
+<td>🐑 <code>:sheep:</code></td>
+<td>📢 <code>:loudspeaker:</code></td>
+<td>🚕<code>:taxi:</code></td>
+</tr>
+<tr>
+<td style="text-align:left">😭 <code>:sob:</code></td>
+<td>🐁 <code>:mouse2:</code></td>
+<td>📰 <code>:newspaper:</code></td>
+<td>🚌<code>:bus:</code></td>
+</tr>
+</tbody>
+</table>
+<p>详细请看参考文章或者文档 ,<a target="_blank" rel="noopener" href="https://gitmoji.dev/">附上git支持emoji地址gitmoji</a></p>
  
       <!-- reward -->
       
@@ -239,7 +329,7 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能:cry:</p>
+  <p>省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能😢</p>
 <p>1.测试软件: <strong>Parkdale</strong></p>
 <p>结果:HIKSEMI - 3.00 58.6 GB HIKSEMI (G:): 37.9 MByte/sec read, 33.9 MByte/sec write USB<br>
 软件评价:</p>
@@ -306,7 +396,7 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="DockerNote">DockerNote</h2>
+  <h2 id="DockerNote"><a class="header-anchor" href="#DockerNote"></a>DockerNote</h2>
 <p>虚拟容器作用:模拟运行环境</p>
  
       <!-- reward -->
@@ -345,8 +435,8 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>:smile:</p>
-<h2 id="java复习总结">java复习总结</h2>
+  <p>😄</p>
+<h2 id="java复习总结"><a class="header-anchor" href="#java复习总结"></a>java复习总结</h2>
 <ol>
 <li>
 <p>java基础快速重新复习</p>
@@ -364,7 +454,7 @@
 <p>开发原则复习</p>
 </li>
 </ol>
-<p>:end:</p>
+<p>🔚</p>
  
       <!-- reward -->
       
@@ -415,7 +505,7 @@
        
   <p>我总结一下自己工作一个月以来学到的一些方法论和思想</p>
 <p>工作上面感想:</p>
-<p>:thinking:  <font color=orange> 好的工作方式能提高执行效率</font></p>
+<p>🤔  <font color=orange> 好的工作方式能提高执行效率</font></p>
 <ol>
 <li>工作的方式最好是效率为先，能当面沟通最好，其次电话沟通，打字沟通效率慢</li>
 <li>问问题最好是有个大纲或者截图，说清楚自己在干吗，遇到了什么不懂</li>
@@ -426,14 +516,14 @@
 <li>完成后需要测试截图将结果和组内沟通，初步确认</li>
 </ol>
 <p>技术层面感想:</p>
-<p>:man_technologist:  <font color=orange> 好的编程思想能提高代码质量</font></p>
+<p>👨‍💻  <font color=orange> 好的编程思想能提高代码质量</font></p>
 <ol>
 <li>
 <p>写代码一定要先把实现逻辑想清楚，不然不敲代码，否则是在浪费时间，也不是一种负责的行为,  只有清楚了逻辑你才能和别人讲你的实现思路。</p>
 </li>
 <li>
 <p>测试非常重要，一定要单元测试，在接口层尽可能的不要去写业务逻辑，要在工具类里去拆解封装好工具函数，并且测试你的工具函数，最后再在接口函数里去调用各种你的工具函数，这样接口才不会臃肿，更好的管理代码。</p>
-<p>:star:</p>
+<p>⭐</p>
 </li>
 <li>
 <p>日志一定要打，每一步的代码都要为自己负责，每一个函数保证自己的正确性，所以每次都需要优先考虑执行错误的情况，并且做出if else判断，每次都要输出日志，最好是每个函数调用都判断，方便出问题能根据日志快速定位到具体的代码函数</p>
@@ -446,7 +536,7 @@
 </li>
 </ol>
 <p>工具方面的感想</p>
-<p>:straight_ruler:  <font color=orange> 好的工具能提高工作效率 </font></p>
+<p>📏  <font color=orange> 好的工具能提高工作效率 </font></p>
 <p>测试工具:</p>
 <p>java后端测试的工具推荐</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">postman --接口文档和测试</span><br><span class="line">Apifox  --接口文档和测试</span><br><span class="line">swagger --接口文档和测试</span><br><span class="line">fiddle  --抓包和发送请求</span><br><span class="line">jmeter  --压测</span><br></pre></td></tr></table></figure>
@@ -505,7 +595,7 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>这周工作下来明显感觉到了自己的不足</p>
-<p>:star:</p>
+<p>⭐</p>
 <ol>
 <li>
 <p>技术不太行，虽然有点羞愧但事实如此，很多基本的代码和工具类都是靠别人写的和抄出来的，缺少自己的灵活使用和理解。</p>
@@ -540,7 +630,7 @@
 </ol>
 </li>
 </ol>
-<p>:envelope:</p>
+<p>✉️</p>
 <p>ok,这周主要是对接了一个门禁一体机到安防系统，实现了</p>
 <ul>
 <li>
@@ -603,9 +693,9 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="对接第三方api-接口记录">对接第三方api 接口记录</h2>
+  <h2 id="对接第三方api-接口记录"><a class="header-anchor" href="#对接第三方api-接口记录"></a>对接第三方api 接口记录</h2>
 <p>这两天在对接门禁设备到安防系统，遇到一些问题和get到一些新技巧</p>
-<p>:bookmark_tabs:</p>
+<p>📑</p>
 <ol>
 <li>
 <p>第三方api和安防系统的需求有不完整的敌法</p>
@@ -671,7 +761,7 @@
        
   <p>​    大家好，我是 java 小菜鸡 iceblin ，之前就一直有搭建个人博客的想法（我相信大部分学编程的都希望有个自己的博客小天地的😃），现在终于实现了，欢呼喝彩嘿嘿</p>
 <p>这是一个傻傻不正经的博主哈哈</p>
-<p>:star:  iceblin 个人博客————启动！！！</p>
+<p>⭐  iceblin 个人博客————启动！！！</p>
  
       <!-- reward -->
       
@@ -725,18 +815,18 @@
 <p>2.创建resource文件夹：需要文件  jdbc.property,mybatis-config.xml</p>
 <p>3.创建实体类对应数据库，创建mapper.xml,绑定在mybatis-config.xml中，</p>
 <p>编写sql语句和映射关系,编写测试代码</p>
-<p>:heart: 标签,动态标签是mybatis的灵魂</p>
+<p>❤️ 标签,动态标签是mybatis的灵魂</p>
 <p>常用sql标签:</p>
 <p>抽离sqlsql  包含include</p>
 <p>查询 select   增删改update</p>
 <p>条件(自动去除and)where遍历foreach</p>
 <p>动态设置条件set  可以消除，加前缀后缀trim  判断if</p>
-<p>:woman_shrugging:映射resultMap  类型resultType</p>
-<p>:goat:进阶：使用分页插件,逆向过程一键生成</p>
+<p>🤷‍♀️映射resultMap  类型resultType</p>
+<p>🐐进阶：使用分页插件,逆向过程一键生成</p>
 <p>1.注入依赖   或者导入生成器jar包</p>
 <p>2.配置generator.xml配置生成器信息</p>
 <p>3.运行生成器类的生成方法，进行一键生成</p>
-<p>-----以上算是个人简单的思路笔记 ----end :sunglasses:</p>
+<p>-----以上算是个人简单的思路笔记 ----end 😎</p>
  
       <!-- reward -->
       
