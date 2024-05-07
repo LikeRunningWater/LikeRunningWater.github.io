@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-07T05:18:20.418Z</updated>
+  <updated>2024-05-07T05:27:03.011Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://example.com/2024/05/07/git%E7%9A%84emoji%E5%9B%BE%E6%A0%87%E6%B3%A8%E9%87%8A/"/>
     <id>http://example.com/2024/05/07/git%E7%9A%84emoji%E5%9B%BE%E6%A0%87%E6%B3%A8%E9%87%8A/</id>
     <published>2024-05-07T04:51:49.000Z</published>
-    <updated>2024-05-07T05:18:20.418Z</updated>
+    <updated>2024-05-07T05:27:03.011Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="gitmoji">gitmoji</h2><p>有时我们会想在git上使用emoji来轻松一下我们的内容，所以就涉及了这个网站</p><p><a href="https://gitmoji.dev/">gitmoji | An emoji guide for your commit messages</a></p><p>这里是各种emoji的使用方式</p><p>例如:</p><p>:art:</p><p>:zap:</p><p>:fire:</p><p>:bug:  (bug)</p><p>:memo:</p><p>:rocket:</p><p>:sparkles:</p><p>:white_check_mark:</p><p>:poop:</p><p>:bulb:</p><p>:speech_balloon:</p><p>:mute:</p><p>:clown_face:</p><p>:mag:</p><p>等一些emoji，其实很写法简单,就是 : +英文名称+:            比如:bug:  只需输入: bug ：（要使用英文标点）</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="gitmoji"><a class="header-anchor" href="#gitmoji"></a>gitmoji</h2><p>有时我们会想在git上使用emoji来轻松一下我们的内容，所以就涉及了这个网站</p><p><a href="https://gitmoji.dev/">gitmoji | An emoji guide for your commit messages</a></p><p>这里是各种emoji的使用方式</p><p>例如:</p><p>🎨</p><p>⚡</p><p>🔥</p><p>🐛  (bug)</p><p>📝</p><p>🚀</p><p>✨</p><p>✅</p><p>💩</p><p>💡</p><p>💬</p><p>🔇</p><p>🤡</p><p>🔍</p><p>等一些emoji，其实很写法简单,就是 : +英文名称+:            比如🐛  只需输入: bug ：（要使用英文标点）</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;gitmoji&quot;&gt;gitmoji&lt;/h2&gt;
+    <summary type="html">&lt;h2 id=&quot;gitmoji&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#gitmoji&quot;&gt;&lt;/a&gt;gitmoji&lt;/h2&gt;
 &lt;p&gt;有时我们会想在git上使用emoji来轻松一下我们的内容，所以就涉及了这个网站&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://gitmoji.dev/&quot;&gt;gitmoji | An emoji guide for </summary>
+&lt;p&gt;&lt;a href=&quot;https:</summary>
       
     
     
@@ -45,14 +45,14 @@
     <published>2024-04-03T11:30:12.226Z</published>
     <updated>2024-04-05T09:02:03.947Z</updated>
     
-    <content type="html"><![CDATA[<p>省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能:cry:</p><p>1.测试软件: <strong>Parkdale</strong></p><p>结果:HIKSEMI - 3.00 58.6 GB HIKSEMI (G:): 37.9 MByte/sec read, 33.9 MByte/sec write USB<br>软件评价:</p><ul><li>This is pretty slow for a USB3 device. USB3 device on USB3 controller in USB2 speed!</li><li>对于USB3设备来说，这是相当慢的。USB3设备上的USB3控制器在USB2速度!</li></ul><p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403193421546.png" alt="img"></p><p>2.测试软件:<strong>HD Tune</strong></p><p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403193057026.png" alt="img">)</p><p>3.测试软件:<strong>CrystalDiskMark</strong> 8.05</p><p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403194038125.png" alt="img"></p><p>解释:</p><p>主要看第1项顺序读写和第3项4K<a href="https://www.zhihu.com/search?q=%E9%9A%8F%E6%9C%BA%E8%AF%BB%E5%86%99&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">随机读写</a></p><p><strong>SEQ1M|Q8T1</strong>表示顺序读写，位深1024K，1线程8队列的测试速度</p><p><strong>SEQ1M|Q1T1</strong>表示顺序读写，位深1024K，1线程1队列测试速度</p><p><strong>RND4K|Q32T1</strong>表示随机读写，位深1024*4K，1线程32队列的测试速度</p><p><strong>RND4K|Q1T1</strong>表示随机读写，位深1024*4K，一线程一队列的测试速度</p><ul><li><p>Seq指的是连续测试，可以理解为影音文件的读写速度，商家标称速度一般指的是这个速度4K随机读写性能代表了硬盘的数据吞吐能力(单位为iops)，比如：<a href="https://www.zhihu.com/search?q=%E7%BD%91%E9%A1%B5%E7%BC%93%E5%AD%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">网页缓存</a>的写入、系统文件更新，包括程序、游戏的加载、响应等等都与随机4K读写性能息息相关。对硬盘来说，4K读写的快慢决定了系统的操作体验，对<a href="https://www.zhihu.com/search?q=U%E7%9B%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">U盘</a>来说，代表了零碎文件（比如复制有大量小文件的文件夹）的读写速度。</p></li><li><p>比如你按下开机按钮，进入Windows以后，启动Windows这个过程既涉及连续文件读，也涉及4K随机读。这个过程有512B文件到128KB各种大小文件的读写过程。Windows正常运行时，产生的<a href="https://www.zhihu.com/search?q=%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">临时文件</a>。也是混合两种文件。</p></li></ul><p>P.s :  随机=random['rændəm]   顺序=sequence[ˈsiːkwəns]</p><p>4.测试软件: <strong>ATTO Disk Benchmark</strong></p><p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403200357838.png" alt="image-20240403200357838"></p>]]></content>
+    <content type="html"><![CDATA[<p>省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能😢</p><p>1.测试软件: <strong>Parkdale</strong></p><p>结果:HIKSEMI - 3.00 58.6 GB HIKSEMI (G:): 37.9 MByte/sec read, 33.9 MByte/sec write USB<br>软件评价:</p><ul><li>This is pretty slow for a USB3 device. USB3 device on USB3 controller in USB2 speed!</li><li>对于USB3设备来说，这是相当慢的。USB3设备上的USB3控制器在USB2速度!</li></ul><p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403193421546.png" alt="img"></p><p>2.测试软件:<strong>HD Tune</strong></p><p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403193057026.png" alt="img">)</p><p>3.测试软件:<strong>CrystalDiskMark</strong> 8.05</p><p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403194038125.png" alt="img"></p><p>解释:</p><p>主要看第1项顺序读写和第3项4K<a href="https://www.zhihu.com/search?q=%E9%9A%8F%E6%9C%BA%E8%AF%BB%E5%86%99&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">随机读写</a></p><p><strong>SEQ1M|Q8T1</strong>表示顺序读写，位深1024K，1线程8队列的测试速度</p><p><strong>SEQ1M|Q1T1</strong>表示顺序读写，位深1024K，1线程1队列测试速度</p><p><strong>RND4K|Q32T1</strong>表示随机读写，位深1024*4K，1线程32队列的测试速度</p><p><strong>RND4K|Q1T1</strong>表示随机读写，位深1024*4K，一线程一队列的测试速度</p><ul><li><p>Seq指的是连续测试，可以理解为影音文件的读写速度，商家标称速度一般指的是这个速度4K随机读写性能代表了硬盘的数据吞吐能力(单位为iops)，比如：<a href="https://www.zhihu.com/search?q=%E7%BD%91%E9%A1%B5%E7%BC%93%E5%AD%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">网页缓存</a>的写入、系统文件更新，包括程序、游戏的加载、响应等等都与随机4K读写性能息息相关。对硬盘来说，4K读写的快慢决定了系统的操作体验，对<a href="https://www.zhihu.com/search?q=U%E7%9B%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">U盘</a>来说，代表了零碎文件（比如复制有大量小文件的文件夹）的读写速度。</p></li><li><p>比如你按下开机按钮，进入Windows以后，启动Windows这个过程既涉及连续文件读，也涉及4K随机读。这个过程有512B文件到128KB各种大小文件的读写过程。Windows正常运行时，产生的<a href="https://www.zhihu.com/search?q=%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">临时文件</a>。也是混合两种文件。</p></li></ul><p>P.s :  随机=random['rændəm]   顺序=sequence[ˈsiːkwəns]</p><p>4.测试软件: <strong>ATTO Disk Benchmark</strong></p><p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403200357838.png" alt="image-20240403200357838"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能:cry:&lt;/p&gt;
+    <summary type="html">&lt;p&gt;省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能😢&lt;/p&gt;
 &lt;p&gt;1.测试软件: &lt;strong&gt;Parkdale&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;结果:HIKSEMI - 3.00 58.6 GB HIKSEMI (G:): 37.</summary>
+&lt;p&gt;结果:HIKSEMI - 3.00 58.6 GB HIKSEMI (G:): 37.9 M</summary>
       
     
     
@@ -67,12 +67,12 @@
     <published>2024-03-22T13:41:21.547Z</published>
     <updated>2024-03-22T13:46:33.494Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="DockerNote">DockerNote</h2><p>虚拟容器作用:模拟运行环境</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="DockerNote"><a class="header-anchor" href="#DockerNote"></a>DockerNote</h2><p>虚拟容器作用:模拟运行环境</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;DockerNote&quot;&gt;DockerNote&lt;/h2&gt;
+    <summary type="html">&lt;h2 id=&quot;DockerNote&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#DockerNote&quot;&gt;&lt;/a&gt;DockerNote&lt;/h2&gt;
 &lt;p&gt;虚拟容器作用:模拟运行环境&lt;/p&gt;
 </summary>
       
@@ -89,23 +89,19 @@
     <published>2024-03-08T14:17:37.206Z</published>
     <updated>2024-03-08T14:17:49.129Z</updated>
     
-    <content type="html"><![CDATA[<p>:smile:</p><h2 id="java复习总结">java复习总结</h2><ol><li><p>java基础快速重新复习</p></li><li><p>项目重新跑起来，看看源代码</p></li><li><p>面试问题常问问题</p></li><li><p>前端vue复习和测试工具熟悉</p></li><li><p>开发原则复习</p></li></ol><p>:end:</p>]]></content>
+    <content type="html"><![CDATA[<p>😄</p><h2 id="java复习总结"><a class="header-anchor" href="#java复习总结"></a>java复习总结</h2><ol><li><p>java基础快速重新复习</p></li><li><p>项目重新跑起来，看看源代码</p></li><li><p>面试问题常问问题</p></li><li><p>前端vue复习和测试工具熟悉</p></li><li><p>开发原则复习</p></li></ol><p>🔚</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;:smile:&lt;/p&gt;
-&lt;h2 id=&quot;java复习总结&quot;&gt;java复习总结&lt;/h2&gt;
+    <summary type="html">&lt;p&gt;😄&lt;/p&gt;
+&lt;h2 id=&quot;java复习总结&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#java复习总结&quot;&gt;&lt;/a&gt;java复习总结&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;java基础快速重新复习&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;项目重新跑起来，看看源代码&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;面试问题常问问题&lt;/p&gt;
-&lt;/li</summary>
+&lt;p&gt;项目重新跑起来，</summary>
       
     
     
@@ -120,16 +116,16 @@
     <published>2024-01-10T07:54:00.000Z</published>
     <updated>2024-01-12T07:25:40.671Z</updated>
     
-    <content type="html"><![CDATA[<p>我总结一下自己工作一个月以来学到的一些方法论和思想</p><p>工作上面感想:</p><p>:thinking:  <font color=orange> 好的工作方式能提高执行效率</font></p><ol><li>工作的方式最好是效率为先，能当面沟通最好，其次电话沟通，打字沟通效率慢</li><li>问问题最好是有个大纲或者截图，说清楚自己在干吗，遇到了什么不懂</li><li>只要进来公司就不要害怕别人瞧不起你，不懂就问很正常，交流需要认真</li><li>上班的内心一定要保持松弛感，一直紧绷着整个人都不会进步也不会好，会积累压力</li><li>大胆提出自己的想法不丢人，不懂就不懂，不能不懂装懂会浪费时间和内耗自己</li><li>每次都要预估一下自己完成的时间，将一件事情在心中大概计划的 分时间段完成</li><li>完成后需要测试截图将结果和组内沟通，初步确认</li></ol><p>技术层面感想:</p><p>:man_technologist:  <font color=orange> 好的编程思想能提高代码质量</font></p><ol><li><p>写代码一定要先把实现逻辑想清楚，不然不敲代码，否则是在浪费时间，也不是一种负责的行为,  只有清楚了逻辑你才能和别人讲你的实现思路。</p></li><li><p>测试非常重要，一定要单元测试，在接口层尽可能的不要去写业务逻辑，要在工具类里去拆解封装好工具函数，并且测试你的工具函数，最后再在接口函数里去调用各种你的工具函数，这样接口才不会臃肿，更好的管理代码。</p><p>:star:</p></li><li><p>日志一定要打，每一步的代码都要为自己负责，每一个函数保证自己的正确性，所以每次都需要优先考虑执行错误的情况，并且做出if else判断，每次都要输出日志，最好是每个函数调用都判断，方便出问题能根据日志快速定位到具体的代码函数</p></li><li><p>遵循设计原则–开闭原则、里氏替换原则等等  写代码一定要考虑后期的维护和规范，写好封装的调用函数，尽量让自己的代码足够动态，对扩展开放，后人不必修改自己的代码也能增加功能。</p></li><li><p>测试，写完一个方法就要实现这个方法的测试自证自己的代码，如果能在写代码前先写好单元测试根据测试来实现那可能更好(maybe)</p></li></ol><p>工具方面的感想</p><p>:straight_ruler:  <font color=orange> 好的工具能提高工作效率 </font></p><p>测试工具:</p><p>java后端测试的工具推荐</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">postman --接口文档和测试</span><br><span class="line">Apifox  --接口文档和测试</span><br><span class="line">swagger --接口文档和测试</span><br><span class="line">fiddle  --抓包和发送请求</span><br><span class="line">jmeter  --压测</span><br></pre></td></tr></table></figure><p>网络测试工具:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sockettools  --模拟tcp/udp 端</span><br><span class="line">httpserver   --模拟http服务器</span><br><span class="line">fiddle</span><br><span class="line">也可以自己手动写监听的jar包 </span><br></pre></td></tr></table></figure><p>感想:</p><p>工作如果真的无法适应，并且你尝试做出了努力，那么就离开它。</p><p>合适的工作才是长久的，离职也不</p><p>是一个坏的选择，花一些时间考虑清楚自己的规划和意愿，自由思考的感觉真棒。</p>]]></content>
+    <content type="html"><![CDATA[<p>我总结一下自己工作一个月以来学到的一些方法论和思想</p><p>工作上面感想:</p><p>🤔  <font color=orange> 好的工作方式能提高执行效率</font></p><ol><li>工作的方式最好是效率为先，能当面沟通最好，其次电话沟通，打字沟通效率慢</li><li>问问题最好是有个大纲或者截图，说清楚自己在干吗，遇到了什么不懂</li><li>只要进来公司就不要害怕别人瞧不起你，不懂就问很正常，交流需要认真</li><li>上班的内心一定要保持松弛感，一直紧绷着整个人都不会进步也不会好，会积累压力</li><li>大胆提出自己的想法不丢人，不懂就不懂，不能不懂装懂会浪费时间和内耗自己</li><li>每次都要预估一下自己完成的时间，将一件事情在心中大概计划的 分时间段完成</li><li>完成后需要测试截图将结果和组内沟通，初步确认</li></ol><p>技术层面感想:</p><p>👨‍💻  <font color=orange> 好的编程思想能提高代码质量</font></p><ol><li><p>写代码一定要先把实现逻辑想清楚，不然不敲代码，否则是在浪费时间，也不是一种负责的行为,  只有清楚了逻辑你才能和别人讲你的实现思路。</p></li><li><p>测试非常重要，一定要单元测试，在接口层尽可能的不要去写业务逻辑，要在工具类里去拆解封装好工具函数，并且测试你的工具函数，最后再在接口函数里去调用各种你的工具函数，这样接口才不会臃肿，更好的管理代码。</p><p>⭐</p></li><li><p>日志一定要打，每一步的代码都要为自己负责，每一个函数保证自己的正确性，所以每次都需要优先考虑执行错误的情况，并且做出if else判断，每次都要输出日志，最好是每个函数调用都判断，方便出问题能根据日志快速定位到具体的代码函数</p></li><li><p>遵循设计原则–开闭原则、里氏替换原则等等  写代码一定要考虑后期的维护和规范，写好封装的调用函数，尽量让自己的代码足够动态，对扩展开放，后人不必修改自己的代码也能增加功能。</p></li><li><p>测试，写完一个方法就要实现这个方法的测试自证自己的代码，如果能在写代码前先写好单元测试根据测试来实现那可能更好(maybe)</p></li></ol><p>工具方面的感想</p><p>📏  <font color=orange> 好的工具能提高工作效率 </font></p><p>测试工具:</p><p>java后端测试的工具推荐</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">postman --接口文档和测试</span><br><span class="line">Apifox  --接口文档和测试</span><br><span class="line">swagger --接口文档和测试</span><br><span class="line">fiddle  --抓包和发送请求</span><br><span class="line">jmeter  --压测</span><br></pre></td></tr></table></figure><p>网络测试工具:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sockettools  --模拟tcp/udp 端</span><br><span class="line">httpserver   --模拟http服务器</span><br><span class="line">fiddle</span><br><span class="line">也可以自己手动写监听的jar包 </span><br></pre></td></tr></table></figure><p>感想:</p><p>工作如果真的无法适应，并且你尝试做出了努力，那么就离开它。</p><p>合适的工作才是长久的，离职也不</p><p>是一个坏的选择，花一些时间考虑清楚自己的规划和意愿，自由思考的感觉真棒。</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;我总结一下自己工作一个月以来学到的一些方法论和思想&lt;/p&gt;
 &lt;p&gt;工作上面感想:&lt;/p&gt;
-&lt;p&gt;:thinking:  &lt;font color=orange&gt; 好的工作方式能提高执行效率&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;🤔  &lt;font color=orange&gt; 好的工作方式能提高执行效率&lt;/font&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;工作的方式最好是效率为先，能当面沟通最好，其次</summary>
+&lt;li&gt;工作的方式最好是效率为先，能当面沟通最好，其次电话沟通，打字沟</summary>
       
     
     
@@ -144,17 +140,17 @@
     <published>2023-12-24T06:00:36.000Z</published>
     <updated>2023-12-24T06:31:12.032Z</updated>
     
-    <content type="html"><![CDATA[<p>这周工作下来明显感觉到了自己的不足</p><p>:star:</p><ol><li><p>技术不太行，虽然有点羞愧但事实如此，很多基本的代码和工具类都是靠别人写的和抄出来的，缺少自己的灵活使用和理解。</p><p>-----还需要多写自己的代码，别人的代码固然优秀但是自己也要造一造轮子</p></li><li><p>业务理解不够，对自己的工作内容的业务理解不到位，和组员沟通不够及时，总是害怕自己给他人带来麻烦。</p><p>------需要正视自己的内心态度，麻烦别人是很正常的，现在麻烦别人以后就可以减少麻烦了，麻烦别人的时间可能也就几分钟，自己不会瞎捉摸能浪费几十分钟，是十倍于时间的消耗，这是需要明白的道理，但是问问题前需要有自己的思考。</p></li><li><p>沟通效率不够，遇到问题没有抓住自己目前矛盾的最核心要点，问也不知道怎么问或者问了别人根本不清楚。</p><p>​------尽量做到以下，至少有做到3点</p><ol><li><p>表示我自己在干吗？（让人清楚你的内容大概）</p></li><li><p>我遇到了什么问题（直接说什么错误）</p></li><li><p>我的预期是什么</p></li><li><p>我做了什么 （代码怎么写的/配置怎么配置的…）</p></li><li><p>我想完成什么样的效果（想让你帮我干嘛）</p></li><li><p>你清楚吗/你有什么建议吗/你觉得我可能什么地方没注意到</p></li></ol></li></ol><p>:envelope:</p><p>ok,这周主要是对接了一个门禁一体机到安防系统，实现了</p><ul><li><p>功能：系统对门禁的远程开关门和创建、删除人员；</p></li><li><p>事件：有人刷卡刷脸会将事件记录上报给安防系统，能看到行踪记录</p></li><li><p>属性：门的状态属性上报，系统可以得知当前门是处于开的还是关的还是常开常关。</p></li></ul><p>总结：菜就多练，不会就多沟通! O(∩_∩)O哈哈~</p><p>下周加油，keep住，其实工作也没很难。现在信心大增hhh</p>]]></content>
+    <content type="html"><![CDATA[<p>这周工作下来明显感觉到了自己的不足</p><p>⭐</p><ol><li><p>技术不太行，虽然有点羞愧但事实如此，很多基本的代码和工具类都是靠别人写的和抄出来的，缺少自己的灵活使用和理解。</p><p>-----还需要多写自己的代码，别人的代码固然优秀但是自己也要造一造轮子</p></li><li><p>业务理解不够，对自己的工作内容的业务理解不到位，和组员沟通不够及时，总是害怕自己给他人带来麻烦。</p><p>------需要正视自己的内心态度，麻烦别人是很正常的，现在麻烦别人以后就可以减少麻烦了，麻烦别人的时间可能也就几分钟，自己不会瞎捉摸能浪费几十分钟，是十倍于时间的消耗，这是需要明白的道理，但是问问题前需要有自己的思考。</p></li><li><p>沟通效率不够，遇到问题没有抓住自己目前矛盾的最核心要点，问也不知道怎么问或者问了别人根本不清楚。</p><p>​------尽量做到以下，至少有做到3点</p><ol><li><p>表示我自己在干吗？（让人清楚你的内容大概）</p></li><li><p>我遇到了什么问题（直接说什么错误）</p></li><li><p>我的预期是什么</p></li><li><p>我做了什么 （代码怎么写的/配置怎么配置的…）</p></li><li><p>我想完成什么样的效果（想让你帮我干嘛）</p></li><li><p>你清楚吗/你有什么建议吗/你觉得我可能什么地方没注意到</p></li></ol></li></ol><p>✉️</p><p>ok,这周主要是对接了一个门禁一体机到安防系统，实现了</p><ul><li><p>功能：系统对门禁的远程开关门和创建、删除人员；</p></li><li><p>事件：有人刷卡刷脸会将事件记录上报给安防系统，能看到行踪记录</p></li><li><p>属性：门的状态属性上报，系统可以得知当前门是处于开的还是关的还是常开常关。</p></li></ul><p>总结：菜就多练，不会就多沟通! O(∩_∩)O哈哈~</p><p>下周加油，keep住，其实工作也没很难。现在信心大增hhh</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;这周工作下来明显感觉到了自己的不足&lt;/p&gt;
-&lt;p&gt;:star:&lt;/p&gt;
+&lt;p&gt;⭐&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;技术不太行，虽然有点羞愧但事实如此，很多基本的代码和工具类都是靠别人写的和抄出来的，缺少自己的灵活使用和理解。&lt;/p&gt;
-&lt;p&gt;-----还需要多写自己的代码，别人的代码固然优秀</summary>
+&lt;p&gt;-----还需要多写自己的代码，别人的代码固然优秀但是自己也</summary>
       
     
     
@@ -169,17 +165,14 @@
     <published>2023-12-18T13:11:06.000Z</published>
     <updated>2023-12-18T13:33:34.414Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="对接第三方api-接口记录">对接第三方api 接口记录</h2><p>这两天在对接门禁设备到安防系统，遇到一些问题和get到一些新技巧</p><p>:bookmark_tabs:</p><ol><li><p>第三方api和安防系统的需求有不完整的敌法</p><p>在调用远程开关门的时候，门禁的打开或者关闭的状态没法看到，虽然写好了代码但是测试开门或者常开等其他状态时，门禁的显示屏都没变化，无法得知是否成功执行，只能等门禁真正安装才能查看？这显然不合理，那开发在测试时不知道是否有问题。</p><p><font color=red>所以在对接代码前先测试一下api接口是否符合预期</font></p></li><li><p>对安防系统的代码不够熟悉，有些数据不知道是在哪里获得的和流通的走向</p><p><font color=blue>这个没办法只能一点一点打断点或者请教，自己看代码的话容易花费太多时间,系统的各个模块相互依赖比较多需要将负责的部分去理解数据流向</font>&gt;</p></li></ol><p>📖 get新技巧：</p><ul><li>postman的环境变量设置,可以使用<code>&#123;&#123;&#125;&#125;</code>这个类似插值表达式来取环境变量的值，postman可以在test里将比如登录认证返回的token更新设置到环境变量里</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="对接第三方api-接口记录"><a class="header-anchor" href="#对接第三方api-接口记录"></a>对接第三方api 接口记录</h2><p>这两天在对接门禁设备到安防系统，遇到一些问题和get到一些新技巧</p><p>📑</p><ol><li><p>第三方api和安防系统的需求有不完整的敌法</p><p>在调用远程开关门的时候，门禁的打开或者关闭的状态没法看到，虽然写好了代码但是测试开门或者常开等其他状态时，门禁的显示屏都没变化，无法得知是否成功执行，只能等门禁真正安装才能查看？这显然不合理，那开发在测试时不知道是否有问题。</p><p><font color=red>所以在对接代码前先测试一下api接口是否符合预期</font></p></li><li><p>对安防系统的代码不够熟悉，有些数据不知道是在哪里获得的和流通的走向</p><p><font color=blue>这个没办法只能一点一点打断点或者请教，自己看代码的话容易花费太多时间,系统的各个模块相互依赖比较多需要将负责的部分去理解数据流向</font>&gt;</p></li></ol><p>📖 get新技巧：</p><ul><li>postman的环境变量设置,可以使用<code>&#123;&#123;&#125;&#125;</code>这个类似插值表达式来取环境变量的值，postman可以在test里将比如登录认证返回的token更新设置到环境变量里</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;对接第三方api-接口记录&quot;&gt;对接第三方api 接口记录&lt;/h2&gt;
+    <summary type="html">&lt;h2 id=&quot;对接第三方api-接口记录&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#对接第三方api-接口记录&quot;&gt;&lt;/a&gt;对接第三方api 接口记录&lt;/h2&gt;
 &lt;p&gt;这两天在对接门禁设备到安防系统，遇到一些问题和get到一些新技巧&lt;/p&gt;
-&lt;p&gt;:bookmark_tabs:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;第三方api和安防系统的需求有不完整的敌法&lt;</summary>
+&lt;p&gt;📑&lt;/</summary>
       
     
     
@@ -194,14 +187,14 @@
     <published>2023-12-17T08:01:15.000Z</published>
     <updated>2023-12-17T08:51:33.408Z</updated>
     
-    <content type="html"><![CDATA[<p>​    大家好，我是 java 小菜鸡 iceblin ，之前就一直有搭建个人博客的想法（我相信大部分学编程的都希望有个自己的博客小天地的😃），现在终于实现了，欢呼喝彩嘿嘿</p><p>这是一个傻傻不正经的博主哈哈</p><p>:star:  iceblin 个人博客————启动！！！</p>]]></content>
+    <content type="html"><![CDATA[<p>​    大家好，我是 java 小菜鸡 iceblin ，之前就一直有搭建个人博客的想法（我相信大部分学编程的都希望有个自己的博客小天地的😃），现在终于实现了，欢呼喝彩嘿嘿</p><p>这是一个傻傻不正经的博主哈哈</p><p>⭐  iceblin 个人博客————启动！！！</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;​    大家好，我是 java 小菜鸡 iceblin ，之前就一直有搭建个人博客的想法（我相信大部分学编程的都希望有个自己的博客小天地的😃），现在终于实现了，欢呼喝彩嘿嘿&lt;/p&gt;
 &lt;p&gt;这是一个傻傻不正经的博主哈哈&lt;/p&gt;
-&lt;p&gt;:star:  iceblin 个人博</summary>
+&lt;p&gt;⭐  iceblin 个人博客————</summary>
       
     
     
@@ -216,7 +209,7 @@
     <published>2023-08-11T14:56:37.000Z</published>
     <updated>2023-08-11T16:56:19.599Z</updated>
     
-    <content type="html"><![CDATA[<p>配置mybatis  步骤如下：</p><p>1.jar包和mysqljar包(必须),Junit测试jar包，pagehelper分页jar包，generator逆向过程jar包…</p><p>2.创建resource文件夹：需要文件  jdbc.property,mybatis-config.xml</p><p>3.创建实体类对应数据库，创建mapper.xml,绑定在mybatis-config.xml中，</p><p>编写sql语句和映射关系,编写测试代码</p><p>:heart: 标签,动态标签是mybatis的灵魂</p><p>常用sql标签:</p><p>抽离sqlsql  包含include</p><p>查询 select   增删改update</p><p>条件(自动去除and)where遍历foreach</p><p>动态设置条件set  可以消除，加前缀后缀trim  判断if</p><p>:woman_shrugging:映射resultMap  类型resultType</p><p>:goat:进阶：使用分页插件,逆向过程一键生成</p><p>1.注入依赖   或者导入生成器jar包</p><p>2.配置generator.xml配置生成器信息</p><p>3.运行生成器类的生成方法，进行一键生成</p><p>-----以上算是个人简单的思路笔记 ----end :sunglasses:</p>]]></content>
+    <content type="html"><![CDATA[<p>配置mybatis  步骤如下：</p><p>1.jar包和mysqljar包(必须),Junit测试jar包，pagehelper分页jar包，generator逆向过程jar包…</p><p>2.创建resource文件夹：需要文件  jdbc.property,mybatis-config.xml</p><p>3.创建实体类对应数据库，创建mapper.xml,绑定在mybatis-config.xml中，</p><p>编写sql语句和映射关系,编写测试代码</p><p>❤️ 标签,动态标签是mybatis的灵魂</p><p>常用sql标签:</p><p>抽离sqlsql  包含include</p><p>查询 select   增删改update</p><p>条件(自动去除and)where遍历foreach</p><p>动态设置条件set  可以消除，加前缀后缀trim  判断if</p><p>🤷‍♀️映射resultMap  类型resultType</p><p>🐐进阶：使用分页插件,逆向过程一键生成</p><p>1.注入依赖   或者导入生成器jar包</p><p>2.配置generator.xml配置生成器信息</p><p>3.运行生成器类的生成方法，进行一键生成</p><p>-----以上算是个人简单的思路笔记 ----end 😎</p>]]></content>
     
     
       
