@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Archives: 2024 |  Hexo</title>
+      <title> Hexo</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,153 +53,209 @@
       
     <main class="content on">
       <section class="outer">
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">2024</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2024" class="archive-year">2024</a>
+  <article
+  id="post-函数编程"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2024/05/10/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time datetime="2024-05-10T12:30:47.948Z" itemprop="datePublished">2024-05-10</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">334</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">1 min</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-    <div class="archives">
       
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/05/10/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B/" class="archive-article-date">
-  <time datetime="2024-05-10T12:30:47.948Z" itemprop="datePublished">05/10</time>
-</a>
-      
+    <div class="tocbot"></div>
 
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/05/09/1.%E7%94%BB%E7%A8%BF%E6%8E%A5%E5%8D%95%E5%8F%AF%E8%A1%8C%E5%90%A6/" class="archive-article-date">
-  <time datetime="2024-05-09T08:33:52.247Z" itemprop="datePublished">05/09</time>
-</a>
-      
 
-    </header>
-    
-    
-  </div>
-</article>
-      
+
+
   
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/05/07/git%E7%9A%84emoji%E5%9B%BE%E6%A0%87%E6%B3%A8%E9%87%8A/" class="archive-article-date">
-  <time datetime="2024-05-07T04:51:49.000Z" itemprop="datePublished">05/07</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/05/07/git%E7%9A%84emoji%E5%9B%BE%E6%A0%87%E6%B3%A8%E9%87%8A/"
-    >git的emoji图标注释</a> 
-</h2>
+  <h2 id="函数编程"><a class="header-anchor" href="#函数编程"></a>函数编程</h2>
+<p>什么是函数，函数就是一种规则，当我们输入x后，根据规则输出返回f(x)计算的结果给我们，f(x) 就是函数</p>
+<h3 id="合格的函数"><a class="header-anchor" href="#合格的函数"></a>合格的函数</h3>
+<p>一个合格的函数</p>
+<p>我们的规则需要不可变，也就是<font color=green> 函数内部的逻辑不可以依赖可变的外部数据</font></p>
+<h3 id="函数对象"><a class="header-anchor" href="#函数对象"></a>函数对象</h3>
+<p>函数对象的语法格式</p>
+<p>如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//参数 -&gt; 逻辑部分</span></span><br><span class="line">student -&gt; student.sex.equal(<span class="string">&quot;男&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>这就是一个函数对象，(解析：返回student的性别是否是男性的boolean值)</p>
+<p>函数对象接口定义写法 如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">interface [函数对象名称] &#123;</span><br><span class="line">    [一个函数方法]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="函数对象的好处"><a class="header-anchor" href="#函数对象的好处"></a>函数对象的好处</h4>
+<p>:happy:</p>
+<h5 id="1-行为参数化"><a class="header-anchor" href="#1-行为参数化"></a>1.行为参数化</h5>
+<p>我们可以以此写出一些通用性的方法，</p>
+<p>应用场景：一些重复代码比较多的函数,</p>
+<p>比如遍历一个数组students（里面有一些student对象），根据student性别或者年龄或者其他参数来筛选</p>
+<p>🌵 <font color=green>我们就可以使用行为参数化来实现不同的筛选条件，而不必每种不同的筛选条件都写一个新方法。</font></p>
+<p>在函数参数多加一个函数对象  ,在逻辑部分使用函数调用函数对象内的方法</p>
+<p>例如：</p>
+<p><img src="$%7Bimg%7D/image-20240510204930110-1715345810106-1.png" alt="image-20240510204930110"></p>
+<p>🔴 调用方式</p>
+<p><img src="$%7Bimg%7D/image-20240510205054281-1715345828685-4.png" alt="image-20240510205054281"></p>
  
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/04/03/u%E7%9B%98%E6%B5%8B%E8%AF%95/" class="archive-article-date">
-  <time datetime="2024-04-03T11:30:12.226Z" itemprop="datePublished">04/03</time>
-</a>
-      
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/03/22/Docker%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  <time datetime="2024-03-22T13:41:21.547Z" itemprop="datePublished">03/22</time>
-</a>
-      
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/03/08/%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87/" class="archive-article-date">
-  <time datetime="2024-03-08T14:17:37.206Z" itemprop="datePublished">03/08</time>
-</a>
-      
-
-    </header>
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/01/10/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  <time datetime="2024-01-10T07:54:00.000Z" itemprop="datePublished">01/10</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2024/01/10/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/"
-    >工作总结</a> 
-</h2>
- 
-
-    </header>
-    
-    
-  </div>
-</article>
-      
+      <!-- reward -->
       
     </div>
-  </div>
-  
-  
+    
 
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/05/10/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2024/05/09/1.%E7%94%BB%E7%A8%BF%E6%8E%A5%E5%8D%95%E5%8F%AF%E8%A1%8C%E5%90%A6/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title"></div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "6CEdnEmjyg6H7zlJEMayY50l-gzGzoHsz",
+    app_key: "1aoz5GKOhoApuM6qSHSW1d6b",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "发表你的想法吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
   
+    
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -324,6 +380,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
