@@ -155,6 +155,112 @@
     
     
     <article
+  id="post-函数编程"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2024/05/10/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time datetime="2024-05-10T12:30:47.948Z" itemprop="datePublished">2024-05-10</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="函数编程"><a class="header-anchor" href="#函数编程"></a>函数编程</h2>
+<p>什么是函数，函数就是一种规则，当我们输入x后，根据规则输出返回f(x)计算的结果给我们，f(x) 就是函数</p>
+<h3 id="合格的函数"><a class="header-anchor" href="#合格的函数"></a>合格的函数</h3>
+<p>一个合格的函数</p>
+<p>我们的规则需要不可变，也就是<font color=green> 函数内部的逻辑不可以依赖可变的外部数据</font></p>
+<h3 id="函数对象"><a class="header-anchor" href="#函数对象"></a>函数对象</h3>
+<p>函数对象的语法格式</p>
+<p>如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//参数 -&gt; 逻辑部分</span></span><br><span class="line">student -&gt; student.sex.equal(<span class="string">&quot;男&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>这就是一个函数对象，(解析：返回student的性别是否是男性的boolean值)</p>
+<p>函数对象接口定义写法 如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">interface [函数对象名称] &#123;</span><br><span class="line">    [一个函数方法]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="函数对象的好处"><a class="header-anchor" href="#函数对象的好处"></a>函数对象的好处</h4>
+<p>:happy:</p>
+<h5 id="1-行为参数化"><a class="header-anchor" href="#1-行为参数化"></a>1.行为参数化</h5>
+<p>我们可以以此写出一些通用性的方法，</p>
+<p>应用场景：一些重复代码比较多的函数,</p>
+<p>比如遍历一个数组students（里面有一些student对象），根据student性别或者年龄或者其他参数来筛选</p>
+<p>🌵 <font color=green>我们就可以使用行为参数化来实现不同的筛选条件，而不必每种不同的筛选条件都写一个新方法。</font></p>
+<p>在函数参数多加一个函数对象  ,在逻辑部分使用函数调用函数对象内的方法</p>
+<p>例如：</p>
+<p><img src="$%7Bimg%7D/image-20240510204930110-1715345810106-1.png" alt="image-20240510204930110"></p>
+<p>🔴 调用方式</p>
+<p><img src="$%7Bimg%7D/image-20240510205054281-1715345828685-4.png" alt="image-20240510205054281"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-1.画稿接单可行否"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2024/05/09/1.%E7%94%BB%E7%A8%BF%E6%8E%A5%E5%8D%95%E5%8F%AF%E8%A1%8C%E5%90%A6/" class="article-date">
+  <time datetime="2024-05-09T08:33:52.247Z" itemprop="datePublished">2024-05-09</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="1-画稿接单注意点"><a class="header-anchor" href="#1-画稿接单注意点"></a>1.画稿接单注意点</h3>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240509161226703.png" alt="image-20240509161226703"></p>
+<h2 id="知识点"><a class="header-anchor" href="#知识点"></a>知识点</h2>
+<h5 id="1-人物头"><a class="header-anchor" href="#1-人物头"></a>1.人物头</h5>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20240509161219147.png" alt="image-20240509161219147"></p>
+<h4 id="important"><a class="header-anchor" href="#important"></a>important</h4>
+<p>🔼 画画思维之  化繁为简</p>
+<p>尽量将复杂场景化为简单的几何图形结构</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-git的emoji图标注释"
   class="article article-type-post"
   itemscope
@@ -782,74 +888,14 @@
 </article>
 
     
-    <article
-  id="post-Mybatis笔记"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/08/11/Mybatis%E7%AC%94%E8%AE%B0/"
-    >Mybatis笔记</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/08/11/Mybatis%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2023-08-11T14:56:37.000Z" itemprop="datePublished">2023-08-11</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>配置mybatis  步骤如下：</p>
-<p>1.jar包和mysqljar包(必须),Junit测试jar包，pagehelper分页jar包，generator逆向过程jar包…</p>
-<p>2.创建resource文件夹：需要文件  jdbc.property,mybatis-config.xml</p>
-<p>3.创建实体类对应数据库，创建mapper.xml,绑定在mybatis-config.xml中，</p>
-<p>编写sql语句和映射关系,编写测试代码</p>
-<p>❤️ 标签,动态标签是mybatis的灵魂</p>
-<p>常用sql标签:</p>
-<p>抽离sqlsql  包含include</p>
-<p>查询 select   增删改update</p>
-<p>条件(自动去除and)where遍历foreach</p>
-<p>动态设置条件set  可以消除，加前缀后缀trim  判断if</p>
-<p>🤷‍♀️映射resultMap  类型resultType</p>
-<p>🐐进阶：使用分页插件,逆向过程一键生成</p>
-<p>1.注入依赖   或者导入生成器jar包</p>
-<p>2.配置generator.xml配置生成器信息</p>
-<p>3.运行生成器类的生成方法，进行一键生成</p>
-<p>-----以上算是个人简单的思路笔记 ----end 😎</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
   </article>
   
 
+  
+  <nav class="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+  </nav>
   
 </section>
 </div>
