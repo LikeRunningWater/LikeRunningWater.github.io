@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">334</span>
+            <span class="post-count">638</span>
         </span>
     </span>
 
@@ -80,7 +80,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
@@ -105,20 +105,33 @@
 <p>如下:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//参数 -&gt; 逻辑部分</span></span><br><span class="line">student -&gt; student.sex.equal(<span class="string">&quot;男&quot;</span>)</span><br></pre></td></tr></table></figure>
 <p>这就是一个函数对象，(解析：返回student的性别是否是男性的boolean值)</p>
-<p>函数对象接口定义写法 如下:</p>
+<p>🔴 函数对象接口定义写法 如下:（<font color=blue>也就是函数式接口,可以使用lambda匿名函数</font>）</p>
+<p>🔵 如果希望该接口更通用、可扩展  即可使用 <font color=green>泛型T </font> 来做函数方法的返回值</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">interface [函数对象名称] &#123;</span><br><span class="line">    [一个函数方法]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="函数对象的好处"><a class="header-anchor" href="#函数对象的好处"></a>函数对象的好处</h4>
-<p>:happy:</p>
-<h5 id="1-行为参数化"><a class="header-anchor" href="#1-行为参数化"></a>1.行为参数化</h5>
+<p>记得lambda表达式要看成是一个函数对象</p>
+<p>例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  ****  函数式接口的定义 ---加上泛型更具扩展性 ******//</span></span><br><span class="line"></span><br><span class="line"> <span class="meta">@FunctionalInterface</span></span><br><span class="line"> <span class="keyword">interface</span> <span class="title class_">Type2</span>&#123;</span><br><span class="line">     Object <span class="title function_">get</span><span class="params">()</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 接受任意类型实现与返回</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> &lt;T&gt;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="meta">@FunctionalInterface</span></span><br><span class="line"> <span class="keyword">interface</span> <span class="title class_">Type1</span>&lt;T&gt;&#123;</span><br><span class="line">     T <span class="title function_">get</span><span class="params">()</span>;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 接受任意类型实现与返回，接受任意参数</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> &lt;T&gt;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="meta">@FunctionalInterface</span></span><br><span class="line"> <span class="keyword">interface</span> <span class="title class_">Type3</span>&lt;O,I&gt;&#123;</span><br><span class="line">     O <span class="title function_">get</span><span class="params">(I i)</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="函数对象的好处-happy"><a class="header-anchor" href="#函数对象的好处-happy"></a>函数对象的好处:happy:</h4>
+<h5 id="行为参数化"><a class="header-anchor" href="#行为参数化"></a>行为参数化</h5>
 <p>我们可以以此写出一些通用性的方法，</p>
 <p>应用场景：一些重复代码比较多的函数,</p>
-<p>比如遍历一个数组students（里面有一些student对象），根据student性别或者年龄或者其他参数来筛选</p>
+<p>比如遍历一个数组students（里面有一些student对象），需要根据student性别或者年龄或者其他参数来筛选</p>
 <p>🌵 <font color=green>我们就可以使用行为参数化来实现不同的筛选条件，而不必每种不同的筛选条件都写一个新方法。</font></p>
-<p>在函数参数多加一个函数对象  ,在逻辑部分使用函数调用函数对象内的方法</p>
+<p>在函数参数多加一个函数对象 (下面的 Lambda 是已经定义好的函数接口) ,在逻辑部分使用函数调用函数对象内的方法</p>
 <p>例如：</p>
-<p><img src="$%7Bimg%7D/image-20240510204930110-1715345810106-1.png" alt="image-20240510204930110"></p>
+<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240510204930110.png" alt="通用性函数"></p>
 <p>🔴 调用方式</p>
-<p><img src="$%7Bimg%7D/image-20240510205054281-1715345828685-4.png" alt="image-20240510205054281"></p>
+<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240510205054281.png" alt="调用方式"></p>
+<h4 id="方法引用"><a class="header-anchor" href="#方法引用"></a>方法引用</h4>
+<p>如图，是lambda表达式的简写版本</p>
+<p>👍 tips: <font color=green> 只要注意方法引用的方法需要什么参数才能执行，即可推断出lambda写法</font></p>
+<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240513164550524.png" alt="方法引用与lambda等价写法"></p>
+<h4 id="JDK-中的函数式接口"><a class="header-anchor" href="#JDK-中的函数式接口"></a>JDK 中的函数式接口</h4>
+<p>其实<code>jdk</code>中已经定义好了一些函数式接口方便我们使用，满足我们大部分的需求了，所以我们基本不需要自定义了,直接调用就行</p>
+<p>🔴这是<code>jdk</code>中我们常用的函数式接口 ，lambda写法对应参数与返回值如下</p>
+<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240513180239730.png" alt="常见函数式接口特点"></p>
+<p>附上梳理图</p>
+<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240513181000470.png" alt="梳理"></p>
  
       <!-- reward -->
       
