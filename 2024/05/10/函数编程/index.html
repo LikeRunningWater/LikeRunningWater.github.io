@@ -98,7 +98,7 @@
   <h2 id="函数编程"><a class="header-anchor" href="#函数编程"></a>函数编程</h2>
 <p>什么是函数，函数就是一种规则，当我们输入x后，根据规则输出返回f(x)计算的结果给我们，f(x) 就是函数</p>
 <h3 id="合格的函数"><a class="header-anchor" href="#合格的函数"></a>合格的函数</h3>
-<p>一个合格的函数</p>
+<p>✅一个合格的函数</p>
 <p>我们的规则需要不可变，也就是<font color=green> 函数内部的逻辑不可以依赖可变的外部数据</font></p>
 <h3 id="函数对象"><a class="header-anchor" href="#函数对象"></a>函数对象</h3>
 <p>函数对象的语法格式</p>
@@ -111,7 +111,7 @@
 <p>记得lambda表达式要看成是一个函数对象</p>
 <p>例子：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  ****  函数式接口的定义 ---加上泛型更具扩展性 ******//</span></span><br><span class="line"></span><br><span class="line"> <span class="meta">@FunctionalInterface</span></span><br><span class="line"> <span class="keyword">interface</span> <span class="title class_">Type2</span>&#123;</span><br><span class="line">     Object <span class="title function_">get</span><span class="params">()</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 接受任意类型实现与返回</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> &lt;T&gt;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="meta">@FunctionalInterface</span></span><br><span class="line"> <span class="keyword">interface</span> <span class="title class_">Type1</span>&lt;T&gt;&#123;</span><br><span class="line">     T <span class="title function_">get</span><span class="params">()</span>;</span><br><span class="line"> &#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 接受任意类型实现与返回，接受任意参数</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@param</span> &lt;T&gt;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="meta">@FunctionalInterface</span></span><br><span class="line"> <span class="keyword">interface</span> <span class="title class_">Type3</span>&lt;O,I&gt;&#123;</span><br><span class="line">     O <span class="title function_">get</span><span class="params">(I i)</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<h4 id="函数对象的好处-happy"><a class="header-anchor" href="#函数对象的好处-happy"></a>函数对象的好处:happy:</h4>
+<h4 id="函数对象的好处​-happy"><a class="header-anchor" href="#函数对象的好处​-happy"></a>函数对象的好处​ :happy:</h4>
 <h5 id="行为参数化"><a class="header-anchor" href="#行为参数化"></a>行为参数化</h5>
 <p>我们可以以此写出一些通用性的方法，</p>
 <p>应用场景：一些重复代码比较多的函数,</p>
@@ -207,10 +207,19 @@
    
   <nav class="article-nav">
     
+      <a href="/2024/05/29/%E4%BA%BA%E7%94%9F%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            人生第二次面试
+          
+        </div>
+      </a>
     
-      <a href="/2024/05/09/1.%E7%94%BB%E7%A8%BF%E6%8E%A5%E5%8D%95%E5%8F%AF%E8%A1%8C%E5%90%A6/" class="article-nav-link">
+    
+      <a href="/2024/05/07/git%E7%9A%84emoji%E5%9B%BE%E6%A0%87%E6%B3%A8%E9%87%8A/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title"></div>
+        <div class="article-nav-title">git的emoji图标注释</div>
       </a>
     
   </nav>
@@ -613,20 +622,26 @@
     
     
     <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
-        src="//music.163.com/outchain/player?type=2&id=1483488615&auto=0&height=32"></iframe>
+        src="//music.163.com/outchain/player?type=2&id=1861579822&auto=1&height=32"></iframe>
 </div>
 
 <style>
     #music {
         position: fixed;
-        right: 15px;
-        bottom: 0;
+        right: 15px; /*右下角*/
+		/*left: 15px; */ 
+       /* bottom: 0;*/
+	   top: 15px;
         z-index: 998;
     }
 </style>
     
     
 
+	//引入
+	<script src="/live2d-widget/autoload.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   </div>
 </body>
 
