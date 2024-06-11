@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-10T06:46:26.308Z</updated>
+  <updated>2024-06-11T12:01:18.947Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,12 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>六月灌水</title>
-    <link href="http://example.com/2024/06/10/%E5%85%AD%E6%9C%88%E7%81%8C%E6%B0%B4/"/>
-    <id>http://example.com/2024/06/10/%E5%85%AD%E6%9C%88%E7%81%8C%E6%B0%B4/</id>
-    <published>2024-06-10T06:46:26.000Z</published>
-    <updated>2024-06-10T06:46:26.308Z</updated>
+    <title>boringTalk</title>
+    <link href="http://example.com/2024/06/11/boringTalk/"/>
+    <id>http://example.com/2024/06/11/boringTalk/</id>
+    <published>2024-06-11T12:00:17.000Z</published>
+    <updated>2024-06-11T12:01:18.947Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="水水水"><a class="header-anchor" href="#水水水"></a>水水水</h2><p>boring…</p><p>🌊</p><p>注意进厂时机 🏭</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;水水水&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#水水水&quot;&gt;&lt;/a&gt;水水水&lt;/h2&gt;
+&lt;p&gt;boring…&lt;/p&gt;
+&lt;p&gt;🌊&lt;/p&gt;
+&lt;p&gt;注意进厂时机 🏭&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>水一篇</title>
+    <link href="http://example.com/2024/06/10/%E6%B0%B4%E4%B8%80%E7%AF%87/"/>
+    <id>http://example.com/2024/06/10/%E6%B0%B4%E4%B8%80%E7%AF%87/</id>
+    <published>2024-06-10T06:47:43.000Z</published>
+    <updated>2024-06-11T11:52:07.965Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="🌊-水一篇文章"><a class="header-anchor" href="#🌊-水一篇文章"></a>🌊 水一篇文章</h4><p>六月了，昨天和朋友第一次体会他们喝酒玩色子 🎲 的规则。我了解到他们所谓的规则</p><p>每人有5个骰子，每次每个人都要说一组数字(比如3个1、6个6等等),这组数字是<br><font color=green>骰子数量*点数</font></p><p>需要每次的说出的这组数字的骰子数量或者点数要比上一组说的大(比如上一个人说了3个1，轮到你可以说3个2或者4个1等等)，也可以说开(开代表着所有玩家亮出骰子，如果上一个人说的条件<br>——<font color=red>在场所有玩家的骰子点数和数量满足他所说的那组数字</font> （例如3个2必须有或者多于3个2的点数）<br>——不符合则他输，否则你输)<br>🔴1默认是个万能点数(可以看作其他点数)，有时只能作为1的点数。</p><p>斋:默认是1为万能点数<br>破斋:1无法作为万能点数，只能作为1，如果有人说的那组数 骰子数量小于上一个人 那么就可以说是破斋了</p><p>其余还有劈，反劈等等这些，笔者也不懂只是了解了大概。</p><p>最后还是说，这只是个为了喝酒娱乐而设计的小游戏，主要是靠一些心理博弈，输了也没什么惩罚就是喝一杯。</p><p>有的人觉得好玩，有的人觉得无聊(笔者就是,其实是不太喜欢这种场合呵呵)。</p><p>✌️ have a nice time!</p><p>端午安康🦆</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;🌊-水一篇文章&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#🌊-水一篇文章&quot;&gt;&lt;/a&gt;🌊 水一篇文章&lt;/h4&gt;
+&lt;p&gt;六月了，昨天和朋友第一次体会他们喝酒玩色子 🎲 的规则。我了解到他们所谓的规则&lt;/p&gt;
+&lt;p&gt;每人有5个骰子，每次每</summary>
+      
     
     
     
@@ -78,7 +111,7 @@
     <link href="http://example.com/2024/05/07/git%E7%9A%84emoji%E5%9B%BE%E6%A0%87%E6%B3%A8%E9%87%8A/"/>
     <id>http://example.com/2024/05/07/git%E7%9A%84emoji%E5%9B%BE%E6%A0%87%E6%B3%A8%E9%87%8A/</id>
     <published>2024-05-07T04:51:49.000Z</published>
-    <updated>2024-05-07T06:19:12.550Z</updated>
+    <updated>2024-06-10T07:14:24.731Z</updated>
     
     <content type="html"><![CDATA[<h2 id="gitmoji"><a class="header-anchor" href="#gitmoji"></a>gitmoji</h2><p>有时我们会想在git上使用emoji来轻松一下我们的内容，所以就涉及了这个网站</p><p><a href="https://gitmoji.dev/">gitmoji | An emoji guide for your commit messages</a></p><p>这里是各种emoji的使用方式</p><p>例如:</p><p>🎨</p><p>⚡</p><p>🔥</p><p>🐛  (bug)</p><p>📝</p><p>🚀</p><p>✨</p><p>✅</p><p>💩</p><p>💡</p><p>💬</p><p>🔇</p><p>🤡</p><p>🔍</p><p>😃</p><p>💢</p><p>😠</p><p>:happy:</p><p>等一些emoji，其实很写法简单,就是   : 英文名称:            比如🐛  只需输入: bug ：（要使用英文标点）</p><h3 id="but"><a class="header-anchor" href="#but"></a>but</h3><p>😱 但是有个问题…</p><p>Hexo默认的markdown渲染引擎<a href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>已经不再支持将Github emoji渲染到静态的html中</p><p>所以直接使用在文章发布后你会发现没有emoji,所以得稍稍配置一下…(我直接百度🐶 )</p><h2 id="使用插件"><a class="header-anchor" href="#使用插件"></a>使用插件</h2><p>这里推荐的是 <code>hexo-renderer-markdown-it</code> 渲染器，支持扩展，采用的是 <code>markdown-it</code> 的内核来解析 markdown 的文本。</p><h3 id="第一步"><a class="header-anchor" href="#第一步"></a>第一步</h3><p>在你的blog目录下</p><p>先卸载掉原来的<a href="https://github.com/hexojs/hexo-renderer-marked">hexo-renderer-marked</a>，然后下载新的插件<a href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it</a>和<a href="https://github.com/markdown-it/markdown-it-emoji">markdown-it-emoji</a></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked -S</span><br><span class="line">npm i hexo-renderer-markdown-it -S</span><br><span class="line"></span><br><span class="line">npm i markdown-it-emoji markdown-it-task-lists -S</span><br></pre></td></tr></table></figure><h3 id="第二步"><a class="header-anchor" href="#第二步"></a>第二步</h3><p>❗ 在你的根目录的<font color=green> _config.yaml</font>下添加下面这段配置(注意是根目录blog下的 _config.yaml)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#让hexo支持emoji增加的插件配置  </span><br><span class="line">markdown:</span><br><span class="line">  render:</span><br><span class="line">    html: true # 在 markdown 文本中支持 html tag 标签</span><br><span class="line">    xhtmlOut: false # 需要 xtml 文档，使用 &lt;br /&gt; 替代 &lt;br&gt;</span><br><span class="line">    breaks: true # 用 &lt;br&gt; 开始新的一行</span><br><span class="line">    linkify: true # 自动将 可能是链接的内容转换成链接</span><br><span class="line">    typographer: true # 印刷标识转换</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">    - markdown-it-emoji </span><br><span class="line">    - markdown-it-task-lists</span><br><span class="line">  anchors:</span><br><span class="line">    level: 2</span><br><span class="line">    collisionSuffix: &#x27;&#x27;</span><br><span class="line">    permalink: false,</span><br><span class="line">    permalinkClass: &#x27;header-anchor&#x27;</span><br><span class="line">    permalinkSymbol: &#x27;&#x27;</span><br><span class="line">    case: 0</span><br><span class="line">    separator: &#x27;&#x27;</span><br><span class="line">  </span><br></pre></td></tr></table></figure><p>然后提交就ok了</p><p>以上步骤应该就能支持emoji了</p><p>参考文章 :</p><p><a href="https://luckysusu.top/post/hexo_emoji.html">hexo中使用emoji表情 | 苏苏の休憩小屋 (luckysusu.top)</a></p><p><a href="https://zhuanlan.zhihu.com/p/102325252">Hexo 中使用 emoji 和 tasks - 知乎 (zhihu.com)</a></p><h4 id="部分emoji使用编码参考-🧐"><a class="header-anchor" href="#部分emoji使用编码参考-🧐"></a>部分emoji使用编码参考   🧐</h4><table><thead><tr><th style="text-align:left">人物</th><th>自然</th><th>事物</th><th>地点</th></tr></thead><tbody><tr><td style="text-align:left"><strong>😐</strong> <code>:neutral_face:</code></td><td>☀️ <code>:sunny:</code></td><td><strong>💝</strong> <code>:gift_heart:</code></td><td>🏠<code>:house:</code></td></tr><tr><td style="text-align:left">😄 <code>:smile:</code></td><td>❄️ <code>:snowflake:</code></td><td>🎁 <code>:gift:</code></td><td>🏫<code>:school:</code></td></tr><tr><td style="text-align:left">😍 <code>:heart_eyes:</code></td><td><strong>☔️</strong> <code>:umbrella:</code></td><td>🎏 <code>:flags:</code></td><td>🏥<code>:hospital:</code></td></tr><tr><td style="text-align:left">😘 <code>:kissing_heart:</code></td><td><strong>☁️</strong> <code>:cloud:</code></td><td>🔔 <code>:bell:</code></td><td>🗾<code>:japan:</code></td></tr><tr><td style="text-align:left">😓 <code>:sweat:</code></td><td>⚡️ <code>:zap:</code></td><td>🎄 <code>:christmas_tree:</code></td><td>🏭<code>:factory:</code></td></tr><tr><td style="text-align:left">😤 <code>:triumph:</code></td><td>🐷 <code>:pig:</code></td><td>☎️ <code>:phone:</code></td><td>✈️<code>:airplane:</code></td></tr><tr><td style="text-align:left">😨 <code>:fearful:</code></td><td>🐗 <code>:boar:</code></td><td>🔉 <code>:sound:</code></td><td>🚲<code>:bike:</code></td></tr><tr><td style="text-align:left">😎 <code>:sunglasses</code></td><td>🐑 <code>:sheep:</code></td><td>📢 <code>:loudspeaker:</code></td><td>🚕<code>:taxi:</code></td></tr><tr><td style="text-align:left">😭 <code>:sob:</code></td><td>🐁 <code>:mouse2:</code></td><td>📰 <code>:newspaper:</code></td><td>🚌<code>:bus:</code></td></tr></tbody></table><p>详细请看参考文章或者文档 ,<a href="https://gitmoji.dev/">附上git支持emoji地址gitmoji</a></p>]]></content>
     
@@ -110,28 +143,6 @@
     <summary type="html">&lt;p&gt;省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能😢&lt;/p&gt;
 &lt;p&gt;1.测试软件: &lt;strong&gt;Parkdale&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;结果:HIKSEMI - 3.00 58.6 GB HIKSEMI (G:): 37.9 M</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2024/03/22/Docker%E7%AC%94%E8%AE%B0/"/>
-    <id>http://example.com/2024/03/22/Docker%E7%AC%94%E8%AE%B0/</id>
-    <published>2024-03-22T13:41:21.547Z</published>
-    <updated>2024-03-22T13:46:33.494Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="DockerNote"><a class="header-anchor" href="#DockerNote"></a>DockerNote</h2><p>虚拟容器作用:模拟运行环境</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;DockerNote&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#DockerNote&quot;&gt;&lt;/a&gt;DockerNote&lt;/h2&gt;
-&lt;p&gt;虚拟容器作用:模拟运行环境&lt;/p&gt;
-</summary>
       
     
     
@@ -264,7 +275,7 @@
     <link href="http://example.com/2023/08/11/Mybatis%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2023/08/11/Mybatis%E7%AC%94%E8%AE%B0/</id>
     <published>2023-08-11T14:56:37.000Z</published>
-    <updated>2023-08-11T16:56:19.599Z</updated>
+    <updated>2024-06-10T07:14:54.982Z</updated>
     
     <content type="html"><![CDATA[<p>配置mybatis  步骤如下：</p><p>1.jar包和mysqljar包(必须),Junit测试jar包，pagehelper分页jar包，generator逆向过程jar包…</p><p>2.创建resource文件夹：需要文件  jdbc.property,mybatis-config.xml</p><p>3.创建实体类对应数据库，创建mapper.xml,绑定在mybatis-config.xml中，</p><p>编写sql语句和映射关系,编写测试代码</p><p>❤️ 标签,动态标签是mybatis的灵魂</p><p>常用sql标签:</p><p>抽离sqlsql  包含include</p><p>查询 select   增删改update</p><p>条件(自动去除and)where遍历foreach</p><p>动态设置条件set  可以消除，加前缀后缀trim  判断if</p><p>🤷‍♀️映射resultMap  类型resultType</p><p>🐐进阶：使用分页插件,逆向过程一键生成</p><p>1.注入依赖   或者导入生成器jar包</p><p>2.配置generator.xml配置生成器信息</p><p>3.运行生成器类的生成方法，进行一键生成</p><p>-----以上算是个人简单的思路笔记 ----end 😎</p>]]></content>
     

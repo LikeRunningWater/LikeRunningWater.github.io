@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2024/03/22/Docker%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="DockerNote"><a class="header-anchor" href="#DockerNote"></a>DockerNote</h2>
-<p>虚拟容器作用:模拟运行环境</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Mybatis笔记</title>
     <url>/2023/08/11/Mybatis%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>配置mybatis  步骤如下：</p>
@@ -153,6 +146,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>boringTalk</title>
+    <url>/2024/06/11/boringTalk/</url>
+    <content><![CDATA[<h2 id="水水水"><a class="header-anchor" href="#水水水"></a>水水水</h2>
+<p>boring…</p>
+<p>🌊</p>
+<p>注意进厂时机 🏭</p>
+]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/2024/04/03/u%E7%9B%98%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能😢</p>
@@ -185,6 +187,16 @@
 <p>P.s :  随机=random['rændəm]   顺序=sequence[ˈsiːkwəns]</p>
 <p>4.测试软件: <strong>ATTO Disk Benchmark</strong></p>
 <p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403200357838.png" alt="image-20240403200357838"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>人生第二次面试</title>
+    <url>/2024/05/29/%E4%BA%BA%E7%94%9F%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95/</url>
+    <content><![CDATA[<p>我想分享我的第二次面试的经历，笔者是个毕业一年的fw大专程序员 😢</p>
+<h3 id="故事"><a class="header-anchor" href="#故事"></a>故事</h3>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">	笔者姑且算个不合格的程序员，技术局限在java语言和一些框架的应用,</span><br><span class="line">对源码和算法没有什么深入了解,算是个copy</span><br><span class="line">码农。已经失业半年了，然而笔者不甘心仍然想继续在计算机行业发展，</span><br><span class="line">近期简历被一个中小企业邀请去面试了。我大为欣喜，</span><br><span class="line">一天时间基本把面试题和基本技术要求看了七七八八，其实好久没写代码了我。 :D</span><br><span class="line">	虽然但是没想到在面试那天下午我发现有6个哥们来面试和我一样的岗位，</span><br><span class="line">不过当时我想也正常,择优筛选嘛。</span><br><span class="line">人事先给我们发了张java笔试卷子，基本没什么难度，</span><br><span class="line">我做完后来了个类似资深程序员和我一对一谈话（应该大部分小公司面试流程都这样的吧）。</span><br><span class="line">	重点来了，谈话过程就不详谈了，该公司需要的是全栈工程师...</span><br><span class="line">说项目很多基本可能要一个人负责一个项目而且进度也可能要自己把握自己交付。</span><br><span class="line">我顿时感觉不对就问你们是外包吗,他说也有承接项目和自研项目。</span><br><span class="line">	好吧,我觉得这个不好说,但是我进去就是独立做外包项目给他们,</span><br><span class="line">我感觉又要gg了。大中公司不要我，小公司想拉扯我...</span><br><span class="line">真的还有必要继续坚持java开发么？</span><br><span class="line">生活来源需要钱，可是继续没工作-&gt;投简历这段时间很挂逼。</span><br><span class="line">	我是上过班的，我明白上班后996的辛苦和每天回家一个人的emo时间，</span><br><span class="line">我不明白上班的意义，而且每天伏案打代码，现在身体腰椎颈椎都时不时疼痛，</span><br><span class="line">时常头晕得难受，身体越来越虚。眼睛度数不知道又加剧了多少，</span><br><span class="line">家里人只是希望我能工作，我没什么朋友，我上班又会积攒很多负面情绪，</span><br><span class="line">一直觉得自己干啥不行。那段上班时间我差点抑郁了，所以我离职了。</span><br><span class="line">	在别人看来我很矫情吃不了苦，我也确实承认有一部分。</span><br><span class="line">	打算放弃java放弃计算机了，可能真的不适合我。</span><br></pre></td></tr></table></figure>
+<p>以上是笔者真诚得心路历程和想法，谢谢</p>
+<p>💇</p>
 ]]></content>
   </entry>
   <entry>
@@ -227,16 +239,6 @@
 <p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240513180239730.png" alt="常见函数式接口特点"></p>
 <p>附上梳理图</p>
 <p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240513181000470.png" alt="梳理"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>人生第二次面试</title>
-    <url>/2024/05/29/%E4%BA%BA%E7%94%9F%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95/</url>
-    <content><![CDATA[<p>我想分享我的第二次面试的经历，笔者是个毕业一年的fw大专程序员 😢</p>
-<h3 id="故事"><a class="header-anchor" href="#故事"></a>故事</h3>
-<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">	笔者姑且算个不合格的程序员，技术局限在java语言和一些框架的应用,</span><br><span class="line">对源码和算法没有什么深入了解,算是个copy</span><br><span class="line">码农。已经失业半年了，然而笔者不甘心仍然想继续在计算机行业发展，</span><br><span class="line">近期简历被一个中小企业邀请去面试了。我大为欣喜，</span><br><span class="line">一天时间基本把面试题和基本技术要求看了七七八八，其实好久没写代码了我。 :D</span><br><span class="line">	虽然但是没想到在面试那天下午我发现有6个哥们来面试和我一样的岗位，</span><br><span class="line">不过当时我想也正常,择优筛选嘛。</span><br><span class="line">人事先给我们发了张java笔试卷子，基本没什么难度，</span><br><span class="line">我做完后来了个类似资深程序员和我一对一谈话（应该大部分小公司面试流程都这样的吧）。</span><br><span class="line">	重点来了，谈话过程就不详谈了，该公司需要的是全栈工程师...</span><br><span class="line">说项目很多基本可能要一个人负责一个项目而且进度也可能要自己把握自己交付。</span><br><span class="line">我顿时感觉不对就问你们是外包吗,他说也有承接项目和自研项目。</span><br><span class="line">	好吧,我觉得这个不好说,但是我进去就是独立做外包项目给他们,</span><br><span class="line">我感觉又要gg了。大中公司不要我，小公司想拉扯我...</span><br><span class="line">真的还有必要继续坚持java开发么？</span><br><span class="line">生活来源需要钱，可是继续没工作-&gt;投简历这段时间很挂逼。</span><br><span class="line">	我是上过班的，我明白上班后996的辛苦和每天回家一个人的emo时间，</span><br><span class="line">我不明白上班的意义，而且每天伏案打代码，现在身体腰椎颈椎都时不时疼痛，</span><br><span class="line">时常头晕得难受，身体越来越虚。眼睛度数不知道又加剧了多少，</span><br><span class="line">家里人只是希望我能工作，我没什么朋友，我上班又会积攒很多负面情绪，</span><br><span class="line">一直觉得自己干啥不行。那段上班时间我差点抑郁了，所以我离职了。</span><br><span class="line">	在别人看来我很矫情吃不了苦，我也确实承认有一部分。</span><br><span class="line">	打算放弃java放弃计算机了，可能真的不适合我。</span><br></pre></td></tr></table></figure>
-<p>以上是笔者真诚得心路历程和想法，谢谢</p>
-<p>💇</p>
 ]]></content>
   </entry>
   <entry>
@@ -308,6 +310,26 @@
 <p>工作如果真的无法适应，并且你尝试做出了努力，那么就离开它。</p>
 <p>合适的工作才是长久的，离职也不</p>
 <p>是一个坏的选择，花一些时间考虑清楚自己的规划和意愿，自由思考的感觉真棒。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>水一篇</title>
+    <url>/2024/06/10/%E6%B0%B4%E4%B8%80%E7%AF%87/</url>
+    <content><![CDATA[<h4 id="🌊-水一篇文章"><a class="header-anchor" href="#🌊-水一篇文章"></a>🌊 水一篇文章</h4>
+<p>六月了，昨天和朋友第一次体会他们喝酒玩色子 🎲 的规则。我了解到他们所谓的规则</p>
+<p>每人有5个骰子，每次每个人都要说一组数字(比如3个1、6个6等等),这组数字是<br>
+<font color=green>骰子数量*点数</font></p>
+<p>需要每次的说出的这组数字的骰子数量或者点数要比上一组说的大(比如上一个人说了3个1，轮到你可以说3个2或者4个1等等)，也可以说开(开代表着所有玩家亮出骰子，如果上一个人说的条件<br>
+——<font color=red>在场所有玩家的骰子点数和数量满足他所说的那组数字</font> （例如3个2必须有或者多于3个2的点数）<br>
+——不符合则他输，否则你输)<br>
+🔴1默认是个万能点数(可以看作其他点数)，有时只能作为1的点数。</p>
+<p>斋:默认是1为万能点数<br>
+破斋:1无法作为万能点数，只能作为1，如果有人说的那组数 骰子数量小于上一个人 那么就可以说是破斋了</p>
+<p>其余还有劈，反劈等等这些，笔者也不懂只是了解了大概。</p>
+<p>最后还是说，这只是个为了喝酒娱乐而设计的小游戏，主要是靠一些心理博弈，输了也没什么惩罚就是喝一杯。</p>
+<p>有的人觉得好玩，有的人觉得无聊(笔者就是,其实是不太喜欢这种场合呵呵)。</p>
+<p>✌️ have a nice time!</p>
+<p>端午安康🦆</p>
 ]]></content>
   </entry>
   <entry>
@@ -390,10 +412,5 @@
 </ol>
 <p>🔚</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>六月灌水</title>
-    <url>/2024/06/10/%E5%85%AD%E6%9C%88%E7%81%8C%E6%B0%B4/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
