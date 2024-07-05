@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> Hexo</title>
+      <title>函数式编程 |  Hexo</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -61,17 +61,27 @@
   data-scroll-reveal
 >
   <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  函数式编程
+</h1>
+ 
+
+      
+    </header>
      
     <div class="article-meta">
-      <a href="/2024/05/10/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B/" class="article-date">
-  <time datetime="2024-05-10T12:30:47.948Z" itemprop="datePublished">2024-05-10</time>
+      <a href="/2024/06/09/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time datetime="2024-06-09T12:54:00.000Z" itemprop="datePublished">2024-06-09</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">638</span>
+            <span class="post-count">727</span>
         </span>
     </span>
 
@@ -132,8 +142,25 @@
 <p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240513180239730.png" alt="常见函数式接口特点"></p>
 <p>附上梳理图</p>
 <p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240513181000470.png" alt="梳理"></p>
+<h4 id="方法引用类型和Stream流："><a class="header-anchor" href="#方法引用类型和Stream流："></a>方法引用类型和Stream流：</h4>
+<ol>
+<li>
+<p><strong>类名: : 静态方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Stream.of(</span><br><span class="line">	<span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;张三&quot;</span>,<span class="number">18</span>),</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;李四&quot;</span>,<span class="number">20</span>)</span><br><span class="line">)    <span class="comment">//打印</span></span><br><span class="line">   <span class="comment">// .forEach((stu)-&gt;System.out.println(stu) )    #lambda写法 </span></span><br><span class="line">  .forEach(Method01::printStudent) <span class="comment">//静态方法引用 写法</span></span><br><span class="line">    ....</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span>  <span class="keyword">class</span> <span class="title class_">Method01</span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">printStudent</span><span class="params">(Student stu)</span>&#123;</span><br><span class="line">    System.out.println(stu)</span><br><span class="line">	&#125;    </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>类名: : 非静态方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//参数--&gt;逻辑</span></span><br><span class="line">Student::getName   -&gt;stu.getName()</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+</li>
+</ol>
  
       <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
       
     </div>
     
@@ -196,7 +223,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/05/10/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/06/09/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -207,19 +234,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2024/05/29/%E4%BA%BA%E7%94%9F%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95/" class="article-nav-link">
+      <a href="/2024/06/10/%E6%B0%B4%E4%B8%80%E7%AF%87/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            人生第二次面试
+            水一篇
           
         </div>
       </a>
     
     
-      <a href="/2024/05/07/git%E7%9A%84emoji%E5%9B%BE%E6%A0%87%E6%B3%A8%E9%87%8A/" class="article-nav-link">
+      <a href="/2024/05/29/%E4%BA%BA%E7%94%9F%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">git的emoji图标注释</div>
+        <div class="article-nav-title">人生第二次面试</div>
       </a>
     
   </nav>
