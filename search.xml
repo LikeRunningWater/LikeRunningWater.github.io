@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>boringTalk</title>
+    <url>/2024/06/11/boringTalk/</url>
+    <content><![CDATA[<h2 id="水水水"><a class="header-anchor" href="#水水水"></a>水水水</h2>
+<p>boring…</p>
+<p>🌊</p>
+<p>注意进厂时机 🏭</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Mybatis笔记</title>
     <url>/2023/08/11/Mybatis%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>配置mybatis  步骤如下：</p>
@@ -146,15 +155,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>boringTalk</title>
-    <url>/2024/06/11/boringTalk/</url>
-    <content><![CDATA[<h2 id="水水水"><a class="header-anchor" href="#水水水"></a>水水水</h2>
-<p>boring…</p>
-<p>🌊</p>
-<p>注意进厂时机 🏭</p>
-]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/2024/04/03/u%E7%9B%98%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能😢</p>
@@ -200,8 +200,8 @@
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2024/05/10/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B/</url>
+    <title>函数式编程</title>
+    <url>/2024/06/09/%E5%87%BD%E6%95%B0%E7%BC%96%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="函数编程"><a class="header-anchor" href="#函数编程"></a>函数编程</h2>
 <p>什么是函数，函数就是一种规则，当我们输入x后，根据规则输出返回f(x)计算的结果给我们，f(x) 就是函数</p>
 <h3 id="合格的函数"><a class="header-anchor" href="#合格的函数"></a>合格的函数</h3>
@@ -239,6 +239,17 @@
 <p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240513180239730.png" alt="常见函数式接口特点"></p>
 <p>附上梳理图</p>
 <p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240513181000470.png" alt="梳理"></p>
+<h4 id="方法引用类型和Stream流："><a class="header-anchor" href="#方法引用类型和Stream流："></a>方法引用类型和Stream流：</h4>
+<ol>
+<li>
+<p><strong>类名: : 静态方法</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Stream.of(</span><br><span class="line">	<span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;张三&quot;</span>,<span class="number">18</span>),</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;李四&quot;</span>,<span class="number">20</span>)</span><br><span class="line">)    <span class="comment">//打印</span></span><br><span class="line">   <span class="comment">// .forEach((stu)-&gt;System.out.println(stu) )    #lambda写法 </span></span><br><span class="line">  .forEach(Method01::printStudent) <span class="comment">//静态方法引用 写法</span></span><br><span class="line">    ....</span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span>  <span class="keyword">class</span> <span class="title class_">Method01</span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">printStudent</span><span class="params">(Student stu)</span>&#123;</span><br><span class="line">    System.out.println(stu)</span><br><span class="line">	&#125;    </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>类名: : 非静态方法</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//参数--&gt;逻辑</span></span><br><span class="line">Student::getName   -&gt;stu.getName()</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 ]]></content>
   </entry>
   <entry>
