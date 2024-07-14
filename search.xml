@@ -424,4 +424,49 @@
 <p>🔚</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>mqtt学习</title>
+    <url>/2024/07/12/mqtt%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="MQTT"><a class="header-anchor" href="#MQTT"></a>MQTT</h2>
+<h4 id="背景说明"><a class="header-anchor" href="#背景说明"></a>背景说明</h4>
+<p>笔者是个java菜鸡,目前工作中接触了物联网方面也就是 IOT</p>
+<p>自然也接触到了MQTT,我想记录记录也介绍下 MQTT</p>
+<h4 id="1-What-is-MQTT-😲"><a class="header-anchor" href="#1-What-is-MQTT-😲"></a>1.What is MQTT? 😲</h4>
+<p><a href="https://www.emqx.com/zh/blog/the-easiest-guide-to-getting-started-with-mqtt">MQTT</a>  是一种轻量级的通讯协议,如 HTTP 类似用来发送和接受信息的,是专为资源受限的设备和低带宽、高延迟或不可靠的网络而设计.符合物联网设备的需求,因为可能有些时候设备比较边缘网络比较差等等原因,</p>
+<p>这些物联网设备使用 MQTT 进行数据传输，因为它易于实施，并且可以有效地传输物联网数据。MQTT 支持设备到云端和云端到设备之间的消息传递。</p>
+<h4 id="2-How-to-Communicate"><a class="header-anchor" href="#2-How-to-Communicate"></a>2.How to Communicate ?</h4>
+<p>MQTT是一种类似消息队列的  <font color=green>发布–订阅</font>模式  , Client 间的通信就靠 Topic 主题的订阅和推送进行.</p>
+<p>MQTT不同于 MQTT 是有个 Broker–代理, MQTT 代理是协调不同客户端之间消息的后端系统。代理的职责包括接收和筛选消息、识别订阅每条消息的客户端，以及向他们发送消息。它还负责其他任务，例如：</p>
+<ul>
+<li>授权 MQTT 客户端以及对其进行身份验证</li>
+<li>将消息传递给其他系统以进行进一步分析</li>
+<li>处理错过的消息和客户端会话</li>
+</ul>
+<p>MQTT 原理: 客户端和代理开始使用 MQTT 连接进行通信。客户端通过向 MQTT 代理发送 <em>CONNECT</em> 消息来启动连接。代理通过响应 <em>CONNACK</em> 消息来确认已建立连接。MQTT 客户端和代理都需要 TCP/IP 堆栈进行通信。<em><strong>客户端从不相互联系，它们只与代理联系</strong></em>。</p>
+<p>例如下面:  一个客户端发布一个订阅,  每个客户端都可以发布和订阅   ,中间是需要靠 broker 转发订阅的消息的</p>
+<p><img src="$%7Bimg%7D/mqtt_2024-07-12_22-01-03.jpg" alt="img"></p>
+<h4 id="MQTT-publish"><a class="header-anchor" href="#MQTT-publish"></a>MQTT publish</h4>
+<p>MQTT 客户端以字节格式发布包含主题和数据的消息。客户端确定数据格式，例如文本数据、二进制数据、XML 或 JSON 文件。例如，智能家居系统中的灯可能会针对主题 <em>livingroom/light</em> 发布消息 <em>on</em>。</p>
+<h4 id="MQTT-subscribe"><a class="header-anchor" href="#MQTT-subscribe"></a><strong>MQTT subscribe</strong></h4>
+<p>MQTT 客户端向 MQTT 代理发送 <em>SUBSCRIBE</em> 消息，以接收有关感兴趣主题的消息。此消息包含唯一标识符和订阅列表。例如，您手机上的智能家居应用程序想要显示您家中有多少灯亮着。它将订阅主题 <em>light</em> 并增加所有 <em>on</em> 消息的计数器。</p>
+<p>*** MQTT 通过 Qos 来决定推送消息的模式**</p>
+<ul>
+<li>
+<p>QoS 0，最多交付一次。</p>
+</li>
+<li>
+<p>QoS 1，至少交付一次。</p>
+</li>
+<li>
+<p>QoS 2，只交付一次。</p>
+</li>
+</ul>
+<p>其中，使用 QoS 0 可能丢失消息，使用 QoS 1 可以保证收到消息，但消息可能重复，使用 QoS 2 可以保证消息既不丢失也不重复。QoS 等级从低到高，不仅意味着消息可靠性的提升，也意味着传输复杂程度的提升。</p>
+<p>**在一个完整的从发布者到订阅者的消息投递流程中，QoS 等级是由发布者在 PUBLISH 报文中指定的，大部分情况下 Broker 向订阅者转发消息时都会维持原始的 QoS 不变。不过也有一些例外的情况，根据订阅者的订阅要求，消息的 QoS 等级可能会在转发的时候发生降级。 **</p>
+<h3 id="MQTT-的文件传输"><a class="header-anchor" href="#MQTT-的文件传输"></a>MQTT 的文件传输</h3>
+<p>是一种基于 TCP 的物联网通信协议，其 Payload 可以容纳任意类型的数据，例如文本、二进制、JSON、XML 等多种格式。这种灵活性使得 MQTT 在物联网应用中拥有广泛的适用性，能够满足不同场景下多样化数据传输的需求。</p>
+<p><a href="https://docs.emqx.com/zh/enterprise/latest/file-transfer/client.html">文件传输客户端开发 | EMQX 企业版文档</a></p>
+<p>🔚 暂时理解这么些,其余后面再补充 Thanks~</p>
+]]></content>
+  </entry>
 </search>
