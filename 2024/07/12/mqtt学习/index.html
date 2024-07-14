@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> Hexo</title>
+      <title>mqtt学习 |  Hexo</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -52,110 +52,9 @@
     
       
     <main class="content on">
-      
-<section class="cover">
-    
-      
-      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
-        target="_blank"><img width="149" height="149" src="/images/forkme.png"
-          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover1.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">Hexo</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
-
-
-<!-- Subtitle -->
-
-  <script>
-    try {
-      var typed = new Typed("#subtitle", {
-        strings: ['欢迎来到我的小岛', '面朝大海，春暖花开', '你好'],
-        startDelay: 0,
-        typeSpeed: 200,
-        loop: true,
-        backSpeed: 100,
-        showCursor: true
-      });
-    } catch (err) {
-      console.log(err)
-    }
-  </script>
-  
-<div id="main">
-  <section class="outer">
-  
-  
-  
-
-<div class="notice" style="margin-top:50px">
-    <i class="ri-heart-fill"></i>
-    <div class="notice-content" id="broad"></div>
-</div>
-<script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("broad").innerHTML = data.hitokoto;
-        })
-        .catch(console.error)
-</script>
-
-<style>
-    .notice {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-    }
-
-    .notice i {
-        float: left;
-        color: #999;
-        font-size: 16px;
-        padding-right: 10px;
-        vertical-align: middle;
-        margin-top: -2px;
-    }
-
-    .notice-content {
-        display: initial;
-        vertical-align: middle;
-    }
-</style>
-  
-  <article class="articles">
-    
-    
-    
-    
-    <article
-  id="post-对接设备api有感"
+      <section class="outer">
+  <article
+  id="post-mqtt学习"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -165,189 +64,231 @@
     
     <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/12/18/%E5%AF%B9%E6%8E%A5%E8%AE%BE%E5%A4%87api%E6%9C%89%E6%84%9F/"
-    >对接第三方api</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  mqtt学习
+</h1>
  
 
       
     </header>
      
     <div class="article-meta">
-      <a href="/2023/12/18/%E5%AF%B9%E6%8E%A5%E8%AE%BE%E5%A4%87api%E6%9C%89%E6%84%9F/" class="article-date">
-  <time datetime="2023-12-18T13:11:06.000Z" itemprop="datePublished">2023-12-18</time>
-</a>    
+      <a href="/2024/07/12/mqtt%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2024-07-12T13:18:35.000Z" itemprop="datePublished">2024-07-12</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">997</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">3 min</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
       
+    <div class="tocbot"></div>
+
+
+
+
+  
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="对接第三方api-接口记录"><a class="header-anchor" href="#对接第三方api-接口记录"></a>对接第三方api 接口记录</h2>
-<p>这两天在对接门禁设备到安防系统，遇到一些问题和get到一些新技巧</p>
-<p>📑</p>
-<ol>
-<li>
-<p>第三方api和安防系统的需求有不完整的敌法</p>
-<p>在调用远程开关门的时候，门禁的打开或者关闭的状态没法看到，虽然写好了代码但是测试开门或者常开等其他状态时，门禁的显示屏都没变化，无法得知是否成功执行，只能等门禁真正安装才能查看？这显然不合理，那开发在测试时不知道是否有问题。</p>
-<p><font color=red>所以在对接代码前先测试一下api接口是否符合预期</font></p>
-</li>
-<li>
-<p>对安防系统的代码不够熟悉，有些数据不知道是在哪里获得的和流通的走向</p>
-<p><font color=blue>这个没办法只能一点一点打断点或者请教，自己看代码的话容易花费太多时间,系统的各个模块相互依赖比较多需要将负责的部分去理解数据流向</font>&gt;</p>
-</li>
-</ol>
-<p>📖 get新技巧：</p>
+  <h2 id="MQTT"><a class="header-anchor" href="#MQTT"></a>MQTT</h2>
+<h4 id="背景说明"><a class="header-anchor" href="#背景说明"></a>背景说明</h4>
+<p>笔者是个java菜鸡,目前工作中接触了物联网方面也就是 IOT</p>
+<p>自然也接触到了MQTT,我想记录记录也介绍下 MQTT</p>
+<h4 id="1-What-is-MQTT-😲"><a class="header-anchor" href="#1-What-is-MQTT-😲"></a>1.What is MQTT? 😲</h4>
+<p><a target="_blank" rel="noopener" href="https://www.emqx.com/zh/blog/the-easiest-guide-to-getting-started-with-mqtt">MQTT</a>  是一种轻量级的通讯协议,如 HTTP 类似用来发送和接受信息的,是专为资源受限的设备和低带宽、高延迟或不可靠的网络而设计.符合物联网设备的需求,因为可能有些时候设备比较边缘网络比较差等等原因,</p>
+<p>这些物联网设备使用 MQTT 进行数据传输，因为它易于实施，并且可以有效地传输物联网数据。MQTT 支持设备到云端和云端到设备之间的消息传递。</p>
+<h4 id="2-How-to-Communicate"><a class="header-anchor" href="#2-How-to-Communicate"></a>2.How to Communicate ?</h4>
+<p>MQTT是一种类似消息队列的  <font color=green>发布–订阅</font>模式  , Client 间的通信就靠 Topic 主题的订阅和推送进行.</p>
+<p>MQTT不同于 MQTT 是有个 Broker–代理, MQTT 代理是协调不同客户端之间消息的后端系统。代理的职责包括接收和筛选消息、识别订阅每条消息的客户端，以及向他们发送消息。它还负责其他任务，例如：</p>
 <ul>
-<li>postman的环境变量设置,可以使用<code>&#123;&#123;&#125;&#125;</code>这个类似插值表达式来取环境变量的值，postman可以在test里将比如登录认证返回的token更新设置到环境变量里</li>
+<li>授权 MQTT 客户端以及对其进行身份验证</li>
+<li>将消息传递给其他系统以进行进一步分析</li>
+<li>处理错过的消息和客户端会话</li>
 </ul>
+<p>MQTT 原理: 客户端和代理开始使用 MQTT 连接进行通信。客户端通过向 MQTT 代理发送 <em>CONNECT</em> 消息来启动连接。代理通过响应 <em>CONNACK</em> 消息来确认已建立连接。MQTT 客户端和代理都需要 TCP/IP 堆栈进行通信。<em><strong>客户端从不相互联系，它们只与代理联系</strong></em>。</p>
+<p>例如下面:  一个客户端发布一个订阅,  每个客户端都可以发布和订阅   ,中间是需要靠 broker 转发订阅的消息的</p>
+<p><img src="$%7Bimg%7D/mqtt_2024-07-12_22-01-03.jpg" alt="img"></p>
+<h4 id="MQTT-publish"><a class="header-anchor" href="#MQTT-publish"></a>MQTT publish</h4>
+<p>MQTT 客户端以字节格式发布包含主题和数据的消息。客户端确定数据格式，例如文本数据、二进制数据、XML 或 JSON 文件。例如，智能家居系统中的灯可能会针对主题 <em>livingroom/light</em> 发布消息 <em>on</em>。</p>
+<h4 id="MQTT-subscribe"><a class="header-anchor" href="#MQTT-subscribe"></a><strong>MQTT subscribe</strong></h4>
+<p>MQTT 客户端向 MQTT 代理发送 <em>SUBSCRIBE</em> 消息，以接收有关感兴趣主题的消息。此消息包含唯一标识符和订阅列表。例如，您手机上的智能家居应用程序想要显示您家中有多少灯亮着。它将订阅主题 <em>light</em> 并增加所有 <em>on</em> 消息的计数器。</p>
+<p>*** MQTT 通过 Qos 来决定推送消息的模式**</p>
+<ul>
+<li>
+<p>QoS 0，最多交付一次。</p>
+</li>
+<li>
+<p>QoS 1，至少交付一次。</p>
+</li>
+<li>
+<p>QoS 2，只交付一次。</p>
+</li>
+</ul>
+<p>其中，使用 QoS 0 可能丢失消息，使用 QoS 1 可以保证收到消息，但消息可能重复，使用 QoS 2 可以保证消息既不丢失也不重复。QoS 等级从低到高，不仅意味着消息可靠性的提升，也意味着传输复杂程度的提升。</p>
+<p>**在一个完整的从发布者到订阅者的消息投递流程中，QoS 等级是由发布者在 PUBLISH 报文中指定的，大部分情况下 Broker 向订阅者转发消息时都会维持原始的 QoS 不变。不过也有一些例外的情况，根据订阅者的订阅要求，消息的 QoS 等级可能会在转发的时候发生降级。 **</p>
+<h3 id="MQTT-的文件传输"><a class="header-anchor" href="#MQTT-的文件传输"></a>MQTT 的文件传输</h3>
+<p>是一种基于 TCP 的物联网通信协议，其 Payload 可以容纳任意类型的数据，例如文本、二进制、JSON、XML 等多种格式。这种灵活性使得 MQTT 在物联网应用中拥有广泛的适用性，能够满足不同场景下多样化数据传输的需求。</p>
+<p><a target="_blank" rel="noopener" href="https://docs.emqx.com/zh/enterprise/latest/file-transfer/client.html">文件传输客户端开发 | EMQX 企业版文档</a></p>
+<p>🔚 暂时理解这么些,其余后面再补充 Thanks~</p>
  
       <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
       
     </div>
     
 
     <!-- copyright -->
     
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-bullshit"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/12/17/bullshit/"
-    >bullshit</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/12/17/bullshit/" class="article-date">
-  <time datetime="2023-12-17T08:01:15.000Z" itemprop="datePublished">2023-12-17</time>
-</a>    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
     </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>​    大家好，我是 java 小菜鸡 iceblin ，之前就一直有搭建个人博客的想法（我相信大部分学编程的都希望有个自己的博客小天地的😃），现在终于实现了，欢呼喝彩嘿嘿</p>
-<p>这是一个傻傻不正经的博主哈哈</p>
-<p>⭐  iceblin 个人博客————启动！！！</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
     
     <footer class="article-footer">
        
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-Mybatis笔记"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/08/11/Mybatis%E7%AC%94%E8%AE%B0/"
-    >Mybatis笔记</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/08/11/Mybatis%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2023-08-11T14:56:37.000Z" itemprop="datePublished">2023-08-11</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>配置mybatis  步骤如下：</p>
-<p>1.jar包和mysqljar包(必须),Junit测试jar包，pagehelper分页jar包，generator逆向过程jar包…</p>
-<p>2.创建resource文件夹：需要文件  jdbc.property,mybatis-config.xml</p>
-<p>3.创建实体类对应数据库，创建mapper.xml,绑定在mybatis-config.xml中，</p>
-<p>编写sql语句和映射关系,编写测试代码</p>
-<p>❤️ 标签,动态标签是mybatis的灵魂</p>
-<p>常用sql标签:</p>
-<p>抽离sqlsql  包含include</p>
-<p>查询 select   增删改update</p>
-<p>条件(自动去除and)where遍历foreach</p>
-<p>动态设置条件set  可以消除，加前缀后缀trim  判断if</p>
-<p>🤷‍♀️映射resultMap  类型resultType</p>
-<p>🐐进阶：使用分页插件,逆向过程一键生成</p>
-<p>1.注入依赖   或者导入生成器jar包</p>
-<p>2.配置generator.xml配置生成器信息</p>
-<p>3.运行生成器类的生成方法，进行一键生成</p>
-<p>-----以上算是个人简单的思路笔记 ----end 😎</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-  </article>
-  
-
-  
-  <nav class="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-  
-</section>
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
 </div>
 
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/07/12/mqtt%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2024/06/11/boringTalk/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">boringTalk</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "6CEdnEmjyg6H7zlJEMayY50l-gzGzoHsz",
+    app_key: "1aoz5GKOhoApuM6qSHSW1d6b",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "发表你的想法吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+  
+    
+</article>
+
+</section>
       <footer class="footer">
   <div class="outer">
     <ul>
@@ -471,6 +412,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
