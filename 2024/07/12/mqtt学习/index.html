@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>mqtt学习 |  Hexo</title>
+      <title>mqtt学习 |  IceBlin</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -41,7 +41,7 @@
           font-size: 1.6rem;
         }
       </style>
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="IceBlin" type="application/atom+xml">
 </head>
   </html>
 </html>
@@ -81,7 +81,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">997</span>
+            <span class="post-count">1k</span>
         </span>
     </span>
 
@@ -106,6 +106,10 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h2 id="MQTT"><a class="header-anchor" href="#MQTT"></a>MQTT</h2>
+<p>device1   --sub--                     /login     接受信息 --{“user”:“admin”}</p>
+<p>broker  —代理   — server-ip    (消息转发/异步/削峰填谷)</p>
+<p>device2    —publish--              /login   {“user”:“admin”}   --qos 服务质量  0 1 2</p>
+<p>设备通过连接broker来互相通信.</p>
 <h4 id="背景说明"><a class="header-anchor" href="#背景说明"></a>背景说明</h4>
 <p>笔者是个java菜鸡,目前工作中接触了物联网方面也就是 IOT</p>
 <p>自然也接触到了MQTT,我想记录记录也介绍下 MQTT</p>
@@ -122,7 +126,7 @@
 </ul>
 <p>MQTT 原理: 客户端和代理开始使用 MQTT 连接进行通信。客户端通过向 MQTT 代理发送 <em>CONNECT</em> 消息来启动连接。代理通过响应 <em>CONNACK</em> 消息来确认已建立连接。MQTT 客户端和代理都需要 TCP/IP 堆栈进行通信。<em><strong>客户端从不相互联系，它们只与代理联系</strong></em>。</p>
 <p>例如下面:  一个客户端发布一个订阅,  每个客户端都可以发布和订阅   ,中间是需要靠 broker 转发订阅的消息的</p>
-<p><img src="$%7Bimg%7D/mqtt_2024-07-12_22-01-03.jpg" alt="img"></p>
+<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/mqtt_2024-07-12_22-01-03.jpg" alt="img"></p>
 <h4 id="MQTT-publish"><a class="header-anchor" href="#MQTT-publish"></a>MQTT publish</h4>
 <p>MQTT 客户端以字节格式发布包含主题和数据的消息。客户端确定数据格式，例如文本数据、二进制数据、XML 或 JSON 文件。例如，智能家居系统中的灯可能会针对主题 <em>livingroom/light</em> 发布消息 <em>on</em>。</p>
 <h4 id="MQTT-subscribe"><a class="header-anchor" href="#MQTT-subscribe"></a><strong>MQTT subscribe</strong></h4>
@@ -226,10 +230,19 @@
    
   <nav class="article-nav">
     
+      <a href="/2024/07/24/%E5%B7%A5%E4%BD%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E4%BD%93%E4%BC%9A/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            工作的一些新体会
+          
+        </div>
+      </a>
     
-      <a href="/2024/06/11/boringTalk/" class="article-nav-link">
+    
+      <a href="/2024/07/12/%E4%B8%80%E4%BA%9B%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9C%AF%E8%AF%AD%E4%BB%8B%E7%BB%8D/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">boringTalk</div>
+        <div class="article-nav-title">一些开发中的术语介绍.md</div>
       </a>
     
   </nav>
@@ -347,7 +360,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ayer-side.svg" alt="IceBlin"></a>
   </div>
   
   <ul class="nav nav-main">
@@ -370,10 +383,6 @@
         <i class="ri-search-line"></i>
       </a>
       
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
       
     </li>
   </ul>
@@ -640,8 +649,8 @@
         position: fixed;
         right: 15px; /*右下角*/
 		/*left: 15px; */ 
-       /* bottom: 0;*/
-	   top: 15px;
+        bottom: 5px;
+	   /*top: 15px;*/
         z-index: 998;
     }
 </style>

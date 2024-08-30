@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Archives: 2024/3 |  IceBlin</title>
+      <title>工作的一些新体会 |  IceBlin</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,47 +53,235 @@
       
     <main class="content on">
       <section class="outer">
-  
-  
-  <article class="articles">
+  <article
+  id="post-工作的一些新体会"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">2024/3</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2024" class="archive-year">2024</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2024/03/08/%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87/" class="archive-article-date">
-  <time datetime="2024-03-08T14:17:37.206Z" itemprop="datePublished">03/08</time>
-</a>
-      
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  工作的一些新体会
+</h1>
+ 
 
+      
     </header>
-    
-    
-  </div>
-</article>
-      
-      
+     
+    <div class="article-meta">
+      <a href="/2024/07/24/%E5%B7%A5%E4%BD%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E4%BD%93%E4%BC%9A/" class="article-date">
+  <time datetime="2024-07-24T13:31:32.000Z" itemprop="datePublished">2024-07-24</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">600</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">2 min</span>
+        </span>
+    </span>
+</div>
+ 
     </div>
-  </div>
-  
-  
+      
+    <div class="tocbot"></div>
+
+
+
 
   
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="关于工作的一些体会"><a class="header-anchor" href="#关于工作的一些体会"></a>关于工作的一些体会</h3>
+<h4 id="1-git-的一些新体会"><a class="header-anchor" href="#1-git-的一些新体会"></a>1. git 的一些新体会</h4>
+<p>笔者工作时懵逼 把master的内容合并提交到了dev</p>
+<p>需要回退版本</p>
+<p>后面使用了 git   reset --hard[指定版本号commit id] 本地回退到上次提交前，然后强制推送 git push -f 覆盖了代码到仓库</p>
+<h5 id="git回退版本"><a class="header-anchor" href="#git回退版本"></a>git回退版本</h5>
+<p>git reset 默认是–mixed ,会撤回所有指定版本之后的提交，   将指定版本后面的内容回退到工作区。</p>
+<p>⭐ 如果git reset 没指定commit id的话 默认是回退到上一个commit.</p>
+<p>例如 git reset 是回退上一次commit ,git reset [commit id] 回退代码到此版本的提交时,此版本后面的内容返回到工作区</p>
+<p>git reset [commit id] --soft 是回退到暂存区，不是工作区</p>
+<p>git reset  [commit id] --hard 撤回并清空工作区及暂存区所有修改  (<font color=red>慎用，因为会把指定版本后的所有内容清空，一定要备份好指定版本后面的代码内容。</font>)</p>
+<p>🌟 <font color=red>工作常碰到的冲突问题 : </font> 当你和其他人都修改了同一文件, 那么其中一个人提交了远程仓库，另一个人会有两种无法pull的情况。</p>
+<ol>
+<li>
+<p>另一个人  代码还没commit，此时pull 同步时git会提示你 远程和本地有相同文件夹都修改了，提示你进行commit，</p>
+<p><font color=green>那么我们可以先commit再pull同步 ------此时会有冲突，需要你手动解决后再commit -&gt;push </font></p>
+</li>
+<li>
+<p>另一个人 代码已经提交了，此时pull,git 会提示冲突 ，还是和上一步后面一样，手动本地解决冲突再push</p>
+</li>
+</ol>
+<p>所以如果有冲突时需要多和其他人沟通 ，比如谁在写某个文件时，你也要写该文件，则探讨一下修改内容或者等他修改你再改也行。。。</p>
+<p>所以时不时pull一下代码，如果失败则说明远程的某些文件和本地文件对应的文件有不同的修改，需要沟通好以免继续写代码发现后面和同事重复写了某个文件，所以提前发现冲突要好很多，因为可能此时代码还没有冲突很多。</p>
+<h4 id="2-自定义starter"><a class="header-anchor" href="#2-自定义starter"></a>2.自定义starter</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/893073">保姆级教程，手把手教你实现SpringBoot自定义starter-阿里云开发者社区 (aliyun.com)</a></p>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/07/24/%E5%B7%A5%E4%BD%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E4%BD%93%E4%BC%9A/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2024/08/30/%E5%89%8D%E7%AB%AF%E5%88%9D%E5%BC%80%E5%8F%91%E4%BD%93%E4%BC%9A/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            前端初开发体会
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2024/07/12/mqtt%E5%AD%A6%E4%B9%A0/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">mqtt学习</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "6CEdnEmjyg6H7zlJEMayY50l-gzGzoHsz",
+    app_key: "1aoz5GKOhoApuM6qSHSW1d6b",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "发表你的想法吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+  
+    
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -214,6 +402,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
