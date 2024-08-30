@@ -155,6 +155,83 @@
     
     
     <article
+  id="post-前端初开发体会"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/08/30/%E5%89%8D%E7%AB%AF%E5%88%9D%E5%BC%80%E5%8F%91%E4%BD%93%E4%BC%9A/"
+    >前端初开发体会</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/08/30/%E5%89%8D%E7%AB%AF%E5%88%9D%E5%BC%80%E5%8F%91%E4%BD%93%E4%BC%9A/" class="article-date">
+  <time datetime="2024-08-30T14:11:07.000Z" itemprop="datePublished">2024-08-30</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="前端新体会"><a class="header-anchor" href="#前端新体会"></a>前端新体会</h3>
+<p>笔者对前端是基本没什么了解，纯纯小白一枚，公司开发需要写后台系统的页面和app的页面，记录一些经验</p>
+<p>后台管理系统是用的vue3，笔者只在以前做过一个vue2的项目，还是copy的vue-admin-template的开源模版来做的，对vue只停留在使用elmentui和几个hook函数的认知阶段，js很多工具方法没用过，只会简单写个事件的方法和古老的 document文档元素(但其实也忘了  😅 )</p>
+<p>然后css样式和布局也是一知半解 ，样式基本只会换个颜色和大小,位置也没搞清楚，基本只会copy其他ui库的文档demo来改改用。</p>
+<ol>
+<li>
+<p>App.vue 页面是项目启动好像就会执行的，可以在这里做一下启动的初始化。</p>
+<p>vue的封装和抽离需要学学，比如把某些信息(例如登录信息)存到全局文件或者其他文件再将文件export，需要时直接import</p>
+</li>
+<li>
+<p>aximos请求库，封装到request.js文件，可以在这里做一下代理和请求/响应的 拦截，做一下请求头配置 例如:携带token 之类的。</p>
+</li>
+<li>
+<p>其他modules可以放在项目里作库引用，例如一些ui库，sdk等等</p>
+</li>
+<li>
+<p>uniapp的布局内容需要计算，比如滚动列表的高度动态计算，</p>
+</li>
+<li>
+<p>uniappH5对接微信支付/支付宝支付  ，等需要比如微信微信环境，注册appid和secret，再微信浏览器环境拿到用户code -&gt;去拿openId和accessToken  -&gt; 去拿userInfo 获取微信用户信息等等，  openId需要存在全局，因为支付需要它， 使用支付提共的sdk方法调用。</p>
+</li>
+<li>
+<p>开发调试,需要微信环境/支付宝环境 ， 可以在chrome的netconditions替换UA为自定义，在把填入微信或者支付宝的 UA来可以模拟环境，  微信还可以手机usb链接PC端，调试微信的内置浏览器 —这样你可以在手机微信浏览器访问时，pc可以同步拿到f12的信息做调试，比如你要看token和网络请求等等。    使用流程 ：a. 先手机usb连pc，手机usb设置为可以文件传输  b. 手机打开<a target="_blank" rel="noopener" href="http://debugxweb.qq.com/?inspector=true">http://debugxweb.qq.com/?inspector=true</a>  ，c. pc在chrome打开 <a href="chrome://inspect/#devices">chrome://inspect/#devices</a></p>
+</li>
+</ol>
+<p>反思一下:遇到不少问题，其实每次都应该问自己，我要什么结果，然后拆分为要做什么 -&gt;拆分为开发步骤 -&gt; 再去通过代码实现</p>
+<p>我会每次都在文档写好流程步骤再去开发，不然不清楚流程开发容易让人白做无用功，并且情绪化，容易增加心智负担。</p>
+<p>总之还是需要多多积累和思考，笔者实力有限有限理解应该不全面或者错误，还请大家一起多多交流、指正.</p>
+<p>thanks for your watch,have a good one  😃</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-工作的一些新体会"
   class="article article-type-post"
   itemscope
@@ -299,83 +376,6 @@
 <p>是一种基于 TCP 的物联网通信协议，其 Payload 可以容纳任意类型的数据，例如文本、二进制、JSON、XML 等多种格式。这种灵活性使得 MQTT 在物联网应用中拥有广泛的适用性，能够满足不同场景下多样化数据传输的需求。</p>
 <p><a target="_blank" rel="noopener" href="https://docs.emqx.com/zh/enterprise/latest/file-transfer/client.html">文件传输客户端开发 | EMQX 企业版文档</a></p>
 <p>🔚 暂时理解这么些,其余后面再补充 Thanks~</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-前端初开发体会"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2024/08/30/%E5%89%8D%E7%AB%AF%E5%88%9D%E5%BC%80%E5%8F%91%E4%BD%93%E4%BC%9A/"
-    >前端初开发体会</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2024/08/30/%E5%89%8D%E7%AB%AF%E5%88%9D%E5%BC%80%E5%8F%91%E4%BD%93%E4%BC%9A/" class="article-date">
-  <time datetime="2024-08-30T14:11:07.000Z" itemprop="datePublished">2024-08-30</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="前端新体会"><a class="header-anchor" href="#前端新体会"></a>前端新体会</h3>
-<p>笔者对前端是基本没什么了解，纯纯小白一枚，公司开发需要写后台系统的页面和app的页面，记录一些经验</p>
-<p>后台管理系统是用的vue3，笔者只在以前做过一个vue2的项目，还是copy的vue-admin-template的开源模版来做的，对vue只停留在使用elmentui和几个hook函数的认知阶段，js很多工具方法没用过，只会简单写个事件的方法和古老的 document文档元素(但其实也忘了  😅 )</p>
-<p>然后css样式和布局也是一知半解 ，样式基本只会换个颜色和大小,位置也没搞清楚，基本只会copy其他ui库的文档demo来改改用。</p>
-<ol>
-<li>
-<p>App.vue 页面是项目启动好像就会执行的，可以在这里做一下启动的初始化。</p>
-<p>vue的封装和抽离需要学学，比如把某些信息(例如登录信息)存到全局文件或者其他文件再将文件export，需要时直接import</p>
-</li>
-<li>
-<p>aximos请求库，封装到request.js文件，可以在这里做一下代理和请求/响应的 拦截，做一下请求头配置 例如:携带token 之类的。</p>
-</li>
-<li>
-<p>其他modules可以放在项目里作库引用，例如一些ui库，sdk等等</p>
-</li>
-<li>
-<p>uniapp的布局内容需要计算，比如滚动列表的高度动态计算，</p>
-</li>
-<li>
-<p>uniappH5对接微信支付/支付宝支付  ，等需要比如微信微信环境，注册appid和secret，再微信浏览器环境拿到用户code -&gt;去拿openId和accessToken  -&gt; 去拿userInfo 获取微信用户信息等等，  openId需要存在全局，因为支付需要它， 使用支付提共的sdk方法调用。</p>
-</li>
-<li>
-<p>开发调试,需要微信环境/支付宝环境 ， 可以在chrome的netconditions替换UA为自定义，在把填入微信或者支付宝的 UA来可以模拟环境，  微信还可以手机usb链接PC端，调试微信的内置浏览器 —这样你可以在手机微信浏览器访问时，pc可以同步拿到f12的信息做调试，比如你要看token和网络请求等等。    使用流程 ：a. 先手机usb连pc，手机usb设置为可以文件传输  b. 手机打开<a target="_blank" rel="noopener" href="http://debugxweb.qq.com/?inspector=true">http://debugxweb.qq.com/?inspector=true</a>  ，c. pc在chrome打开 <a href="chrome://inspect/#devices">chrome://inspect/#devices</a></p>
-</li>
-</ol>
-<p>反思一下:遇到不少问题，其实每次都应该问自己，我要什么结果，然后拆分为要做什么 -&gt;拆分为开发步骤 -&gt; 再去通过代码实现</p>
-<p>我会每次都在文档写好流程步骤再去开发，不然不清楚流程开发容易让人白做无用功，并且情绪化，容易增加心智负担。</p>
-<p>总之还是需要多多积累和思考，笔者实力有限有限理解应该不全面或者错误，还请大家一起多多交流、指正.</p>
-<p>thanks for your watch,have a good one  😃</p>
  
       <!-- reward -->
       
