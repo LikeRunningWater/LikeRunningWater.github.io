@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>boringTalk |  Hexo</title>
+      <title>工作的一些新体会 |  Hexo</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -54,7 +54,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-boringTalk"
+  id="post-工作的一些新体会"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -65,7 +65,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  boringTalk
+  工作的一些新体会
 </h1>
  
 
@@ -73,15 +73,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2024/06/11/boringTalk/" class="article-date">
-  <time datetime="2024-06-11T12:00:17.000Z" itemprop="datePublished">2024-06-11</time>
+      <a href="/2024/07/24/%E5%B7%A5%E4%BD%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E4%BD%93%E4%BC%9A/" class="article-date">
+  <time datetime="2024-07-24T13:31:32.000Z" itemprop="datePublished">2024-07-24</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">10</span>
+            <span class="post-count">600</span>
         </span>
     </span>
 
@@ -90,7 +90,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
@@ -105,12 +105,39 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="水水水"><a class="header-anchor" href="#水水水"></a>水水水</h2>
-<p>boring…</p>
-<p>🌊</p>
-<p>注意进厂时机 🏭</p>
+  <h3 id="关于工作的一些体会"><a class="header-anchor" href="#关于工作的一些体会"></a>关于工作的一些体会</h3>
+<h4 id="1-git-的一些新体会"><a class="header-anchor" href="#1-git-的一些新体会"></a>1. git 的一些新体会</h4>
+<p>笔者工作时懵逼 把master的内容合并提交到了dev</p>
+<p>需要回退版本</p>
+<p>后面使用了 git   reset --hard[指定版本号commit id] 本地回退到上次提交前，然后强制推送 git push -f 覆盖了代码到仓库</p>
+<h5 id="git回退版本"><a class="header-anchor" href="#git回退版本"></a>git回退版本</h5>
+<p>git reset 默认是–mixed ,会撤回所有指定版本之后的提交，   将指定版本后面的内容回退到工作区。</p>
+<p>⭐ 如果git reset 没指定commit id的话 默认是回退到上一个commit.</p>
+<p>例如 git reset 是回退上一次commit ,git reset [commit id] 回退代码到此版本的提交时,此版本后面的内容返回到工作区</p>
+<p>git reset [commit id] --soft 是回退到暂存区，不是工作区</p>
+<p>git reset  [commit id] --hard 撤回并清空工作区及暂存区所有修改  (<font color=red>慎用，因为会把指定版本后的所有内容清空，一定要备份好指定版本后面的代码内容。</font>)</p>
+<p>🌟 <font color=red>工作常碰到的冲突问题 : </font> 当你和其他人都修改了同一文件, 那么其中一个人提交了远程仓库，另一个人会有两种无法pull的情况。</p>
+<ol>
+<li>
+<p>另一个人  代码还没commit，此时pull 同步时git会提示你 远程和本地有相同文件夹都修改了，提示你进行commit，</p>
+<p><font color=green>那么我们可以先commit再pull同步 ------此时会有冲突，需要你手动解决后再commit -&gt;push </font></p>
+</li>
+<li>
+<p>另一个人 代码已经提交了，此时pull,git 会提示冲突 ，还是和上一步后面一样，手动本地解决冲突再push</p>
+</li>
+</ol>
+<p>所以如果有冲突时需要多和其他人沟通 ，比如谁在写某个文件时，你也要写该文件，则探讨一下修改内容或者等他修改你再改也行。。。</p>
+<p>所以时不时pull一下代码，如果失败则说明远程的某些文件和本地文件对应的文件有不同的修改，需要沟通好以免继续写代码发现后面和同事重复写了某个文件，所以提前发现冲突要好很多，因为可能此时代码还没有冲突很多。</p>
+<h4 id="2-自定义starter"><a class="header-anchor" href="#2-自定义starter"></a>2.自定义starter</h4>
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/893073">保姆级教程，手把手教你实现SpringBoot自定义starter-阿里云开发者社区 (aliyun.com)</a></p>
  
       <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
       
     </div>
     
@@ -173,7 +200,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/06/11/boringTalk/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/07/24/%E5%B7%A5%E4%BD%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E4%BD%93%E4%BC%9A/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -184,19 +211,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2024/07/12/mqtt%E5%AD%A6%E4%B9%A0/" class="article-nav-link">
+      <a href="/2024/08/30/%E5%89%8D%E7%AB%AF%E5%88%9D%E5%BC%80%E5%8F%91%E4%BD%93%E4%BC%9A/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            mqtt学习
+            前端初开发体会
           
         </div>
       </a>
     
     
-      <a href="/2024/06/10/%E6%B0%B4%E4%B8%80%E7%AF%87/" class="article-nav-link">
+      <a href="/2024/07/12/mqtt%E5%AD%A6%E4%B9%A0/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">水一篇</div>
+        <div class="article-nav-title">mqtt学习</div>
       </a>
     
   </nav>

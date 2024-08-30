@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>boringTalk</title>
-    <url>/2024/06/11/boringTalk/</url>
-    <content><![CDATA[<h2 id="水水水"><a class="header-anchor" href="#水水水"></a>水水水</h2>
-<p>boring…</p>
-<p>🌊</p>
-<p>注意进厂时机 🏭</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Mybatis笔记</title>
     <url>/2023/08/11/Mybatis%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>配置mybatis  步骤如下：</p>
@@ -155,6 +146,55 @@
 ]]></content>
   </entry>
   <entry>
+    <title>mqtt学习</title>
+    <url>/2024/07/12/mqtt%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="MQTT"><a class="header-anchor" href="#MQTT"></a>MQTT</h2>
+<p>device1   --sub--                     /login     接受信息 --{“user”:“admin”}</p>
+<p>broker  —代理   — server-ip    (消息转发/异步/削峰填谷)</p>
+<p>device2    —publish--              /login   {“user”:“admin”}   --qos 服务质量  0 1 2</p>
+<p>设备通过连接broker来互相通信.</p>
+<h4 id="背景说明"><a class="header-anchor" href="#背景说明"></a>背景说明</h4>
+<p>笔者是个java菜鸡,目前工作中接触了物联网方面也就是 IOT</p>
+<p>自然也接触到了MQTT,我想记录记录也介绍下 MQTT</p>
+<h4 id="1-What-is-MQTT-😲"><a class="header-anchor" href="#1-What-is-MQTT-😲"></a>1.What is MQTT? 😲</h4>
+<p><a href="https://www.emqx.com/zh/blog/the-easiest-guide-to-getting-started-with-mqtt">MQTT</a>  是一种轻量级的通讯协议,如 HTTP 类似用来发送和接受信息的,是专为资源受限的设备和低带宽、高延迟或不可靠的网络而设计.符合物联网设备的需求,因为可能有些时候设备比较边缘网络比较差等等原因,</p>
+<p>这些物联网设备使用 MQTT 进行数据传输，因为它易于实施，并且可以有效地传输物联网数据。MQTT 支持设备到云端和云端到设备之间的消息传递。</p>
+<h4 id="2-How-to-Communicate"><a class="header-anchor" href="#2-How-to-Communicate"></a>2.How to Communicate ?</h4>
+<p>MQTT是一种类似消息队列的  <font color=green>发布–订阅</font>模式  , Client 间的通信就靠 Topic 主题的订阅和推送进行.</p>
+<p>MQTT不同于 MQTT 是有个 Broker–代理, MQTT 代理是协调不同客户端之间消息的后端系统。代理的职责包括接收和筛选消息、识别订阅每条消息的客户端，以及向他们发送消息。它还负责其他任务，例如：</p>
+<ul>
+<li>授权 MQTT 客户端以及对其进行身份验证</li>
+<li>将消息传递给其他系统以进行进一步分析</li>
+<li>处理错过的消息和客户端会话</li>
+</ul>
+<p>MQTT 原理: 客户端和代理开始使用 MQTT 连接进行通信。客户端通过向 MQTT 代理发送 <em>CONNECT</em> 消息来启动连接。代理通过响应 <em>CONNACK</em> 消息来确认已建立连接。MQTT 客户端和代理都需要 TCP/IP 堆栈进行通信。<em><strong>客户端从不相互联系，它们只与代理联系</strong></em>。</p>
+<p>例如下面:  一个客户端发布一个订阅,  每个客户端都可以发布和订阅   ,中间是需要靠 broker 转发订阅的消息的</p>
+<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/mqtt_2024-07-12_22-01-03.jpg" alt="img"></p>
+<h4 id="MQTT-publish"><a class="header-anchor" href="#MQTT-publish"></a>MQTT publish</h4>
+<p>MQTT 客户端以字节格式发布包含主题和数据的消息。客户端确定数据格式，例如文本数据、二进制数据、XML 或 JSON 文件。例如，智能家居系统中的灯可能会针对主题 <em>livingroom/light</em> 发布消息 <em>on</em>。</p>
+<h4 id="MQTT-subscribe"><a class="header-anchor" href="#MQTT-subscribe"></a><strong>MQTT subscribe</strong></h4>
+<p>MQTT 客户端向 MQTT 代理发送 <em>SUBSCRIBE</em> 消息，以接收有关感兴趣主题的消息。此消息包含唯一标识符和订阅列表。例如，您手机上的智能家居应用程序想要显示您家中有多少灯亮着。它将订阅主题 <em>light</em> 并增加所有 <em>on</em> 消息的计数器。</p>
+<p>*** MQTT 通过 Qos 来决定推送消息的模式**</p>
+<ul>
+<li>
+<p>QoS 0，最多交付一次。</p>
+</li>
+<li>
+<p>QoS 1，至少交付一次。</p>
+</li>
+<li>
+<p>QoS 2，只交付一次。</p>
+</li>
+</ul>
+<p>其中，使用 QoS 0 可能丢失消息，使用 QoS 1 可以保证收到消息，但消息可能重复，使用 QoS 2 可以保证消息既不丢失也不重复。QoS 等级从低到高，不仅意味着消息可靠性的提升，也意味着传输复杂程度的提升。</p>
+<p>**在一个完整的从发布者到订阅者的消息投递流程中，QoS 等级是由发布者在 PUBLISH 报文中指定的，大部分情况下 Broker 向订阅者转发消息时都会维持原始的 QoS 不变。不过也有一些例外的情况，根据订阅者的订阅要求，消息的 QoS 等级可能会在转发的时候发生降级。 **</p>
+<h3 id="MQTT-的文件传输"><a class="header-anchor" href="#MQTT-的文件传输"></a>MQTT 的文件传输</h3>
+<p>是一种基于 TCP 的物联网通信协议，其 Payload 可以容纳任意类型的数据，例如文本、二进制、JSON、XML 等多种格式。这种灵活性使得 MQTT 在物联网应用中拥有广泛的适用性，能够满足不同场景下多样化数据传输的需求。</p>
+<p><a href="https://docs.emqx.com/zh/enterprise/latest/file-transfer/client.html">文件传输客户端开发 | EMQX 企业版文档</a></p>
+<p>🔚 暂时理解这么些,其余后面再补充 Thanks~</p>
+]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/2024/04/03/u%E7%9B%98%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能😢</p>
@@ -187,6 +227,84 @@
 <p>P.s :  随机=random['rændəm]   顺序=sequence[ˈsiːkwəns]</p>
 <p>4.测试软件: <strong>ATTO Disk Benchmark</strong></p>
 <p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403200357838.png" alt="image-20240403200357838"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>一些开发中的术语介绍.md</title>
+    <url>/2024/07/12/%E4%B8%80%E4%BA%9B%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9C%AF%E8%AF%AD%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[<h3 id="背景介绍"><a class="header-anchor" href="#背景介绍"></a>背景介绍</h3>
+<p>笔者最近关注到一些开发中的术语,但是属于架构或者服务方面的,对刚进门的开发来说接触式属于比较少的,所以想记录一些</p>
+<h3 id="术语"><a class="header-anchor" href="#术语"></a>术语</h3>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">术语</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">QOS</td>
+<td style="text-align:left">Quality of Service）即&quot;服务质量&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left">QPS</td>
+<td style="text-align:left">Queries Per Second 意思是“每秒查询率”</td>
+</tr>
+<tr>
+<td style="text-align:left">TPS</td>
+<td style="text-align:left">是 TransactionsPerSecond 的缩写，也就是事务数/秒</td>
+</tr>
+<tr>
+<td style="text-align:left">RT</td>
+<td style="text-align:left">响应时间 RT(Response-time)  ,请求开始到响应结束的时间</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="一些组件或者中间件"><a class="header-anchor" href="#一些组件或者中间件"></a>一些组件或者中间件</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">name</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">SkyWalking</td>
+<td>链路追踪用的</td>
+</tr>
+<tr>
+<td style="text-align:left">RabbitMQ</td>
+<td>消息队列,异步,用作削峰填谷</td>
+</tr>
+<tr>
+<td style="text-align:left">RocketMQ</td>
+<td>消息队列</td>
+</tr>
+<tr>
+<td style="text-align:left">Kafka</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">zookiper</td>
+<td>链路追踪</td>
+</tr>
+<tr>
+<td style="text-align:left">Prometheus</td>
+<td>(普罗米修斯）监控系统</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 ]]></content>
   </entry>
   <entry>
@@ -250,6 +368,40 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//参数--&gt;逻辑</span></span><br><span class="line">Student::getName   -&gt;stu.getName()</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>前端初开发体会</title>
+    <url>/2024/08/30/%E5%89%8D%E7%AB%AF%E5%88%9D%E5%BC%80%E5%8F%91%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<h3 id="前端新体会"><a class="header-anchor" href="#前端新体会"></a>前端新体会</h3>
+<p>笔者对前端是基本没什么了解，纯纯小白一枚，公司开发需要写后台系统的页面和app的页面，记录一些经验</p>
+<p>后台管理系统是用的vue3，笔者只在以前做过一个vue2的项目，还是copy的vue-admin-template的开源模版来做的，对vue只停留在使用elmentui和几个hook函数的认知阶段，js很多工具方法没用过，只会简单写个事件的方法和古老的 document文档元素(但其实也忘了  😅 )</p>
+<p>然后css样式和布局也是一知半解 ，样式基本只会换个颜色和大小,位置也没搞清楚，基本只会copy其他ui库的文档demo来改改用。</p>
+<ol>
+<li>
+<p>App.vue 页面是项目启动好像就会执行的，可以在这里做一下启动的初始化。</p>
+<p>vue的封装和抽离需要学学，比如把某些信息(例如登录信息)存到全局文件或者其他文件再将文件export，需要时直接import</p>
+</li>
+<li>
+<p>aximos请求库，封装到request.js文件，可以在这里做一下代理和请求/响应的 拦截，做一下请求头配置 例如:携带token 之类的。</p>
+</li>
+<li>
+<p>其他modules可以放在项目里作库引用，例如一些ui库，sdk等等</p>
+</li>
+<li>
+<p>uniapp的布局内容需要计算，比如滚动列表的高度动态计算，</p>
+</li>
+<li>
+<p>uniappH5对接微信支付/支付宝支付  ，等需要比如微信微信环境，注册appid和secret，再微信浏览器环境拿到用户code -&gt;去拿openId和accessToken  -&gt; 去拿userInfo 获取微信用户信息等等，  openId需要存在全局，因为支付需要它， 使用支付提共的sdk方法调用。</p>
+</li>
+<li>
+<p>开发调试,需要微信环境/支付宝环境 ， 可以在chrome的netconditions替换UA为自定义，在把填入微信或者支付宝的 UA来可以模拟环境，  微信还可以手机usb链接PC端，调试微信的内置浏览器 —这样你可以在手机微信浏览器访问时，pc可以同步拿到f12的信息做调试，比如你要看token和网络请求等等。    使用流程 ：a. 先手机usb连pc，手机usb设置为可以文件传输  b. 手机打开<a href="http://debugxweb.qq.com/?inspector=true">http://debugxweb.qq.com/?inspector=true</a>  ，c. pc在chrome打开 <a href="chrome://inspect/#devices">chrome://inspect/#devices</a></p>
+</li>
+</ol>
+<p>反思一下:遇到不少问题，其实每次都应该问自己，我要什么结果，然后拆分为要做什么 -&gt;拆分为开发步骤 -&gt; 再去通过代码实现</p>
+<p>我会每次都在文档写好流程步骤再去开发，不然不清楚流程开发容易让人白做无用功，并且情绪化，容易增加心智负担。</p>
+<p>总之还是需要多多积累和思考，笔者实力有限有限理解应该不全面或者错误，还请大家一起多多交流、指正.</p>
+<p>thanks for your watch,have a good one  😃</p>
 ]]></content>
   </entry>
   <entry>
@@ -321,6 +473,36 @@
 <p>工作如果真的无法适应，并且你尝试做出了努力，那么就离开它。</p>
 <p>合适的工作才是长久的，离职也不</p>
 <p>是一个坏的选择，花一些时间考虑清楚自己的规划和意愿，自由思考的感觉真棒。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>工作的一些新体会</title>
+    <url>/2024/07/24/%E5%B7%A5%E4%BD%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E4%BD%93%E4%BC%9A/</url>
+    <content><![CDATA[<h3 id="关于工作的一些体会"><a class="header-anchor" href="#关于工作的一些体会"></a>关于工作的一些体会</h3>
+<h4 id="1-git-的一些新体会"><a class="header-anchor" href="#1-git-的一些新体会"></a>1. git 的一些新体会</h4>
+<p>笔者工作时懵逼 把master的内容合并提交到了dev</p>
+<p>需要回退版本</p>
+<p>后面使用了 git   reset --hard[指定版本号commit id] 本地回退到上次提交前，然后强制推送 git push -f 覆盖了代码到仓库</p>
+<h5 id="git回退版本"><a class="header-anchor" href="#git回退版本"></a>git回退版本</h5>
+<p>git reset 默认是–mixed ,会撤回所有指定版本之后的提交，   将指定版本后面的内容回退到工作区。</p>
+<p>⭐ 如果git reset 没指定commit id的话 默认是回退到上一个commit.</p>
+<p>例如 git reset 是回退上一次commit ,git reset [commit id] 回退代码到此版本的提交时,此版本后面的内容返回到工作区</p>
+<p>git reset [commit id] --soft 是回退到暂存区，不是工作区</p>
+<p>git reset  [commit id] --hard 撤回并清空工作区及暂存区所有修改  (<font color=red>慎用，因为会把指定版本后的所有内容清空，一定要备份好指定版本后面的代码内容。</font>)</p>
+<p>🌟 <font color=red>工作常碰到的冲突问题 : </font> 当你和其他人都修改了同一文件, 那么其中一个人提交了远程仓库，另一个人会有两种无法pull的情况。</p>
+<ol>
+<li>
+<p>另一个人  代码还没commit，此时pull 同步时git会提示你 远程和本地有相同文件夹都修改了，提示你进行commit，</p>
+<p><font color=green>那么我们可以先commit再pull同步 ------此时会有冲突，需要你手动解决后再commit -&gt;push </font></p>
+</li>
+<li>
+<p>另一个人 代码已经提交了，此时pull,git 会提示冲突 ，还是和上一步后面一样，手动本地解决冲突再push</p>
+</li>
+</ol>
+<p>所以如果有冲突时需要多和其他人沟通 ，比如谁在写某个文件时，你也要写该文件，则探讨一下修改内容或者等他修改你再改也行。。。</p>
+<p>所以时不时pull一下代码，如果失败则说明远程的某些文件和本地文件对应的文件有不同的修改，需要沟通好以免继续写代码发现后面和同事重复写了某个文件，所以提前发现冲突要好很多，因为可能此时代码还没有冲突很多。</p>
+<h4 id="2-自定义starter"><a class="header-anchor" href="#2-自定义starter"></a>2.自定义starter</h4>
+<p><a href="https://developer.aliyun.com/article/893073">保姆级教程，手把手教你实现SpringBoot自定义starter-阿里云开发者社区 (aliyun.com)</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -422,51 +604,6 @@
 </li>
 </ol>
 <p>🔚</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>mqtt学习</title>
-    <url>/2024/07/12/mqtt%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h2 id="MQTT"><a class="header-anchor" href="#MQTT"></a>MQTT</h2>
-<h4 id="背景说明"><a class="header-anchor" href="#背景说明"></a>背景说明</h4>
-<p>笔者是个java菜鸡,目前工作中接触了物联网方面也就是 IOT</p>
-<p>自然也接触到了MQTT,我想记录记录也介绍下 MQTT</p>
-<h4 id="1-What-is-MQTT-😲"><a class="header-anchor" href="#1-What-is-MQTT-😲"></a>1.What is MQTT? 😲</h4>
-<p><a href="https://www.emqx.com/zh/blog/the-easiest-guide-to-getting-started-with-mqtt">MQTT</a>  是一种轻量级的通讯协议,如 HTTP 类似用来发送和接受信息的,是专为资源受限的设备和低带宽、高延迟或不可靠的网络而设计.符合物联网设备的需求,因为可能有些时候设备比较边缘网络比较差等等原因,</p>
-<p>这些物联网设备使用 MQTT 进行数据传输，因为它易于实施，并且可以有效地传输物联网数据。MQTT 支持设备到云端和云端到设备之间的消息传递。</p>
-<h4 id="2-How-to-Communicate"><a class="header-anchor" href="#2-How-to-Communicate"></a>2.How to Communicate ?</h4>
-<p>MQTT是一种类似消息队列的  <font color=green>发布–订阅</font>模式  , Client 间的通信就靠 Topic 主题的订阅和推送进行.</p>
-<p>MQTT不同于 MQTT 是有个 Broker–代理, MQTT 代理是协调不同客户端之间消息的后端系统。代理的职责包括接收和筛选消息、识别订阅每条消息的客户端，以及向他们发送消息。它还负责其他任务，例如：</p>
-<ul>
-<li>授权 MQTT 客户端以及对其进行身份验证</li>
-<li>将消息传递给其他系统以进行进一步分析</li>
-<li>处理错过的消息和客户端会话</li>
-</ul>
-<p>MQTT 原理: 客户端和代理开始使用 MQTT 连接进行通信。客户端通过向 MQTT 代理发送 <em>CONNECT</em> 消息来启动连接。代理通过响应 <em>CONNACK</em> 消息来确认已建立连接。MQTT 客户端和代理都需要 TCP/IP 堆栈进行通信。<em><strong>客户端从不相互联系，它们只与代理联系</strong></em>。</p>
-<p>例如下面:  一个客户端发布一个订阅,  每个客户端都可以发布和订阅   ,中间是需要靠 broker 转发订阅的消息的</p>
-<p><img src="$%7Bimg%7D/mqtt_2024-07-12_22-01-03.jpg" alt="img"></p>
-<h4 id="MQTT-publish"><a class="header-anchor" href="#MQTT-publish"></a>MQTT publish</h4>
-<p>MQTT 客户端以字节格式发布包含主题和数据的消息。客户端确定数据格式，例如文本数据、二进制数据、XML 或 JSON 文件。例如，智能家居系统中的灯可能会针对主题 <em>livingroom/light</em> 发布消息 <em>on</em>。</p>
-<h4 id="MQTT-subscribe"><a class="header-anchor" href="#MQTT-subscribe"></a><strong>MQTT subscribe</strong></h4>
-<p>MQTT 客户端向 MQTT 代理发送 <em>SUBSCRIBE</em> 消息，以接收有关感兴趣主题的消息。此消息包含唯一标识符和订阅列表。例如，您手机上的智能家居应用程序想要显示您家中有多少灯亮着。它将订阅主题 <em>light</em> 并增加所有 <em>on</em> 消息的计数器。</p>
-<p>*** MQTT 通过 Qos 来决定推送消息的模式**</p>
-<ul>
-<li>
-<p>QoS 0，最多交付一次。</p>
-</li>
-<li>
-<p>QoS 1，至少交付一次。</p>
-</li>
-<li>
-<p>QoS 2，只交付一次。</p>
-</li>
-</ul>
-<p>其中，使用 QoS 0 可能丢失消息，使用 QoS 1 可以保证收到消息，但消息可能重复，使用 QoS 2 可以保证消息既不丢失也不重复。QoS 等级从低到高，不仅意味着消息可靠性的提升，也意味着传输复杂程度的提升。</p>
-<p>**在一个完整的从发布者到订阅者的消息投递流程中，QoS 等级是由发布者在 PUBLISH 报文中指定的，大部分情况下 Broker 向订阅者转发消息时都会维持原始的 QoS 不变。不过也有一些例外的情况，根据订阅者的订阅要求，消息的 QoS 等级可能会在转发的时候发生降级。 **</p>
-<h3 id="MQTT-的文件传输"><a class="header-anchor" href="#MQTT-的文件传输"></a>MQTT 的文件传输</h3>
-<p>是一种基于 TCP 的物联网通信协议，其 Payload 可以容纳任意类型的数据，例如文本、二进制、JSON、XML 等多种格式。这种灵活性使得 MQTT 在物联网应用中拥有广泛的适用性，能够满足不同场景下多样化数据传输的需求。</p>
-<p><a href="https://docs.emqx.com/zh/enterprise/latest/file-transfer/client.html">文件传输客户端开发 | EMQX 企业版文档</a></p>
-<p>🔚 暂时理解这么些,其余后面再补充 Thanks~</p>
 ]]></content>
   </entry>
 </search>
