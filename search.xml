@@ -230,84 +230,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>一些开发中的术语介绍.md</title>
-    <url>/2024/07/12/%E4%B8%80%E4%BA%9B%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9C%AF%E8%AF%AD%E4%BB%8B%E7%BB%8D/</url>
-    <content><![CDATA[<h3 id="背景介绍"><a class="header-anchor" href="#背景介绍"></a>背景介绍</h3>
-<p>笔者最近关注到一些开发中的术语,但是属于架构或者服务方面的,对刚进门的开发来说接触式属于比较少的,所以想记录一些</p>
-<h3 id="术语"><a class="header-anchor" href="#术语"></a>术语</h3>
-<hr>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">术语</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">QOS</td>
-<td style="text-align:left">Quality of Service）即&quot;服务质量&quot;</td>
-</tr>
-<tr>
-<td style="text-align:left">QPS</td>
-<td style="text-align:left">Queries Per Second 意思是“每秒查询率”</td>
-</tr>
-<tr>
-<td style="text-align:left">TPS</td>
-<td style="text-align:left">是 TransactionsPerSecond 的缩写，也就是事务数/秒</td>
-</tr>
-<tr>
-<td style="text-align:left">RT</td>
-<td style="text-align:left">响应时间 RT(Response-time)  ,请求开始到响应结束的时间</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-</tr>
-</tbody>
-</table>
-<h3 id="一些组件或者中间件"><a class="header-anchor" href="#一些组件或者中间件"></a>一些组件或者中间件</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">name</th>
-<th>desc</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">SkyWalking</td>
-<td>链路追踪用的</td>
-</tr>
-<tr>
-<td style="text-align:left">RabbitMQ</td>
-<td>消息队列,异步,用作削峰填谷</td>
-</tr>
-<tr>
-<td style="text-align:left">RocketMQ</td>
-<td>消息队列</td>
-</tr>
-<tr>
-<td style="text-align:left">Kafka</td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left">zookiper</td>
-<td>链路追踪</td>
-</tr>
-<tr>
-<td style="text-align:left">Prometheus</td>
-<td>(普罗米修斯）监控系统</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-]]></content>
-  </entry>
-  <entry>
     <title>人生第二次面试</title>
     <url>/2024/05/29/%E4%BA%BA%E7%94%9F%E7%AC%AC%E4%BA%8C%E6%AC%A1%E9%9D%A2%E8%AF%95/</url>
     <content><![CDATA[<p>我想分享我的第二次面试的经历，笔者是个毕业一年的fw大专程序员 😢</p>
@@ -506,6 +428,104 @@
 ]]></content>
   </entry>
   <entry>
+    <title>水一篇</title>
+    <url>/2024/06/10/%E6%B0%B4%E4%B8%80%E7%AF%87/</url>
+    <content><![CDATA[<h4 id="🌊-水一篇文章"><a class="header-anchor" href="#🌊-水一篇文章"></a>🌊 水一篇文章</h4>
+<p>六月了，昨天和朋友第一次体会他们喝酒玩色子 🎲 的规则。我了解到他们所谓的规则</p>
+<p>每人有5个骰子，每次每个人都要说一组数字(比如3个1、6个6等等),这组数字是<br>
+<font color=green>骰子数量*点数</font></p>
+<p>需要每次的说出的这组数字的骰子数量或者点数要比上一组说的大(比如上一个人说了3个1，轮到你可以说3个2或者4个1等等)，也可以说开(开代表着所有玩家亮出骰子，如果上一个人说的条件<br>
+——<font color=red>在场所有玩家的骰子点数和数量满足他所说的那组数字</font> （例如3个2必须有或者多于3个2的点数）<br>
+——不符合则他输，否则你输)<br>
+🔴1默认是个万能点数(可以看作其他点数)，有时只能作为1的点数。</p>
+<p>斋:默认是1为万能点数<br>
+破斋:1无法作为万能点数，只能作为1，如果有人说的那组数 骰子数量小于上一个人 那么就可以说是破斋了</p>
+<p>其余还有劈，反劈等等这些，笔者也不懂只是了解了大概。</p>
+<p>最后还是说，这只是个为了喝酒娱乐而设计的小游戏，主要是靠一些心理博弈，输了也没什么惩罚就是喝一杯。</p>
+<p>有的人觉得好玩，有的人觉得无聊(笔者就是,其实是不太喜欢这种场合呵呵)。</p>
+<p>✌️ have a nice time!</p>
+<p>端午安康🦆</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>一些开发中的术语介绍.md</title>
+    <url>/2024/07/12/%E4%B8%80%E4%BA%9B%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E6%9C%AF%E8%AF%AD%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[<h3 id="背景介绍"><a class="header-anchor" href="#背景介绍"></a>背景介绍</h3>
+<p>笔者最近关注到一些开发中的术语,但是属于架构或者服务方面的,对刚进门的开发来说接触式属于比较少的,所以想记录一些</p>
+<h3 id="术语"><a class="header-anchor" href="#术语"></a>术语</h3>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">术语</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">QOS</td>
+<td style="text-align:left">Quality of Service）即&quot;服务质量&quot;</td>
+</tr>
+<tr>
+<td style="text-align:left">QPS</td>
+<td style="text-align:left">Queries Per Second 意思是“每秒查询率”</td>
+</tr>
+<tr>
+<td style="text-align:left">TPS</td>
+<td style="text-align:left">是 TransactionsPerSecond 的缩写，也就是事务数/秒</td>
+</tr>
+<tr>
+<td style="text-align:left">RT</td>
+<td style="text-align:left">响应时间 RT(Response-time)  ,请求开始到响应结束的时间</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="一些组件或者中间件"><a class="header-anchor" href="#一些组件或者中间件"></a>一些组件或者中间件</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">name</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">SkyWalking</td>
+<td>链路追踪用的</td>
+</tr>
+<tr>
+<td style="text-align:left">RabbitMQ</td>
+<td>消息队列,异步,用作削峰填谷</td>
+</tr>
+<tr>
+<td style="text-align:left">RocketMQ</td>
+<td>消息队列</td>
+</tr>
+<tr>
+<td style="text-align:left">Kafka</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">zookiper</td>
+<td>链路追踪</td>
+</tr>
+<tr>
+<td style="text-align:left">Prometheus</td>
+<td>(普罗米修斯）监控系统</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+  </entry>
+  <entry>
     <title>第二周工作记录</title>
     <url>/2023/12/24/%E7%AC%AC%E4%BA%8C%E5%91%A8%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p>这周工作下来明显感觉到了自己的不足</p>
@@ -559,26 +579,6 @@
 </ul>
 <p>总结：菜就多练，不会就多沟通! O(∩_∩)O哈哈~</p>
 <p>下周加油，keep住，其实工作也没很难。现在信心大增hhh</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>水一篇</title>
-    <url>/2024/06/10/%E6%B0%B4%E4%B8%80%E7%AF%87/</url>
-    <content><![CDATA[<h4 id="🌊-水一篇文章"><a class="header-anchor" href="#🌊-水一篇文章"></a>🌊 水一篇文章</h4>
-<p>六月了，昨天和朋友第一次体会他们喝酒玩色子 🎲 的规则。我了解到他们所谓的规则</p>
-<p>每人有5个骰子，每次每个人都要说一组数字(比如3个1、6个6等等),这组数字是<br>
-<font color=green>骰子数量*点数</font></p>
-<p>需要每次的说出的这组数字的骰子数量或者点数要比上一组说的大(比如上一个人说了3个1，轮到你可以说3个2或者4个1等等)，也可以说开(开代表着所有玩家亮出骰子，如果上一个人说的条件<br>
-——<font color=red>在场所有玩家的骰子点数和数量满足他所说的那组数字</font> （例如3个2必须有或者多于3个2的点数）<br>
-——不符合则他输，否则你输)<br>
-🔴1默认是个万能点数(可以看作其他点数)，有时只能作为1的点数。</p>
-<p>斋:默认是1为万能点数<br>
-破斋:1无法作为万能点数，只能作为1，如果有人说的那组数 骰子数量小于上一个人 那么就可以说是破斋了</p>
-<p>其余还有劈，反劈等等这些，笔者也不懂只是了解了大概。</p>
-<p>最后还是说，这只是个为了喝酒娱乐而设计的小游戏，主要是靠一些心理博弈，输了也没什么惩罚就是喝一杯。</p>
-<p>有的人觉得好玩，有的人觉得无聊(笔者就是,其实是不太喜欢这种场合呵呵)。</p>
-<p>✌️ have a nice time!</p>
-<p>端午安康🦆</p>
 ]]></content>
   </entry>
   <entry>
