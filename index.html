@@ -150,6 +150,131 @@
     
     
     <article
+  id="post-权限控制模型"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2025/10/18/%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B/"
+    >权限控制模型</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/10/18/%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2025-10-18T04:20:20.000Z" itemprop="datePublished">2025-10-18</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="权限控制模型"><a class="header-anchor" href="#权限控制模型"></a>权限控制模型</h2>
+<p>如果我们要设计权限控制，那么权限控制模型必须要调研下的。</p>
+<p>我们可能需要知道:</p>
+<ol>
+<li>使用需求场景</li>
+<li>需要实现的编程语言(如果你是开发)</li>
+</ol>
+<p>目前已知的模型有</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>模型名称</th>
+<th>基本思路</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ACL（访问控制列表）</td>
+<td>每个资源上维护一份“允许访问的用户清单”</td>
+<td>文档管理/多人协作平台</td>
+</tr>
+<tr>
+<td>2</td>
+<td>DAC（自主访问控制）</td>
+<td>资源所有者可自由决定谁能访问资源</td>
+<td>文件共享系统…</td>
+</tr>
+<tr>
+<td>3</td>
+<td>MAC（强制访问控制）</td>
+<td>系统对资源和用户打标签，权限强制遵守安全等级策略</td>
+<td>军事、政府系统高安全要求平台</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ABAC（基于属性的访问控制）</td>
+<td>根据用户、资源、环境属性组合判断是否授权</td>
+<td>多租户 SaaS 平台，条件多</td>
+</tr>
+<tr>
+<td>5</td>
+<td>RBAC（基于角色的访问控制）</td>
+<td>权限-&gt; 角色 -&gt; 用户</td>
+<td>企业后台系统</td>
+</tr>
+<tr>
+<td>6</td>
+<td>TBAC（基于任务的访问控制）</td>
+<td>用户的权限是基于其当前执行的任务或角色</td>
+<td>适用于以任务为中心的系统</td>
+</tr>
+<tr>
+<td>7</td>
+<td>T-RBAC（ 基于任务和角色的访问控制模型）</td>
+<td>任务和角色置于同等重要的地位任务，是RBAC 和TBAC能结合的基础</td>
+<td>适用于以任务和角色控制为主的系统</td>
+</tr>
+<tr>
+<td>8</td>
+<td>OBAC（基于对象的访问控制）</td>
+<td>以受控对象为中心构建访问控制机制</td>
+<td>对象存储系统、OOP设计的系统等</td>
+</tr>
+<tr>
+<td>9</td>
+<td>UCON（使用控制模型）</td>
+<td>主体、客体、权限  |  条件、义务、授权规则 。有四种可能的授权过程</td>
+<td>试验型。涵盖了现代商务和信息系统需求中的安全和隐私问题</td>
+</tr>
+</tbody>
+</table>
+<p>其中用户数比较多的web系统，用的RBAC 比较多，例如: 菜单、角色、用户</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/" rel="tag">开发日常</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B/" rel="tag">权限控制模型</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-前端初开发体会"
   class="article article-type-post"
   itemscope
@@ -609,6 +734,54 @@
 
     
     <article
+  id="post-好久不写"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2025/04/29/%E5%A5%BD%E4%B9%85%E4%B8%8D%E5%86%99/"
+    >好久不写</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2025/04/29/%E5%A5%BD%E4%B9%85%E4%B8%8D%E5%86%99/" class="article-date">
+  <time datetime="2025-04-28T16:15:29.517Z" itemprop="datePublished">2025-04-29</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+   
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-水一篇"
   class="article article-type-post"
   itemscope
@@ -862,130 +1035,6 @@
 </tbody>
 </table>
 <p>详细请看参考文章或者文档 ,<a target="_blank" rel="noopener" href="https://gitmoji.dev/">附上git支持emoji地址gitmoji</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-u盘测试"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2024/04/03/u%E7%9B%98%E6%B5%8B%E8%AF%95/" class="article-date">
-  <time datetime="2024-04-03T11:30:12.226Z" itemprop="datePublished">2024-04-03</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>省流:笔者在某宝花了40块买了个64g的海康威视的u盘,闲着没事测试测试u盘性能😢</p>
-<p>1.测试软件: <strong>Parkdale</strong></p>
-<p>结果:HIKSEMI - 3.00 58.6 GB HIKSEMI (G:): 37.9 MByte/sec read, 33.9 MByte/sec write USB<br>
-软件评价:</p>
-<ul>
-<li>This is pretty slow for a USB3 device. USB3 device on USB3 controller in USB2 speed!</li>
-<li>对于USB3设备来说，这是相当慢的。USB3设备上的USB3控制器在USB2速度!</li>
-</ul>
-<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403193421546.png" alt="img"></p>
-<p>2.测试软件:<strong>HD Tune</strong></p>
-<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403193057026.png" alt="img">)</p>
-<p>3.测试软件:<strong>CrystalDiskMark</strong> 8.05</p>
-<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403194038125.png" alt="img"></p>
-<p>解释:</p>
-<p>主要看第1项顺序读写和第3项4K<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E9%9A%8F%E6%9C%BA%E8%AF%BB%E5%86%99&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">随机读写</a></p>
-<p><strong>SEQ1M|Q8T1</strong>表示顺序读写，位深1024K，1线程8队列的测试速度</p>
-<p><strong>SEQ1M|Q1T1</strong>表示顺序读写，位深1024K，1线程1队列测试速度</p>
-<p><strong>RND4K|Q32T1</strong>表示随机读写，位深1024*4K，1线程32队列的测试速度</p>
-<p><strong>RND4K|Q1T1</strong>表示随机读写，位深1024*4K，一线程一队列的测试速度</p>
-<ul>
-<li>
-<p>Seq指的是连续测试，可以理解为影音文件的读写速度，商家标称速度一般指的是这个速度4K随机读写性能代表了硬盘的数据吞吐能力(单位为iops)，比如：<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E7%BD%91%E9%A1%B5%E7%BC%93%E5%AD%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">网页缓存</a>的写入、系统文件更新，包括程序、游戏的加载、响应等等都与随机4K读写性能息息相关。对硬盘来说，4K读写的快慢决定了系统的操作体验，对<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=U%E7%9B%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">U盘</a>来说，代表了零碎文件（比如复制有大量小文件的文件夹）的读写速度。</p>
-</li>
-<li>
-<p>比如你按下开机按钮，进入Windows以后，启动Windows这个过程既涉及连续文件读，也涉及4K随机读。这个过程有512B文件到128KB各种大小文件的读写过程。Windows正常运行时，产生的<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2624013318%7D">临时文件</a>。也是混合两种文件。</p>
-</li>
-</ul>
-<p>P.s :  随机=random['rændəm]   顺序=sequence[ˈsiːkwəns]</p>
-<p>4.测试软件: <strong>ATTO Disk Benchmark</strong></p>
-<p><img src="https://iceblin-blog.oss-cn-guangzhou.aliyuncs.com/blog-img/image-20240403200357838.png" alt="image-20240403200357838"></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-面试复习准备"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2024/03/08/%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87/" class="article-date">
-  <time datetime="2024-03-08T14:17:37.206Z" itemprop="datePublished">2024-03-08</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>😄</p>
-<h2 id="java复习总结"><a class="header-anchor" href="#java复习总结"></a>java复习总结</h2>
-<ol>
-<li>
-<p>java基础快速重新复习</p>
-</li>
-<li>
-<p>项目重新跑起来，看看源代码</p>
-</li>
-<li>
-<p>面试问题常问问题</p>
-</li>
-<li>
-<p>前端vue复习和测试工具熟悉</p>
-</li>
-<li>
-<p>开发原则复习</p>
-</li>
-</ol>
-<p>🔚</p>
  
       <!-- reward -->
       

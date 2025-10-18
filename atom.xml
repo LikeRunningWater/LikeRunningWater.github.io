@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-08-30T14:53:10.209Z</updated>
+  <updated>2025-10-18T04:54:53.375Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>权限控制模型</title>
+    <link href="http://example.com/2025/10/18/%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://example.com/2025/10/18/%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B/</id>
+    <published>2025-10-18T04:20:20.000Z</published>
+    <updated>2025-10-18T04:54:53.375Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="权限控制模型"><a class="header-anchor" href="#权限控制模型"></a>权限控制模型</h2><p>如果我们要设计权限控制，那么权限控制模型必须要调研下的。</p><p>我们可能需要知道:</p><ol><li>使用需求场景</li><li>需要实现的编程语言(如果你是开发)</li></ol><p>目前已知的模型有</p><table><thead><tr><th>#</th><th>模型名称</th><th>基本思路</th><th>适用场景</th></tr></thead><tbody><tr><td>1</td><td>ACL（访问控制列表）</td><td>每个资源上维护一份“允许访问的用户清单”</td><td>文档管理/多人协作平台</td></tr><tr><td>2</td><td>DAC（自主访问控制）</td><td>资源所有者可自由决定谁能访问资源</td><td>文件共享系统…</td></tr><tr><td>3</td><td>MAC（强制访问控制）</td><td>系统对资源和用户打标签，权限强制遵守安全等级策略</td><td>军事、政府系统高安全要求平台</td></tr><tr><td>4</td><td>ABAC（基于属性的访问控制）</td><td>根据用户、资源、环境属性组合判断是否授权</td><td>多租户 SaaS 平台，条件多</td></tr><tr><td>5</td><td>RBAC（基于角色的访问控制）</td><td>权限-&gt; 角色 -&gt; 用户</td><td>企业后台系统</td></tr><tr><td>6</td><td>TBAC（基于任务的访问控制）</td><td>用户的权限是基于其当前执行的任务或角色</td><td>适用于以任务为中心的系统</td></tr><tr><td>7</td><td>T-RBAC（ 基于任务和角色的访问控制模型）</td><td>任务和角色置于同等重要的地位任务，是RBAC 和TBAC能结合的基础</td><td>适用于以任务和角色控制为主的系统</td></tr><tr><td>8</td><td>OBAC（基于对象的访问控制）</td><td>以受控对象为中心构建访问控制机制</td><td>对象存储系统、OOP设计的系统等</td></tr><tr><td>9</td><td>UCON（使用控制模型）</td><td>主体、客体、权限  |  条件、义务、授权规则 。有四种可能的授权过程</td><td>试验型。涵盖了现代商务和信息系统需求中的安全和隐私问题</td></tr></tbody></table><p>其中用户数比较多的web系统，用的RBAC 比较多，例如: 菜单、角色、用户</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;权限控制模型&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#权限控制模型&quot;&gt;&lt;/a&gt;权限控制模型&lt;/h2&gt;
+&lt;p&gt;如果我们要设计权限控制，那么权限控制模型必须要调研下的。&lt;/p&gt;
+&lt;p&gt;我们可能需要知道:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用需求场景</summary>
+      
+    
+    
+    
+    
+    <category term="权限控制模型" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="开发日常" scheme="http://example.com/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>好久不写</title>
+    <link href="http://example.com/2025/04/29/%E5%A5%BD%E4%B9%85%E4%B8%8D%E5%86%99/"/>
+    <id>http://example.com/2025/04/29/%E5%A5%BD%E4%B9%85%E4%B8%8D%E5%86%99/</id>
+    <published>2025-04-28T16:15:29.517Z</published>
+    <updated>2025-04-28T16:15:29.518Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>前端初开发体会</title>
